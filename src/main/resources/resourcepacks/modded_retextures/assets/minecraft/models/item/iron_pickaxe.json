@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/iron_pickaxe_without_socket",
+  "overrides": [
+    {
+      "model": "minecraft:item/iron_pickaxe_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

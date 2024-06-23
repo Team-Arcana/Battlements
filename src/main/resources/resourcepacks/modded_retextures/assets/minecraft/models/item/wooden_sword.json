@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/wooden_sword_without_socket",
+  "overrides": [
+    {
+      "model": "minecraft:item/wooden_sword_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

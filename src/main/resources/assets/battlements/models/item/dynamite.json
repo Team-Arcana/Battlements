@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/dynamite_held",
+    "textures": {
+      "layer0": "battlements:item/dynamite_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/dynamite_inventory",
+      "textures": {
+        "layer0": "battlements:item/dynamite"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/dynamite_inventory",
+      "textures": {
+        "layer0": "battlements:item/dynamite"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "caverns_and_chasms:item/necromium_sword_without_socket",
+  "overrides": [
+    {
+      "model": "caverns_and_chasms:item/necromium_sword_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

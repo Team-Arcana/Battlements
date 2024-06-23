@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/golden_shovel_without_socket",
+  "overrides": [
+    {
+      "model": "minecraft:item/golden_shovel_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "caverns_and_chasms:silver_ingot"
+    },
+    "s": {
+      "item": "caverns_and_chasms:silver_nugget"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    "sSS",
+    "sSS",
+    "|ss"
+  ],
+  "result": {
+    "item": "battlements:silver_greatclub"
+  },
+  "show_notification": true
+}

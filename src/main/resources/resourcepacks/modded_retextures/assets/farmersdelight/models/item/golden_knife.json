@@ -1,0 +1,11 @@
+{
+  "parent": "farmersdelight:item/golden_knife_without_socket",
+  "overrides": [
+    {
+      "model": "farmersdelight:item/golden_knife_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

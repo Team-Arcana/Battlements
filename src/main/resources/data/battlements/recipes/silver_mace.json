@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "caverns_and_chasms:silver_ingot"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    " SS",
+    " |S",
+    "|  "
+  ],
+  "result": {
+    "item": "battlements:silver_mace"
+  },
+  "show_notification": true
+}

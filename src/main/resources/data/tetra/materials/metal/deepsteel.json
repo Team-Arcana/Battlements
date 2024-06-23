@@ -1,0 +1,27 @@
+{
+    "key": "deepsteel",
+    "category": "metal",
+    "primary": 7.24,
+    "secondary": 2.9,
+    "tertiary": 3.5,
+    "durability": 2031,
+    "integrityCost": 2,
+    "integrityGain": 8,
+    "magicCapacity": 90,
+    "toolLevel": "battlements:deepsteel",
+    "toolEfficiency": 9,
+    "tints": {
+        "glyph": "0b96b0",
+        "texture": "0b96b0"
+    },
+    "textures": [
+        "heavy",
+        "metal"
+    ],
+    "material": {
+        "items": [ "battlements:deepsteel_ingot" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    }
+}

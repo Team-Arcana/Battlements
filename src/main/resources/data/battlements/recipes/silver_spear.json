@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "/": {
+      "item": "battlements:pole"
+    },
+    "S": {
+      "item": "caverns_and_chasms:silver_ingot"
+    }
+  },
+  "pattern": [
+    " S",
+    "/ "
+  ],
+  "result": {
+    "item": "battlements:silver_spear"
+  },
+  "show_notification": true
+}

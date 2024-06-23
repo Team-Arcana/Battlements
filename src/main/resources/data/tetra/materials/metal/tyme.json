@@ -1,0 +1,27 @@
+{
+    "key": "tyme",
+    "category": "metal",
+    "primary": 8,
+    "secondary": 3,
+    "tertiary": 4,
+    "durability": 2800,
+    "integrityCost": 3,
+    "integrityGain": 12,
+    "magicCapacity": 180,
+    "toolLevel": "battlements:tyme",
+    "toolEfficiency": 12,
+    "tints": {
+        "glyph": "a5a145",
+        "texture": "a5a145"
+    },
+    "textures": [
+        "heavy",
+        "metal"
+    ],
+    "material": {
+        "items": [ "battlements:tyme_ingot" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+    }
+}

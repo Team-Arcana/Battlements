@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/iron_axe_without_socket",
+  "overrides": [
+    {
+      "model": "minecraft:item/iron_axe_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}

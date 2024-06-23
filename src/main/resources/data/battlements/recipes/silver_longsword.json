@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "caverns_and_chasms:silver_ingot"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    "S",
+    "S",
+    "|"
+  ],
+  "result": {
+    "item": "battlements:silver_longsword"
+  },
+  "show_notification": true
+}

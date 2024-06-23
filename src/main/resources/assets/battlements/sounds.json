@@ -1,0 +1,55 @@
+{
+  "item.boomerang.throw": {
+    "subtitle": "sounds.battlements.item.boomerang.throw",
+    "sounds": [
+      {
+        "name": "battlements:item/boomerang_throw1"
+      },
+      {
+        "name": "battlements:item/boomerang_throw2"
+      },
+      {
+        "name": "battlements:item/boomerang_throw3"
+      }
+    ]
+  },
+  "item.boomerang.fly": {
+    "subtitle": "sounds.battlements.item.boomerang.fly",
+    "sounds": [
+      {
+        "name": "battlements:item/boomerang_throw1"
+      },
+      {
+        "name": "battlements:item/boomerang_throw2"
+      },
+      {
+        "name": "battlements:item/boomerang_throw3"
+      }
+    ]
+  },
+  "item.boomerang.hit.block": {
+    "subtitle": "sounds.battlements.item.boomerang.hit.block",
+    "sounds": [
+      {
+        "name": "battlements:item/boomerang_hit1"
+      },
+      {
+        "name": "battlements:item/boomerang_hit2"
+      },
+      {
+        "name": "battlements:item/boomerang_hit3"
+      },
+      {
+        "name": "battlements:item/boomerang_hit4"
+      }
+    ]
+  },
+  "item.boomerang.hit.entity": {
+    "subtitle": "sounds.battlements.item.boomerang.hit.entity",
+    "sounds": [
+      "item/trident/pierce1",
+      "item/trident/pierce2",
+      "item/trident/pierce3"
+    ]
+  }
+}

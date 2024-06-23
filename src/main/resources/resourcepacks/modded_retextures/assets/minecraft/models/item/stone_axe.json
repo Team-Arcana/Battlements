@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/stone_axe_without_socket",
+  "overrides": [
+    {
+      "model": "minecraft:item/stone_axe_with_socket",
+      "predicate": {
+        "battlements:socketed": 1.0
+      }
+    }
+  ]
+}
