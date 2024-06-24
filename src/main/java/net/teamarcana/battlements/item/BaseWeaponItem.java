@@ -23,7 +23,6 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ToolAction;
-import net.teamarcana.battlements.api.IReloadable;
 import net.teamarcana.battlements.api.trait.TraitContainer;
 import net.teamarcana.battlements.api.trait.Trait;
 import net.teamarcana.battlements.api.trait.VersatileTrait;
@@ -34,28 +33,54 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWeaponItem>, IReloadable {
+public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeaponItem>{
     protected String customName = null;
     protected ItemAttributeModifiers modifiers;
-    protected final Archetype archetype;
-    protected List<Trait> traits;
-    protected Tier tier;
-    protected float attackDamage;
-    protected float attackSpeed;
+    protected static Archetype archetype;
+    protected static List<Trait> traits;
+    protected static Tier tier;
+    protected static float attackDamage;
+    protected static float attackSpeed;
 
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties) {
-        super(tier, properties.durability(tier.getUses()));
+        //super(tier, properties.attributes(createAttributes(archetype)));
+        super(tier, properties);
         this.tier = tier;
         this.archetype = archetype;
+
+        traits = archetype.hasTraits() ? archetype.getTraits() : List.of();
+
+        attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
+        attackSpeed = archetype.getAttackSpeed();
+
+        // initialize the item modifiers
+        ItemAttributeModifiers.Builder attributeModifiers = ItemAttributeModifiers.builder();
+        attributeModifiers.add(
+                Attributes.ATTACK_DAMAGE,
+                new AttributeModifier(
+                        BASE_ATTACK_DAMAGE_ID,
+                        attackDamage,
+                        AttributeModifier.Operation.ADD_VALUE
+                ),
+                EquipmentSlotGroup.MAINHAND
+        ).add(
+                Attributes.ATTACK_SPEED,
+                new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE),
+                EquipmentSlotGroup.MAINHAND
+        );
+        if(hasTraits()){
+            traits.forEach(trait -> {
+                trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
+            });
+        }
+        modifiers = attributeModifiers.build();
     }
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties, String customName) {
         this(tier, archetype, properties);
         this.customName = customName;
     }
 
-    @Override
-    public void reload() {
-        // initialize the traits
+    public static ItemAttributeModifiers createAttributes(Archetype archetype) {
         ImmutableList.Builder<Trait> traitBuilder = ImmutableList.builder();
         traitBuilder.addAll(archetype.getTraits());
         traits = traitBuilder.build();
@@ -78,11 +103,12 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
                 new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE),
                 EquipmentSlotGroup.MAINHAND
         );
-        traits.forEach(trait -> {
-            trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
-        });
-        modifiers = attributeModifiers.build();
-
+        if(archetype.hasTraits()){
+            traits.forEach(trait -> {
+                trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
+            });
+        }
+        return attributeModifiers.build();
     }
 
     public boolean isVersatile(){ return hasTraitWithType(BattleTraitTypes.VERSATILE); }

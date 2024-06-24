@@ -69,4 +69,5 @@ public class Archetype {
             traits.forEach(trait -> trait.addTooltip(item, tooltip, isShiftPressed));
         }
     }
+    public boolean hasTraits(){ return traits != null && !traits.isEmpty(); }
 }
