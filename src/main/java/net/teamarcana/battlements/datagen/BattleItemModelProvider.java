@@ -72,20 +72,21 @@ public class BattleItemModelProvider extends ItemModelProvider {
         handheldItemWithExistingModel(BattleItems.IRON_MAUL.get(), "battlements:item/base/maul_held");
         handheldItem(BattleItems.IRON_MACE.get());
         largeHandheldItem(BattleItems.IRON_ANCHOR.get());
+        handheldItem(BattleItems.IRON_WARPICK.get());
         handheldItem(BattleItems.IRON_BATTLEAXE.get());
         largeHandheldItem(BattleItems.IRON_GREATAXE.get());
         polearmHandheldItem(BattleItems.IRON_SPEAR.get());
         largePolearmHandheldItem(BattleItems.IRON_PIKE.get());
         polearmHandheldItem(BattleItems.IRON_QUARTERSTAFF.get());
-        polearmHandheldItem(BattleItems.IRON_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.IRON_GLAIVE.get());
         polearmHandheldItemAlt(BattleItems.IRON_HALBERD.get());
-        polearmHandheldItemAlt(BattleItems.IRON_PITCHFORK.get());;
+        polearmHandheldItem(BattleItems.IRON_PITCHFORK.get());;
         polearmHandheldItemAlt(BattleItems.IRON_SCYTHE.get());
         polearmHandheldItem(BattleItems.IRON_JAVELIN.get());
         handheldItemWithExistingModel2(BattleItems.IRON_BOOMERANG.get(), "battlements:item/base/boomerang_held");
         handheldItem(BattleItems.IRON_KUNAI.get());
         handheldItem(BattleItems.IRON_TOMAHAWK.get());
-        handheldItem(BattleItems.IRON_PITCHFORK.get());
+        handheldItem(BattleItems.IRON_THROWING_KNIFE.get());
     }
 
     // METHODS

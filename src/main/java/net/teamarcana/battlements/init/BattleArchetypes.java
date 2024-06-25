@@ -79,7 +79,7 @@ public class BattleArchetypes {
             true, ToolActions.DEFAULT_AXE_ACTIONS
     );
     public static final Archetype GREATAXE = new Archetype(
-            "greataxe",4.2f, 2.1f, 0.8f,
+            "greataxe",4.8f, 2.1f, 0.8f,
             true, ToolActions.DEFAULT_AXE_ACTIONS
     );
     public static final Archetype SPEAR = new Archetype(

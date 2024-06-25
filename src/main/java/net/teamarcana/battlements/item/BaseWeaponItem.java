@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -33,21 +34,29 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeaponItem>{
+public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWeaponItem>{
     protected String customName = null;
-    protected ItemAttributeModifiers modifiers;
-    protected static Archetype archetype;
+    protected static ItemAttributeModifiers modifiers;
+    protected Archetype archetype;
     protected static List<Trait> traits;
     protected static Tier tier;
     protected static float attackDamage;
     protected static float attackSpeed;
 
+    // todo: get the durability bars to stop showing
+    // so the reason why the durability bats are like that is because for some reason it's stuck
+    // at 248/250 durability [for iron weapons]
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties) {
-        //super(tier, properties.attributes(createAttributes(archetype)));
-        super(tier, properties);
+        super(tier, properties.attributes(createAttributes(tier, archetype)).durability(tier.getUses()));
         this.tier = tier;
         this.archetype = archetype;
+    }
+    public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties, String customName) {
+        this(tier, archetype, properties);
+        this.customName = customName;
+    }
 
+    public static ItemAttributeModifiers createAttributes(Tier tier, Archetype archetype) {
         traits = archetype.hasTraits() ? archetype.getTraits() : List.of();
 
         attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
@@ -65,7 +74,7 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
                 EquipmentSlotGroup.MAINHAND
         ).add(
                 Attributes.ATTACK_SPEED,
-                new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed - 4.0d, AttributeModifier.Operation.ADD_VALUE),
                 EquipmentSlotGroup.MAINHAND
         );
         if(hasTraits()){
@@ -74,40 +83,6 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
             });
         }
         modifiers = attributeModifiers.build();
-    }
-    public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties, String customName) {
-        this(tier, archetype, properties);
-        this.customName = customName;
-    }
-
-    public static ItemAttributeModifiers createAttributes(Archetype archetype) {
-        ImmutableList.Builder<Trait> traitBuilder = ImmutableList.builder();
-        traitBuilder.addAll(archetype.getTraits());
-        traits = traitBuilder.build();
-
-        attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
-        attackSpeed = archetype.getAttackSpeed();
-
-        // initialize the item modifiers
-        ItemAttributeModifiers.Builder attributeModifiers = ItemAttributeModifiers.builder();
-        attributeModifiers.add(
-                Attributes.ATTACK_DAMAGE,
-                new AttributeModifier(
-                        BASE_ATTACK_DAMAGE_ID,
-                        attackDamage,
-                        AttributeModifier.Operation.ADD_VALUE
-                ),
-                EquipmentSlotGroup.MAINHAND
-        ).add(
-                Attributes.ATTACK_SPEED,
-                new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE),
-                EquipmentSlotGroup.MAINHAND
-        );
-        if(archetype.hasTraits()){
-            traits.forEach(trait -> {
-                trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
-            });
-        }
         return attributeModifiers.build();
     }
 
@@ -130,11 +105,6 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
         boolean isShiftPressed = Screen.hasShiftDown();
         archetype.addTraitsToTooltip(item, tooltip, isShiftPressed);
         super.appendHoverText(item, context, tooltip, flag);
-    }
-
-    @Override
-    public int getDamage(ItemStack item) {
-        return ((int) Math.ceil(tier.getAttackDamageBonus()));
     }
 
     @Override
@@ -172,6 +142,14 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
                     }
                 }
             }
+            // just here for now until the traits exist
+            else{
+                if((item.is(ItemTags.PICKAXES) && state.is(BlockTags.MINEABLE_WITH_PICKAXE)) || (item.is(ItemTags.AXES) && state.is(BlockTags.MINEABLE_WITH_AXE)) || (item.is(ItemTags.HOES) && state.is(BlockTags.MINEABLE_WITH_HOE)) || (item.is(ItemTags.SHOVELS) && state.is(BlockTags.MINEABLE_WITH_SHOVEL))){
+                    item.hurtAndBreak(1, entity, EquipmentSlot.MAINHAND);
+                } else {
+                    item.hurtAndBreak(2, entity, EquipmentSlot.MAINHAND);
+                }
+            }
         }
         return true;
     }
@@ -187,7 +165,7 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
         if(hasTraits()){
             traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.hurtEnemy(tier, item, target, attacker, null)));
         }
-        return super.hurtEnemy(item, target, attacker);
+        return true;
     }
 
     @Override
@@ -195,7 +173,7 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
         if(hasTraits()){
             traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.postHurtEnemy(tier, item, target, attacker, null)));
         }
-        super.postHurtEnemy(item, target, attacker);
+        item.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
     }
 
     @Override
@@ -330,5 +308,5 @@ public class BaseWeaponItem extends SwordItem implements TraitContainer<BaseWeap
         return traits;
     }
 
-    public boolean hasTraits(){ return traits != null && !traits.isEmpty(); }
+    public static boolean hasTraits(){ return traits != null && !traits.isEmpty(); }
 }

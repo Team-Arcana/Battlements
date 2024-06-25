@@ -1,4 +1,4 @@
-// 1.21	2024-06-24T18:20:36.4530172	Item Models: battlements
+// 1.21	2024-06-25T08:46:59.3644446	Item Models: battlements
 0d9c999c983324da1acc43d7fecf7caab432387b assets/battlements/models/item/copper_nugget.json
 963918ebe6dd7773c435f88e47e719c1a3ff3fc8 assets/battlements/models/item/diamond_shard.json
 0f97cffb76974fb5055ad172f91ee0518eaba920 assets/battlements/models/item/enderium_ingot.json
@@ -19,8 +19,8 @@ ad5c384da7aa8d974e0dbcb11f481f3814d98e94 assets/battlements/models/item/iron_cla
 d01054118f99d352e1547f826d52af4d58d3b6b6 assets/battlements/models/item/iron_club_inventory.json
 6368b4f593779b92c76a03beac23606e291f955e assets/battlements/models/item/iron_cutlass.json
 54dac19f3400cf6cfa131c969005daac4f494099 assets/battlements/models/item/iron_dagger.json
-239f839a9c5fc21fc059a90c420e4776f368b713 assets/battlements/models/item/iron_glaive.json
-be049be7fa2509bd6c65502bbf09c8e6188929c7 assets/battlements/models/item/iron_glaive_held.json
+dbc5b7d48036b84dcaed03f6f3d506b20963b4ea assets/battlements/models/item/iron_glaive.json
+e1a010ec7f38380c8944e5b45e9527b5c012369c assets/battlements/models/item/iron_glaive_held.json
 dddecdffaf73b069eb997e753c894f7e9375c99f assets/battlements/models/item/iron_glaive_inventory.json
 94f69732becaeadd6e4995e6b70a022ffe92ca11 assets/battlements/models/item/iron_greataxe.json
 c10024a660f00c4eb5f2abcee2655eba73ff5e24 assets/battlements/models/item/iron_greataxe_held.json
@@ -54,8 +54,8 @@ c29b03caa0993ae239118d81ad4652d87273f54c assets/battlements/models/item/iron_mau
 34a8f7c5875beb97155ab5602e6992b11c51ce91 assets/battlements/models/item/iron_pike.json
 993200707d4e6bbac44791c5fd3ae6ff7856d46c assets/battlements/models/item/iron_pike_held.json
 fef20c8ee19883c6835dd2b42d8a107938333191 assets/battlements/models/item/iron_pike_inventory.json
-f27e436befadafb79a1a8f9b0e9524dc0fcb6c92 assets/battlements/models/item/iron_pitchfork.json
-46a268042296cfeaf79e62dac8a0b2ca13dc8bb6 assets/battlements/models/item/iron_pitchfork_held.json
+17d9897a9f0a85b41167113fd158f5032af56c50 assets/battlements/models/item/iron_pitchfork.json
+57995a15bbe2e3cef3354c14977632c568480e16 assets/battlements/models/item/iron_pitchfork_held.json
 2566622d5fbe5a29afa85569be12776c2a827b51 assets/battlements/models/item/iron_pitchfork_inventory.json
 045ecb8f436eccb7d390a4d78d9da6d119692ffd assets/battlements/models/item/iron_quarterstaff.json
 e79f96337aaa7eef75a2ef00cd6eb788c00bc53e assets/battlements/models/item/iron_quarterstaff_held.json
@@ -69,10 +69,12 @@ e941fd51a153aaf35895eb580f0d5a1bc9e4ebbf assets/battlements/models/item/iron_sic
 e2888dd22592060d2198fa0c21688803a9f8406d assets/battlements/models/item/iron_spear.json
 d9fa92d63522e625339df6185c51a7d6f9b9d6e3 assets/battlements/models/item/iron_spear_held.json
 159ff79b0fbeeef6960c88b271315206d866fbce assets/battlements/models/item/iron_spear_inventory.json
+133960e2804257c0498b316840a4bf3f1710bb19 assets/battlements/models/item/iron_throwing_knife.json
 c33ea1199547e62a5bad7172930fe8fd02f516d0 assets/battlements/models/item/iron_tomahawk.json
 6518e3bc24fae0e250f6cd2c8e60346d8bd4164b assets/battlements/models/item/iron_warhammer.json
 e41f7ff75b1603295b19131f12ef912b949398cd assets/battlements/models/item/iron_warhammer_held.json
 6b1899a92060a5fa2d6f8c4b0834344feaa35057 assets/battlements/models/item/iron_warhammer_inventory.json
+223b1b07a3ec1b1583c7407caa9d8422d9ba9be5 assets/battlements/models/item/iron_warpick.json
 963e15e3415e2db49ae73fc92760578db045ef2b assets/battlements/models/item/pole.json
 59db0ec899beb170d6cb311c03847f22c3b89871 assets/battlements/models/item/pole_held.json
 f99cd8f388e6d4c966774dd0f9d7a1373fa2cf3b assets/battlements/models/item/pole_inventory.json
