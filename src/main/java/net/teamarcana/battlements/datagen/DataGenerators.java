@@ -22,15 +22,15 @@ public class DataGenerators {
 
         //generator.addProvider(event.includeServer(), new BattleRecipeProvider(packOutput));
 
-        //generator.addProvider(event.includeServer(), BattleLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), BattleLootTableProvider.create(packOutput, lookupProvider));
 
         //generator.addProvider(event.includeClient(), new BattleBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new BattleItemModelProvider(packOutput, existingFileHelper));
 
         //generator.addProvider(event.includeServer(), new BattleWorldGenProvider(packOutput, lookupProvider));
 
-        //BattleBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(),
-        //        new BattleBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
-        //generator.addProvider(event.includeServer(), new BattleItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+        BattleBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(),
+                new BattleBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new BattleItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter()));
     }
 }
