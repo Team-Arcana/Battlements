@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/base/boomerang_held",
+    "textures": {
+      "layer0": "battlements:item/stone_boomerang"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_boomerang"
+      }
+    },
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_boomerang"
+      }
+    }
+  }
+}

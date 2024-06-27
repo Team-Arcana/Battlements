@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "battlements:steel_ingot"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    "S|S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:steel_greatsword"
+  }
+}

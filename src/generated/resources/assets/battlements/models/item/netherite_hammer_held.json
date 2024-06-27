@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/hammer_held",
+  "textures": {
+    "layer0": "battlements:item/netherite_hammer_held"
+  }
+}

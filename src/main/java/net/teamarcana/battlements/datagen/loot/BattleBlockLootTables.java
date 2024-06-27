@@ -1,7 +1,6 @@
 package net.teamarcana.battlements.datagen.loot;
 
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.data.loot.LootTableProvider;
@@ -17,10 +16,14 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.teamarcana.battlements.init.BattleBlocks;
 import net.teamarcana.battlements.init.BattleItems;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
 public class BattleBlockLootTables extends BlockLootSubProvider {
     public BattleBlockLootTables(HolderLookup.Provider lookupProvider) {
         super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags(), lookupProvider);
@@ -30,7 +33,7 @@ public class BattleBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(BattleBlocks.STEEL_BLOCK.get());
         dropSelf(BattleBlocks.ENDERIUM_BLOCK.get());
-        createCopperLikeOreDrops(BattleBlocks.ENDER_CRYSTAL_BLOCk.get(), BattleItems.ENDER_CRYSTAL.get());
+        add(BattleBlocks.ENDER_CRYSTAL_BLOCk.get(), createCopperLikeOreDrops(BattleBlocks.ENDER_CRYSTAL_BLOCk.get(), BattleItems.ENDER_CRYSTAL.get()));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
@@ -74,7 +77,9 @@ public class BattleBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return BuiltInRegistries.BLOCK;
+        List<Block> knownBlocks = new ArrayList<>();
+        knownBlocks.addAll(BattleBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::get).toList());
+        return knownBlocks;
     }
 
     public static LootTableProvider.SubProviderEntry getEntry(){

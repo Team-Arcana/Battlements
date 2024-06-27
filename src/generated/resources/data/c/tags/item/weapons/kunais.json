@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_kunai",
+    "battlements:stone_kunai",
+    "battlements:golden_kunai",
+    "battlements:iron_kunai",
+    "battlements:steel_kunai",
+    "battlements:diamond_kunai",
+    "battlements:netherite_kunai",
+    "battlements:enderium_kunai"
+  ]
+}

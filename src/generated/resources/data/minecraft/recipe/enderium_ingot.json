@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "battlements:ender_crystal"
+    },
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "ESS",
+    "SS "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:enderium_ingot"
+  }
+}

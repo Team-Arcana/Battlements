@@ -29,4 +29,6 @@ public class BattleTraitTypes {
     public static final String RAPID_STRIKE = "rapid_strike";
     public static final String SLAM = "slam";
     public static final String TWO_HANDED = "two_handed";
+    public static final String THROWABLE = "throwable";
+    public static final String PARRYING = "parrying";
 }

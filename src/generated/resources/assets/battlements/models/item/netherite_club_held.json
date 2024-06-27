@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/club_held",
+  "textures": {
+    "layer0": "battlements:item/netherite_club_held"
+  }
+}

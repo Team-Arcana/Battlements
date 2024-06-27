@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "item": "battlements:netherite_nugget"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  s",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:netherite_kunai"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "tag": "minecraft:stone_crafting_materials"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "SS ",
+    "LL "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:stone_claw"
+  }
+}

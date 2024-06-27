@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/warhammer_held",
+  "textures": {
+    "layer0": "battlements:item/diamond_warhammer_held"
+  }
+}

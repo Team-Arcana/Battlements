@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "battlements:steel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "battlements:steel_ingot"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "item": "battlements:rock"
+    },
+    "|": {
+      "item": "battlements:pole"
+    }
+  },
+  "pattern": [
+    "  s",
+    " | ",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:stone_quarterstaff"
+  }
+}

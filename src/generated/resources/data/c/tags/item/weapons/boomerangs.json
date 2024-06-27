@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_boomerang",
+    "battlements:stone_boomerang",
+    "battlements:golden_boomerang",
+    "battlements:iron_boomerang",
+    "battlements:steel_boomerang",
+    "battlements:diamond_boomerang",
+    "battlements:netherite_boomerang",
+    "battlements:enderium_boomerang"
+  ]
+}

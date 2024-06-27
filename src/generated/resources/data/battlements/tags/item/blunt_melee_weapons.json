@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#c:weapons/clubs",
+    "#c:weapons/greatclubs",
+    "#c:weapons/hammers",
+    "#c:weapons/warhammers",
+    "#c:weapons/mauls",
+    "#c:weapons/anchors",
+    "#c:weapons/quarterstaves",
+    "minecraft:mace"
+  ]
+}

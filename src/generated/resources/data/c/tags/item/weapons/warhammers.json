@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_warhammer",
+    "battlements:stone_warhammer",
+    "battlements:golden_warhammer",
+    "battlements:iron_warhammer",
+    "battlements:steel_warhammer",
+    "battlements:diamond_warhammer",
+    "battlements:netherite_warhammer",
+    "battlements:enderium_warhammer"
+  ]
+}

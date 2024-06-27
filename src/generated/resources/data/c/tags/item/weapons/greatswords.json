@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_greatsword",
+    "battlements:stone_greatsword",
+    "battlements:golden_greatsword",
+    "battlements:iron_greatsword",
+    "battlements:steel_greatsword",
+    "battlements:diamond_greatsword",
+    "battlements:netherite_greatsword",
+    "battlements:enderium_greatsword"
+  ]
+}

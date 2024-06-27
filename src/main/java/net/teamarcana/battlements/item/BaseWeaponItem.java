@@ -1,11 +1,9 @@
 package net.teamarcana.battlements.item;
 
-import com.google.common.collect.ImmutableList;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -27,8 +25,9 @@ import net.neoforged.neoforge.common.ToolAction;
 import net.teamarcana.battlements.api.trait.TraitContainer;
 import net.teamarcana.battlements.api.trait.Trait;
 import net.teamarcana.battlements.api.trait.VersatileTrait;
-import net.teamarcana.battlements.api.weapon_type.Archetype;
+import net.teamarcana.battlements.api.archetype.Archetype;
 import net.teamarcana.battlements.init.BattleTraitTypes;
+import net.teamarcana.battlements.init.BattleTraits;
 
 import java.util.Collection;
 import java.util.List;
@@ -142,22 +141,13 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
                     }
                 }
             }
-            // just here for now until the traits exist
-            else{
-                if((item.is(ItemTags.PICKAXES) && state.is(BlockTags.MINEABLE_WITH_PICKAXE)) || (item.is(ItemTags.AXES) && state.is(BlockTags.MINEABLE_WITH_AXE)) || (item.is(ItemTags.HOES) && state.is(BlockTags.MINEABLE_WITH_HOE)) || (item.is(ItemTags.SHOVELS) && state.is(BlockTags.MINEABLE_WITH_SHOVEL))){
-                    item.hurtAndBreak(1, entity, EquipmentSlot.MAINHAND);
-                } else {
-                    item.hurtAndBreak(2, entity, EquipmentSlot.MAINHAND);
-                }
-            }
         }
         return true;
     }
 
-    // todo when the shield block trait is made
     @Override
     public boolean canDisableShield(ItemStack item, ItemStack shield, LivingEntity target, LivingEntity attacker) {
-        return super.canDisableShield(item, shield, target, attacker);
+        return hasTraits() && hasTrait(BattleTraits.SHIELD_BREACH.get()) ? true : super.canDisableShield(item, shield, target, attacker);
     }
 
     @Override

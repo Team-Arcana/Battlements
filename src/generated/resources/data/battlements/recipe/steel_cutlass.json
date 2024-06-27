@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "battlements:steel_ingot"
+    },
+    "s": {
+      "item": "battlements:steel_nugget"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " |s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:steel_cutlass"
+  }
+}

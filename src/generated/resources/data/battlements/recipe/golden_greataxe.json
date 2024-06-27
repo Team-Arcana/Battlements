@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:gold_ingot"
+    },
+    "|": {
+      "item": "battlements:pole"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "S| "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:golden_greataxe"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/hammer_held",
+  "textures": {
+    "layer0": "battlements:item/wooden_hammer_held"
+  }
+}

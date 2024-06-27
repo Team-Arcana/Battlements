@@ -1,0 +1,21 @@
+{
+  "values": [
+    "#c:weapons/daggers",
+    "#c:weapons/longswords",
+    "#c:weapons/greatswords",
+    "#c:weapons/katanas",
+    "#c:weapons/rapiers",
+    "#c:weapons/sabers",
+    "#c:weapons/sickles",
+    "#c:weapons/warpicks",
+    "#c:weapons/battleaxes",
+    "#c:weapons/greataxes",
+    "#c:weapons/spears",
+    "#c:weapons/pikes",
+    "#c:weapons/glaives",
+    "#c:weapons/scythes",
+    "#c:weapons/pitchforks",
+    "#c:weapons/halberds",
+    "#minecraft:swords"
+  ]
+}

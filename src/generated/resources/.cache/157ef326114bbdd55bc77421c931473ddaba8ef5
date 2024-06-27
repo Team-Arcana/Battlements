@@ -1,0 +1,5 @@
+// 1.21	2024-06-27T17:26:11.2448434	Tags for minecraft:block mod id battlements
+2dde7c2cba98c0e8afb19d3fb4928557e89bcb83 data/minecraft/tags/block/beacon_base_blocks.json
+05edbca4954606754f3e8710f17ea82f0cc5fd6d data/minecraft/tags/block/mineable/pickaxe.json
+43c17c0db039c5b9096c2ac529c60d2d4a5e8d95 data/minecraft/tags/block/needs_diamond_tool.json
+784c47e13f97d82f6679f42abcdf55202c486b56 data/minecraft/tags/block/needs_iron_tool.json

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "item": "battlements:steel_nugget"
+    },
+    "|": {
+      "item": "battlements:pole"
+    }
+  },
+  "pattern": [
+    "  s",
+    " | ",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:steel_quarterstaff"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/base/warhammer_held",
+    "textures": {
+      "layer0": "battlements:item/stone_warhammer_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_warhammer"
+      }
+    },
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_warhammer"
+      }
+    }
+  }
+}

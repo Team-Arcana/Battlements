@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/boomerang_held",
+  "textures": {
+    "layer0": "battlements:item/wooden_boomerang"
+  }
+}

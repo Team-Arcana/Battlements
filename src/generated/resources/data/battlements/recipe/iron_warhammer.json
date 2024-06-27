@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:iron_ingot"
+    },
+    "|": {
+      "item": "battlements:handle"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SS ",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:iron_warhammer"
+  }
+}

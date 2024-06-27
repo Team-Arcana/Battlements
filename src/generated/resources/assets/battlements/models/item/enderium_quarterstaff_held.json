@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/polearm_held",
+  "textures": {
+    "layer0": "battlements:item/enderium_quarterstaff_held"
+  }
+}

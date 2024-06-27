@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_pike",
+    "battlements:stone_pike",
+    "battlements:golden_pike",
+    "battlements:iron_pike",
+    "battlements:steel_pike",
+    "battlements:diamond_pike",
+    "battlements:netherite_pike",
+    "battlements:enderium_pike"
+  ]
+}

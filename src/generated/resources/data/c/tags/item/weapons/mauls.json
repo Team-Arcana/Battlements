@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_maul",
+    "battlements:stone_maul",
+    "battlements:golden_maul",
+    "battlements:iron_maul",
+    "battlements:steel_maul",
+    "battlements:diamond_maul",
+    "battlements:netherite_maul",
+    "battlements:enderium_maul"
+  ]
+}

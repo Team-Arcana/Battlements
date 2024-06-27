@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": {
+      "tag": "minecraft:wooden_buttons"
+    },
+    "|": {
+      "item": "battlements:pole"
+    }
+  },
+  "pattern": [
+    "  s",
+    " | ",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:wooden_quarterstaff"
+  }
+}

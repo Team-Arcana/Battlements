@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/maul_held",
+  "textures": {
+    "layer0": "battlements:item/stone_maul_held"
+  }
+}

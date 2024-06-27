@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#minecraft:enchantable/sword",
+    "#c:weapons/longswords",
+    "#c:weapons/greatswords",
+    "#c:weapons/sabers",
+    "#c:weapons/glaives"
+  ]
+}

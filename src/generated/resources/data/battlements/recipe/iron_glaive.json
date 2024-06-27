@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:iron_ingot"
+    },
+    "s": {
+      "item": "minecraft:iron_nugget"
+    },
+    "|": {
+      "item": "battlements:pole"
+    }
+  },
+  "pattern": [
+    " sS",
+    "  |"
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:iron_glaive"
+  }
+}

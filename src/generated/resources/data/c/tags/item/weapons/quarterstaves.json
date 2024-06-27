@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_quarterstaff",
+    "battlements:stone_quarterstaff",
+    "battlements:golden_quarterstaff",
+    "battlements:iron_quarterstaff",
+    "battlements:steel_quarterstaff",
+    "battlements:diamond_quarterstaff",
+    "battlements:netherite_quarterstaff",
+    "battlements:enderium_quarterstaff"
+  ]
+}

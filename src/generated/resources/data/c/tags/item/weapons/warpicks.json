@@ -1,0 +1,12 @@
+{
+  "values": [
+    "battlements:wooden_warpick",
+    "battlements:stone_warpick",
+    "battlements:golden_warpick",
+    "battlements:iron_warpick",
+    "battlements:steel_warpick",
+    "battlements:diamond_warpick",
+    "battlements:netherite_warpick",
+    "battlements:enderium_warpick"
+  ]
+}

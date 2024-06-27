@@ -52,22 +52,22 @@ public class Trait {
     public Trait setMagnitude(float magnitude){ this.magnitude = magnitude; return this; }
     public float getMagnitude() { return magnitude; }
 
-    public Trait setMelee(boolean melee){ this.isMelee = melee; return this; }
+    public Trait setMelee(){ this.isMelee = true; return this; }
     public boolean isMelee() { return isMelee; }
 
 
-    public Trait setRanged(boolean ranged){ this.isRanged = ranged; return this; }
+    public Trait setRanged(){ this.isRanged = true; return this; }
     public boolean isRanged() { return isRanged; }
 
 
-    public Trait setThrowing(boolean throwing){ this.isThrowing = throwing; return this; }
+    public Trait setThrowing(){ this.isThrowing = true; return this; }
     public boolean isThrowing() { return isThrowing; }
 
 
-    public Trait setAction(boolean action){ this.isAction = action; return this; }
+    public Trait setAction(){ this.isAction = true; return this; }
     public boolean isAction() { return isAction; }
 
-    public Trait setUniversal(boolean universal){ setMelee(universal); setRanged(universal); setThrowing(universal); setAction(universal); return this; }
+    public Trait setUniversal(){ setMelee(); setRanged(); setThrowing(); setAction(); return this; }
     public boolean isUniversal(){return isMelee && isRanged && isThrowing && isAction ;}
 
     public String getType() { return type; }

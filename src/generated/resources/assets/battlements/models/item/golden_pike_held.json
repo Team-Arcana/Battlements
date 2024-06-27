@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/large_polearm_held",
+  "textures": {
+    "layer0": "battlements:item/golden_pike_held"
+  }
+}
