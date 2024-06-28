@@ -29,8 +29,8 @@ public class VersatileTrait extends Trait{
     public MutableComponent addTooltipTitle() {
         MutableComponent title = Component.literal("- ").withStyle(qualityFormat);
         String type = effectiveBlocks != null && toolName != null && !toolName.isEmpty() ?
-                String.format("tooltip.%s.weapontrait.versatile.%s", modId, toolName)
-                : String.format("tooltip.%s.weapontrait.versatile.none", modId);
-        return title.append(type);
+                String.format("tooltip.%s.trait.versatile_%s", modId, toolName)
+                : String.format("tooltip.%s.trait.versatile_none", modId);
+        return title.append(Component.translatable(type));
     }
 }

@@ -21,15 +21,14 @@ public class BattleItems {
     public static final DeferredItem<Item> STEEL_INGOT = ITEMS.registerSimpleItem("steel_ingot", new Item.Properties());
     public static final DeferredItem<Item> STEEL_NUGGET = ITEMS.registerSimpleItem("steel_nugget", new Item.Properties());
     public static final DeferredItem<Item> NETHERITE_NUGGET = ITEMS.registerSimpleItem("netherite_nugget", new Item.Properties());
+    public static final DeferredItem<Item> ENDER_CRYSTAL = ITEMS.registerSimpleItem("ender_crystal", new Item.Properties());
+    public static final DeferredItem<Item> ENDERIUM_INGOT = ITEMS.registerSimpleItem("enderium_ingot", new Item.Properties());
+    public static final DeferredItem<Item> ENDERIUM_NUGGET = ITEMS.registerSimpleItem("enderium_nugget", new Item.Properties());
 
     // the blocks [because I apparently have to do this now]
     public static final DeferredItem<BlockItem> STEEL_BLOCK = ITEMS.registerSimpleBlockItem(BattleBlocks.STEEL_BLOCK);
     public static final DeferredItem<BlockItem> ENDERIUM_BLOCK = ITEMS.registerSimpleBlockItem(BattleBlocks.ENDERIUM_BLOCK);
     public static final DeferredItem<BlockItem> ENDER_CRYSTAL_BLOCK = ITEMS.registerSimpleBlockItem(BattleBlocks.ENDER_CRYSTAL_BLOCk);
-
-    public static final DeferredItem<Item> ENDER_CRYSTAL = ITEMS.registerSimpleItem("ender_crystal", new Item.Properties());
-    public static final DeferredItem<Item> ENDERIUM_INGOT = ITEMS.registerSimpleItem("enderium_ingot", new Item.Properties());
-    public static final DeferredItem<Item> ENDERIUM_NUGGET = ITEMS.registerSimpleItem("enderium_nugget", new Item.Properties());
 
     // new Base Tools and Weapons
     public static final DeferredItem<Item> STEEL_SWORD = ITEMS.register(

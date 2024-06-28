@@ -29,6 +29,6 @@
   "slots": [
     "mainhand"
   ],
-  "supported_items": "#neoforge:enchantable/knockback",
+  "supported_items": "#c:enchantable/knockback",
   "weight": 5
 }

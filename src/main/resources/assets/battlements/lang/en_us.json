@@ -1,6 +1,27 @@
 {
   "itemGroup.battlements": "Battlements Weapons",
 
+  "tooltip.battlements.trait.versatile_pickaxe": "Versatile (Pickaxe)",
+  "tooltip.battlements.trait.versatile_pickaxe.desc": "can be used as a pickaxe",
+
+  "tooltip.battlements.trait.versatile_axe": "Versatile (Axe)",
+  "tooltip.battlements.trait.versatile_axe.desc": "can be used as an axe",
+
+  "tooltip.battlements.trait.versatile_shovel": "Versatile (Shovel)",
+  "tooltip.battlements.trait.versatile_shovel.desc": "can be used as a shovel",
+
+  "tooltip.battlements.trait.versatile_hoe": "Versatile (Hoe)",
+  "tooltip.battlements.trait.versatile_hoe.desc": "can be used as a hoe",
+
+  "tooltip.battlements.trait.throwable": "Throwable",
+  "tooltip.battlements.trait.throwable.desc": "can be thrown",
+
+  "tooltip.battlements.trait.parrying": "Parrying",
+  "tooltip.battlements.trait.parrying.desc": "hold right click to block melee attacks",
+
+  "tooltip.battlements.trait.shield_breach": "Shield Breach",
+  "tooltip.battlements.trait.shield_breach.desc": "can disable shields for a tiny bit",
+
   "item.battlements.handle": "Handle",
   "item.battlements.pole": "Pole",
   "item.battlements.rock": "Rock",

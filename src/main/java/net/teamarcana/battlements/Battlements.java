@@ -1,7 +1,8 @@
 package net.teamarcana.battlements;
-
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
-import net.neoforged.neoforge.registries.NewRegistryEvent;
 import net.neoforged.neoforge.registries.RegistryBuilder;
 import net.teamarcana.battlements.api.trait.Trait;
 import net.teamarcana.battlements.init.*;
@@ -30,11 +31,14 @@ public class Battlements
     public static final Logger LOGGER = LogUtils.getLogger();
     public static boolean isBetterCombatHere;
 
+    // stuff for trait registering
+    public static final ResourceKey<Registry<Trait>> TRAIT_REGISTRY_KEY = ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(MOD_ID, "trait"));
+    public static final Registry<Trait> TRAIT_REGISTRY = new RegistryBuilder<>(TRAIT_REGISTRY_KEY).create();
+
     public Battlements(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        //modEventBus.addListener(this::registerRegistries);
 
         // registering stuff
         BattleTraits.register(modEventBus);

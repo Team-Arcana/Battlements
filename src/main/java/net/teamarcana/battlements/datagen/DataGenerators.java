@@ -1,10 +1,8 @@
 package net.teamarcana.battlements.datagen;
 
-import io.netty.bootstrap.Bootstrap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.worldgen.BootstrapContext;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -34,5 +32,6 @@ public class DataGenerators {
         BattleBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(),
                 new BattleBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new BattleItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new TraitTagProvider(packOutput, lookupProvider, Battlements.MOD_ID, existingFileHelper));
     }
 }

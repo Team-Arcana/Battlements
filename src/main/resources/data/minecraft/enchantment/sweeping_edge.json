@@ -37,6 +37,6 @@
     "slots": [
       "mainhand"
     ],
-    "supported_items": "#neoforge:enchantable/sweeping",
+    "supported_items": "#c:enchantable/sweeping",
     "weight": 2
   }

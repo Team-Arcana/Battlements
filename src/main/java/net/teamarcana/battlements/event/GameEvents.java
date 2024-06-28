@@ -1,5 +1,7 @@
 package net.teamarcana.battlements.event;
 
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -18,7 +20,8 @@ public class GameEvents {
 
         Log.debug(String.format("Initializing reloadables for %s values", reloadList.size()));
         long start = System.nanoTime();
-        reloadList.forEach((item) -> item.reload());
+        RegistryAccess registryAccess = event.getRegistryAccess();
+        reloadList.forEach((item) -> item.reload(registryAccess));
         long end = System.nanoTime();
         double milliseconds = (end-start) / 1000000.0d;
         Log.info(String.format("Finished initialising Weapon Traits & Attributes! Took %s ms", milliseconds));

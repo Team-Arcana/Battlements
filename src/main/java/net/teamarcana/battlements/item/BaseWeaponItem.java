@@ -1,7 +1,9 @@
 package net.teamarcana.battlements.item;
 
+import com.google.common.collect.ImmutableList;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
@@ -22,6 +24,8 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ToolAction;
+import net.teamarcana.battlements.api.IReloadable;
+import net.teamarcana.battlements.api.ReloadHandler;
 import net.teamarcana.battlements.api.trait.TraitContainer;
 import net.teamarcana.battlements.api.trait.Trait;
 import net.teamarcana.battlements.api.trait.VersatileTrait;
@@ -33,30 +37,32 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWeaponItem>{
+public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWeaponItem>, IReloadable {
     protected String customName = null;
     protected static ItemAttributeModifiers modifiers;
     protected Archetype archetype;
-    protected static List<Trait> traits;
+    protected static List<Trait> traits = List.of();
     protected static Tier tier;
     protected static float attackDamage;
     protected static float attackSpeed;
 
-    // todo: get the durability bars to stop showing
-    // so the reason why the durability bats are like that is because for some reason it's stuck
-    // at 248/250 durability [for iron weapons]
+
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties) {
-        super(tier, properties.attributes(createAttributes(tier, archetype)).durability(tier.getUses()));
+        super(tier, properties.durability(tier.getUses()).attributes(BaseWeaponItem.createBaseModifiers(tier, archetype)));
         this.tier = tier;
         this.archetype = archetype;
+        ReloadHandler.addToReloadables(this);
     }
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties, String customName) {
         this(tier, archetype, properties);
         this.customName = customName;
     }
 
-    public static ItemAttributeModifiers createAttributes(Tier tier, Archetype archetype) {
-        traits = archetype.hasTraits() ? archetype.getTraits() : List.of();
+    @Override
+    public void reload(RegistryAccess registryAccess) {
+        ImmutableList.Builder<Trait> traitBuilder = new ImmutableList.Builder<>();
+        traitBuilder.addAll(archetype.getTraits());
+        traits = traitBuilder.build();
 
         attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
         attackSpeed = archetype.getAttackSpeed();
@@ -76,17 +82,35 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
                 new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed - 4.0d, AttributeModifier.Operation.ADD_VALUE),
                 EquipmentSlotGroup.MAINHAND
         );
-        if(hasTraits()){
-            traits.forEach(trait -> {
-                trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
-            });
-        }
+        traits.forEach(trait -> {
+            trait.getMeleeCallback().ifPresent(callback -> callback.onModifyAttributes(attributeModifiers));
+        });
         modifiers = attributeModifiers.build();
+    }
+
+    public static ItemAttributeModifiers createBaseModifiers(Tier tier, Archetype archetype){
+        attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
+        attackSpeed = archetype.getAttackSpeed();
+
+        // initialize the item modifiers
+        ItemAttributeModifiers.Builder attributeModifiers = ItemAttributeModifiers.builder();
+        attributeModifiers.add(
+                Attributes.ATTACK_DAMAGE,
+                new AttributeModifier(
+                        BASE_ATTACK_DAMAGE_ID,
+                        attackDamage,
+                        AttributeModifier.Operation.ADD_VALUE
+                ),
+                EquipmentSlotGroup.MAINHAND
+        ).add(
+                Attributes.ATTACK_SPEED,
+                new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed - 4.0d, AttributeModifier.Operation.ADD_VALUE),
+                EquipmentSlotGroup.MAINHAND
+        );
         return attributeModifiers.build();
     }
 
     public boolean isVersatile(){ return hasTraitWithType(BattleTraitTypes.VERSATILE); }
-
     public Archetype getArchetype() { return archetype; }
 
     @Override
@@ -121,9 +145,7 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
     @Override
     public void inventoryTick(ItemStack item, Level level, Entity entity, int slot, boolean isSelected) {
         if(entity instanceof LivingEntity living){
-            if(hasTraits()){
-                traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> inventoryTick(item, level, living, slot, isSelected)));
-            }
+            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> inventoryTick(item, level, living, slot, isSelected)));
         }
         super.inventoryTick(item, level, entity, slot, isSelected);
     }
@@ -131,15 +153,16 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
     @Override
     public boolean mineBlock(ItemStack item, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
         if (state.getDestroySpeed(level, pos) != 0.0F){
-            if (hasTraits()) {
-                for (Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)) {
-                    VersatileTrait versatileTrait = (VersatileTrait) trait;
-                    if (state.is(versatileTrait.getEffectiveBlocks())) {
-                        item.hurtAndBreak(1, entity, EquipmentSlot.MAINHAND);
-                    } else {
-                        item.hurtAndBreak(2, entity, EquipmentSlot.MAINHAND);
-                    }
+            for (Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)) {
+                VersatileTrait versatileTrait = (VersatileTrait) trait;
+                if (state.is(versatileTrait.getEffectiveBlocks())) {
+                    item.hurtAndBreak(1, entity, EquipmentSlot.MAINHAND);
+                } else {
+                    item.hurtAndBreak(2, entity, EquipmentSlot.MAINHAND);
                 }
+            }
+            if(!hasTraitWithType(BattleTraitTypes.VERSATILE)){
+                item.hurtAndBreak(2, entity, EquipmentSlot.MAINHAND);
             }
         }
         return true;
@@ -147,22 +170,18 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public boolean canDisableShield(ItemStack item, ItemStack shield, LivingEntity target, LivingEntity attacker) {
-        return hasTraits() && hasTrait(BattleTraits.SHIELD_BREACH.get()) ? true : super.canDisableShield(item, shield, target, attacker);
+        return hasTrait(BattleTraits.SHIELD_BREACH.get()) || super.canDisableShield(item, shield, target, attacker);
     }
 
     @Override
     public boolean hurtEnemy(ItemStack item, LivingEntity target, LivingEntity attacker) {
-        if(hasTraits()){
-            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.hurtEnemy(tier, item, target, attacker, null)));
-        }
+        traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.hurtEnemy(tier, item, target, attacker, null)));
         return true;
     }
 
     @Override
     public void postHurtEnemy(ItemStack item, LivingEntity target, LivingEntity attacker) {
-        if(hasTraits()){
-            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.postHurtEnemy(tier, item, target, attacker, null)));
-        }
+        traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.postHurtEnemy(tier, item, target, attacker, null)));
         item.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
     }
 
@@ -241,9 +260,7 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public void onCraftedBy(ItemStack item, Level level, Player player) {
-        if(hasTraits()){
-            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.onCraftedBy(tier, item, level, player)));
-        }
+        traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> callback.onCraftedBy(tier, item, level, player)));
         super.onCraftedBy(item, level, player);
     }
 
@@ -254,11 +271,9 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public boolean canAttackBlock(BlockState state, Level level, BlockPos pos, Player player) {
-        if(hasTraits()){
-            for(Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)){
-                VersatileTrait versatileTrait = ((VersatileTrait) trait);
-                if(state.is(versatileTrait.getEffectiveBlocks())){ return true; }
-            }
+        for(Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)){
+            VersatileTrait versatileTrait = ((VersatileTrait) trait);
+            if(state.is(versatileTrait.getEffectiveBlocks())){ return true; }
         }
         return !player.isCreative() && super.canAttackBlock(state, level, pos, player);
     }
@@ -281,7 +296,6 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public Trait getFirstTraitWithType(String type) {
-        if(!hasTraits()){ return null; }
         for(Trait trait : traits){
             if(trait.getType().equals(type)){ return trait; }
         }
@@ -290,7 +304,7 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public List<Trait> getAllTraitsWithType(String type) {
-        return hasTraits() ? traits.stream().filter(trait -> trait.getType().equals(type)).toList() : List.of();
+        return traits.stream().filter(trait -> trait.getType().equals(type)).toList();
     }
 
     @Override
@@ -298,5 +312,5 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
         return traits;
     }
 
-    public static boolean hasTraits(){ return traits != null && !traits.isEmpty(); }
+    public static boolean hasTraits(){ return !traits.isEmpty(); }
 }

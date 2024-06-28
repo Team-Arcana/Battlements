@@ -107,8 +107,8 @@ public class Trait {
 
     public MutableComponent addTooltipTitle(){
         MutableComponent title = Component.literal("- ").withStyle(qualityFormat);
-        if(level == 0){ title.append(Component.translatable(String.format("tooltip.%s.weapontrait.%s"), modId, type)); }
-        else { title.append(Component.translatable(String.format("tooltip.%s.weapontrait.%s"), modId, type)
+        if(level == 0){ title.append(Component.translatable(String.format("tooltip.%s.trait.%s"), modId, type)); }
+        else { title.append(Component.translatable(String.format("tooltip.%s.trait.%s"), modId, type)
                 .append(Component.literal(" ")).append(Component.translatable(String.format("enchantment.level.%s", Integer.toString(level))))); }
         return title;
     }

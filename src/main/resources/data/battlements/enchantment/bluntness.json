@@ -31,6 +31,6 @@
     "slots": [
       "mainhand"
     ],
-    "supported_items": "#neoforge:enchantable/blunt_weapon",
+    "supported_items": "#c:enchantable/blunt_weapon",
     "weight": 10
   }
