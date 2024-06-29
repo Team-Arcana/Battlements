@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "caverns_and_chasms:item/necromium_pickaxe",
-    "layer1": "battlements:item/layer1/pickaxe"
-  }
-}

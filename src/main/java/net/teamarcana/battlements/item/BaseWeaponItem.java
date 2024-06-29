@@ -45,7 +45,7 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
     protected static Tier tier;
     protected static float attackDamage;
     protected static float attackSpeed;
-
+    //protected static Tool;
 
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties) {
         super(tier, properties.durability(tier.getUses()).attributes(BaseWeaponItem.createBaseModifiers(tier, archetype)));
@@ -132,28 +132,21 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
 
     @Override
     public float getDestroySpeed(ItemStack item, BlockState state) {
-        for(Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)){
+        List<Trait> versatileTraits = getAllTraitsWithType(BattleTraitTypes.VERSATILE);
+        for (Trait trait : versatileTraits) {
             VersatileTrait versatileTrait = ((VersatileTrait) trait);
             if(state.is(versatileTrait.getEffectiveBlocks())){
                 return tier.getSpeed();
             }
         }
         if(archetype.isSharp()){ return state.is(Blocks.COBWEB) ? 15.0f : (state.is(BlockTags.SWORD_EFFICIENT) ? 1.5f : 1.0f); }
-        return super.getDestroySpeed(item, state);
+        return 1.0f;
     }
-
-    @Override
-    public void inventoryTick(ItemStack item, Level level, Entity entity, int slot, boolean isSelected) {
-        if(entity instanceof LivingEntity living){
-            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> inventoryTick(item, level, living, slot, isSelected)));
-        }
-        super.inventoryTick(item, level, entity, slot, isSelected);
-    }
-
     @Override
     public boolean mineBlock(ItemStack item, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
         if (state.getDestroySpeed(level, pos) != 0.0F){
-            for (Trait trait : getAllTraitsWithType(BattleTraitTypes.VERSATILE)) {
+            List<Trait> versatileTraits = getAllTraitsWithType(BattleTraitTypes.VERSATILE);
+            for (Trait trait : versatileTraits) {
                 VersatileTrait versatileTrait = (VersatileTrait) trait;
                 if (state.is(versatileTrait.getEffectiveBlocks())) {
                     item.hurtAndBreak(1, entity, EquipmentSlot.MAINHAND);
@@ -166,6 +159,14 @@ public class BaseWeaponItem extends TieredItem implements TraitContainer<BaseWea
             }
         }
         return true;
+    }
+
+    @Override
+    public void inventoryTick(ItemStack item, Level level, Entity entity, int slot, boolean isSelected) {
+        if(entity instanceof LivingEntity living){
+            traits.forEach(trait -> trait.getMeleeCallback().ifPresent(callback -> inventoryTick(item, level, living, slot, isSelected)));
+        }
+        super.inventoryTick(item, level, entity, slot, isSelected);
     }
 
     @Override
