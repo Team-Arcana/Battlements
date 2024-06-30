@@ -2,12 +2,9 @@ package net.teamarcana.battlements.init;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.teamarcana.battlements.Battlements;
 
 public class CommunityTags {
     public static final TagKey<Item> INGOTS_STEEL = itemTag("ingots/steel");
@@ -56,6 +53,12 @@ public class CommunityTags {
     public static final TagKey<Item> KNOCKBACK_ENCHANTABLE = itemTag("enchantable/knockback");
     public static final TagKey<Item> SWEEPING_ENCHANTABLE = itemTag("enchantable/sweeping");
     public static final TagKey<Item> LOOTING_ENCHANTABLE = itemTag("enchantable/looting");
+
+    // tags for archetypes
+    public static final TagKey<Item> STUNNING = itemTag("weapon_stat/stunning");
+    public static final TagKey<Item> BLEEDING = itemTag("weapon_stat/bleeding");
+    public static final TagKey<Item> SWEEPING = itemTag("weapon_stat/sweeping");
+    public static final TagKey<Item> BACKSTABBING = itemTag("weapon_stat/backstabbing");
 
     private static TagKey<Item> itemTag(String path){
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));

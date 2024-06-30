@@ -24,6 +24,6 @@ public class GameEvents {
         reloadList.forEach((item) -> item.reload(registryAccess));
         long end = System.nanoTime();
         double milliseconds = (end-start) / 1000000.0d;
-        Log.info(String.format("Finished initialising Weapon Traits & Attributes! Took %s ms", milliseconds));
+        Log.info(String.format("Finished initialising reloadables. Took %s ms", milliseconds));
     }
 }
