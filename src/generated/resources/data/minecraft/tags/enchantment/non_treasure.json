@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "battlements:frostbite",
+      "required": false
+    },
+    {
+      "id": "battlements:life_steal",
+      "required": false
+    },
+    {
+      "id": "battlements:bluntness",
+      "required": false
+    }
+  ]
+}

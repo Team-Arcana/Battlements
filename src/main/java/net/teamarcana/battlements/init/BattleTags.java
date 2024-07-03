@@ -1,15 +1,12 @@
 package net.teamarcana.battlements.init;
 
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.teamarcana.battlements.Battlements;
-import net.teamarcana.battlements.api.trait.Trait;
 
 public class BattleTags {
     public static class Blocks{
@@ -29,8 +26,20 @@ public class BattleTags {
         public static final TagKey<Item> BLADED_THROWING = tag("bladed_throwing_weapons");
         public static final TagKey<Item> BLUNT_THROWING = tag("blunt_throwing_weapons");
 
+        public static final TagKey<Item> FROSTBITE_ENCHANTABLE = tag("enchantable/frostbite");
+
+        // special tag for items that are tools/weapons/armor
+        public static final TagKey<Item> EQUIPPABLE = tag("equipment");
+
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, name));
         }
+    }
+    public static class Enchantments{
+        public static final TagKey<Enchantment> EXCLUSIVE_ELEMENTAL = tag("exclusive_set/elemental");
+        private static TagKey<Enchantment> tag(String name) {
+            return TagKey.create(Registries.ENCHANTMENT, ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, name));
+        }
+
     }
 }

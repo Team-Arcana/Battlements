@@ -21,6 +21,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.init.BattleItems;
+import net.teamarcana.battlements.init.BattleModelOverrides;
 
 import java.util.LinkedHashMap;
 import java.util.Objects;
@@ -56,7 +57,20 @@ public class BattleItemModelProvider extends ItemModelProvider {
         simpleItem(BattleItems.NETHERITE_NUGGET);
         simpleItem(BattleItems.ENDER_CRYSTAL);
         simpleItem(BattleItems.ENDERIUM_INGOT);
+        simpleItem(BattleItems.ENDERIUM_NUGGET);
         simpleItem(BattleItems.ROCK);
+
+        handheldItem(BattleItems.STEEL_SWORD.get());
+        handheldItem(BattleItems.STEEL_PICKAXE.get());
+        handheldItem(BattleItems.STEEL_AXE.get());
+        handheldItem(BattleItems.STEEL_SHOVEL.get());
+        handheldItem(BattleItems.STEEL_HOE.get());
+
+        handheldItem(BattleItems.ENDERIUM_SWORD.get());
+        handheldItem(BattleItems.ENDERIUM_PICKAXE.get());
+        handheldItem(BattleItems.ENDERIUM_AXE.get());
+        handheldItem(BattleItems.ENDERIUM_SHOVEL.get());
+        handheldItem(BattleItems.ENDERIUM_HOE.get());
 
         // WOODEN WEAPONS
         handheldItem(BattleItems.WOODEN_DAGGER.get());
@@ -495,6 +509,104 @@ public class BattleItemModelProvider extends ItemModelProvider {
     public ItemModelBuilder heldItemWithExistingModel2(ResourceLocation item, String existingModelPath) {
         return withExistingParent(item + "_held",
                 existingModelPath)
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // Weapon Item Modeling
+    public ItemModelBuilder weaponItem(Item item){
+        return weaponItem(Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item)));
+    }
+    public ItemModelBuilder weaponItem(ResourceLocation item){
+        ItemModelBuilder heldModel = weaponItemHandheld(item);
+        ItemModelBuilder parryModel = weaponItemParrying(item);
+        ItemModelBuilder throwingModel = weaponItemThrowing(item);
+        return withExistingParent(item.toString(), heldModel.getLocation())
+                .override().predicate(BattleModelOverrides.PARRYING, 1.0f).model(new ModelFile.ExistingModelFile(parryModel.getLocation(), existingFileHelper)).end()
+                .override().predicate(BattleModelOverrides.THROWING, 1.0f).model(new ModelFile.ExistingModelFile(throwingModel.getLocation(), existingFileHelper)).end();
+    }
+
+    // normal
+    public ItemModelBuilder weaponItemHandheld(ResourceLocation item) {
+        return withExistingParent(item + "_held",
+                "battlements:item/base/handheld")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // parrying
+    public ItemModelBuilder weaponItemParrying(ResourceLocation item) {
+        return withExistingParent(item + "_parrying",
+                "battlements:item/base/handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // throwing
+    public ItemModelBuilder weaponItemThrowing(ResourceLocation item) {
+        return withExistingParent(item + "_throwing",
+                "battlements:item/base/handheld_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // Large Weapon Item Modeling
+    public ItemModelBuilder largeWeaponItem(Item item){
+        return largeWeaponItem(Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item)));
+    }
+    public ItemModelBuilder largeWeaponItem(ResourceLocation item){
+        ItemModelBuilder heldModel = largeWeaponItemHandheld(item);
+        ItemModelBuilder parryModel = largeWeaponItemParrying(item);
+        ItemModelBuilder throwingModel = largeWeaponItemThrowing(item);
+        return withExistingParent(item.toString(), heldModel.getLocation())
+                .override().predicate(BattleModelOverrides.PARRYING, 1.0f).model(new ModelFile.ExistingModelFile(parryModel.getLocation(), existingFileHelper)).end()
+                .override().predicate(BattleModelOverrides.THROWING, 1.0f).model(new ModelFile.ExistingModelFile(throwingModel.getLocation(), existingFileHelper)).end();
+    }
+
+    // normal
+    public ItemModelBuilder largeWeaponItemHandheld(ResourceLocation item) {
+        return withExistingParent(item + "_held",
+                "battlements:item/base/large_handheld")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+    public ItemModelBuilder largeWeaponItemHandheldInHand(ResourceLocation item) {
+        return withExistingParent(item + "_held_in_hand",
+                "battlements:item/base/large_handheld")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+    public ItemModelBuilder largeWeaponItemHandheldInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_held_in_inventory",
+                "battlements:item/base/large_handheld")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+
+    // parrying
+    public ItemModelBuilder largeWeaponItemParrying(ResourceLocation item) {
+        return withExistingParent(item + "_parrying",
+                "battlements:item/base/handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder largeWeaponItemParryingInHand(ResourceLocation item) {
+        return withExistingParent(item + "_parrying_in_hand",
+                "battlements:item/base/handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder largeWeaponItemParryingInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_parrying_in_inventory",
+                "battlements:item/base/handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // throwing
+    public ItemModelBuilder largeWeaponItemThrowing(ResourceLocation item) {
+        return withExistingParent(item + "_throwing",
+                "battlements:item/base/handheld_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder largeWeaponItemThrowingInHand(ResourceLocation item) {
+        return withExistingParent(item + "_throwing_in_hand",
+                "battlements:item/base/handheld_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder largeWeaponItemThrowingInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_throwing_in_inventory",
+                "battlements:item/base/handheld_throwing")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 }

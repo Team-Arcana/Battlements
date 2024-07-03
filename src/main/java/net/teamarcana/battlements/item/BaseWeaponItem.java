@@ -1,7 +1,9 @@
 package net.teamarcana.battlements.item;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -16,6 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ToolAction;
+import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
 
 import java.util.List;
@@ -27,6 +30,10 @@ public class BaseWeaponItem extends TieredItem{
     protected static Tier tier;
     protected static float attackDamage;
     protected static float attackSpeed;
+    protected static float knockbackMod;
+
+    public static final ResourceLocation BASE_ENTITY_REACH_ID = ResourceLocation.withDefaultNamespace("base_entity_reach");
+    public static final ResourceLocation BASE_ATTACK_KNOCKBACK_ID = ResourceLocation.withDefaultNamespace("base_attack_knockback");
 
     public BaseWeaponItem(Tier tier, Archetype archetype, Properties properties) {
         super(tier, properties.durability(tier.getUses()).attributes(BaseWeaponItem.createAttributeModifiers(tier, archetype)));
@@ -41,6 +48,7 @@ public class BaseWeaponItem extends TieredItem{
     public static ItemAttributeModifiers createAttributeModifiers(Tier tier, Archetype archetype){
         attackDamage = (tier.getAttackDamageBonus() * archetype.getAttackDamageMultiplier()) + archetype.getBaseAttackDamage() - 1.0f;
         attackSpeed = archetype.getAttackSpeed();
+        knockbackMod = archetype.getKnockbackMod();
 
         // initialize the item modifiers
         ItemAttributeModifiers.Builder attributeModifiers = ItemAttributeModifiers.builder();
@@ -57,7 +65,30 @@ public class BaseWeaponItem extends TieredItem{
                 new AttributeModifier(BASE_ATTACK_SPEED_ID, attackSpeed - 4.0d, AttributeModifier.Operation.ADD_VALUE),
                 EquipmentSlotGroup.MAINHAND
         );
-        return attributeModifiers.build();
+        if(archetype.getSize() > 0 && !Battlements.isBetterCombatHere()){
+            attributeModifiers.add(
+                    Attributes.ENTITY_INTERACTION_RANGE,
+                    new AttributeModifier(
+                            BASE_ENTITY_REACH_ID,
+                            (5 + archetype.getSize()) - 5.0f,
+                            AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+            );
+        }
+        if(archetype.getKnockbackMod() > 0){
+            attributeModifiers.add(
+                    Attributes.ATTACK_KNOCKBACK,
+                    new AttributeModifier(
+                            BASE_ATTACK_KNOCKBACK_ID,
+                            knockbackMod,
+                            AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+            );
+        }
+        modifiers = attributeModifiers.build();
+        return modifiers;
     }
 
     public Archetype getArchetype() { return archetype; }

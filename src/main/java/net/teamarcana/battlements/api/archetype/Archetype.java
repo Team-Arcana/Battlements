@@ -23,6 +23,8 @@ public class Archetype{
     protected int twoHanded = 0;
     protected boolean hasExtendedReach = false;
 
+    protected float knockbackMod = 0;
+
     protected Set<ToolAction> toolActions = Set.of();
     protected final TagKey<Block> effectiveBlocks;
     protected boolean isSharp = false;
@@ -61,11 +63,15 @@ public class Archetype{
     public float getBaseAttackDamage() { return baseAttackDamage; }
     public float getAttackDamageMultiplier() { return attackDamageMultiplier; }
     public float getAttackSpeed() { return attackSpeed; }
+    public float getSize(){ return size; }
 
     public Set<ToolAction> getToolActions() { return toolActions; }
     public boolean canPerformToolAction(ToolAction action){ return toolActions.contains(action); }
     public TagKey<Block> getEffectiveBlocks(){ return effectiveBlocks; }
     public boolean isEffective(BlockState state){ return state.is(effectiveBlocks); }
+
+    public Archetype setKnockbackModifier(float modifier){ this.knockbackMod = modifier; return this; }
+    public float getKnockbackMod(){ return knockbackMod; }
 
     public Archetype setTwoHanded(int twoHanded){ this.twoHanded = twoHanded; return this; }
     public int getTwoHanded(){ return twoHanded; }

@@ -53,6 +53,7 @@ public class CommunityTags {
     public static final TagKey<Item> KNOCKBACK_ENCHANTABLE = itemTag("enchantable/knockback");
     public static final TagKey<Item> SWEEPING_ENCHANTABLE = itemTag("enchantable/sweeping");
     public static final TagKey<Item> LOOTING_ENCHANTABLE = itemTag("enchantable/looting");
+    public static final TagKey<Item> ENCHANTABLE_WEAPON = itemTag("enchantable/weapon");
 
     // tags for archetypes
     public static final TagKey<Item> STUNNING = itemTag("weapon_stat/stunning");

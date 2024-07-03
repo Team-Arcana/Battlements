@@ -1,5 +1,7 @@
 package net.teamarcana.battlements;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.teamarcana.battlements.init.*;
 import org.slf4j.Logger;
 
@@ -25,6 +27,8 @@ public class Battlements
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     public static boolean isBetterCombatHere;
+    public static boolean isLegendaryTooltipsHere;
+    public static final ResourceLocation FONT_ICONS = ResourceLocation.fromNamespaceAndPath(MOD_ID, "icons");
 
     public Battlements(IEventBus modEventBus, ModContainer modContainer)
     {
@@ -33,6 +37,7 @@ public class Battlements
 
         BattleBlocks.register(modEventBus);
         BattleItems.register(modEventBus);
+        BattleEnchantmentEntityEffects.register(modEventBus);
 
         BattleCreativeTabs.register(modEventBus);
 
@@ -45,11 +50,13 @@ public class Battlements
     public static boolean isBetterCombatHere(){
         return isBetterCombatHere;
     }
+    public static boolean isLegendaryTooltipsHere() { return isLegendaryTooltipsHere; }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code
         isBetterCombatHere = ModList.get().isLoaded("bettercombat");
+        isLegendaryTooltipsHere = ModList.get().isLoaded("legendarytooltips");
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,0 +1,48 @@
+{
+  "anvil_cost": 8,
+  "description": {
+    "translate": "enchantment.battlements.life_steal"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "attacker",
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "battlements:heal_entity",
+              "amount": 1.2
+            }
+          ]
+        },
+        "enchanted": "attacker",
+        "requirements": {
+          "chance": {
+            "type": "minecraft:enchantment_level",
+            "amount": {
+              "type": "minecraft:linear",
+              "base": 0.15,
+              "per_level_above_first": 0.15
+            }
+          },
+          "condition": "minecraft:random_chance"
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 20
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 20
+  },
+  "supported_items": "#c:enchantable/weapon",
+  "slots": [
+    "any"
+  ],
+  "weight": 1
+}

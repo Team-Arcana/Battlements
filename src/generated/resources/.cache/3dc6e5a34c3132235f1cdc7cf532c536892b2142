@@ -1,8 +1,10 @@
-// 1.21	2024-06-27T17:26:11.2788429	Tags for minecraft:item mod id battlements
+// 1.21	2024-07-02T12:43:22.7636974	Tags for minecraft:item mod id battlements
 0b384e1ed249709e5b8543130dd20c082b35edd2 data/battlements/tags/item/bladed_melee_weapons.json
 5ca9e041ddb4b1d485727a773954fa57679a90eb data/battlements/tags/item/bladed_throwing_weapons.json
 15abb12cc185e25d7fbb133fbf9585c2e7bd6953 data/battlements/tags/item/blunt_melee_weapons.json
 734c7e45a720a716850802143a703ee616ff5892 data/battlements/tags/item/blunt_throwing_weapons.json
+4eded238cc169507c3ee1964422fed9bcd54b1f7 data/battlements/tags/item/enchantable/frostbite.json
+d614202caab5b4865f00d1cf838ba271b7e66624 data/battlements/tags/item/equipment.json
 53afab49b5b9633acf3b19ddcc94f6a7d07029e7 data/c/tags/item/enchantable/blunt_weapon.json
 109af27f5c848766a2ebbbce21ebe9bef9a2f328 data/c/tags/item/enchantable/knockback.json
 263e828567fd007b98fd5dcc3201a2f88eb3ef93 data/c/tags/item/enchantable/looting.json
@@ -48,6 +50,7 @@ bfbb215d603202627ee0edf55ade74e8c110907b data/c/tags/item/weapons/warpicks.json
 c4813a90ac649a80039273651c57913270b7707b data/minecraft/tags/item/enchantable/mining.json
 c4813a90ac649a80039273651c57913270b7707b data/minecraft/tags/item/enchantable/mining_loot.json
 de10e666b49d84935f31ce6d44adff29a162d85c data/minecraft/tags/item/enchantable/sharp_weapon.json
+e3a6327626a3e611f2217be48668d0ae3f569b5d data/minecraft/tags/item/enchantable/sword.json
 8f49790e527a5ccc0fbfe10a5a465965a9325ece data/minecraft/tags/item/enchantable/weapon.json
 5c571f1fdc3453cd516cbe3296b1543d9044817b data/minecraft/tags/item/hoes.json
 cf98241e577ebf10c9bd4c67def19848dfadbc68 data/minecraft/tags/item/pickaxes.json

@@ -32,5 +32,6 @@ public class DataGenerators {
         BattleBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(),
                 new BattleBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new BattleItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new BattleEnchantmentTagProvider(packOutput, lookupProvider));
     }
 }

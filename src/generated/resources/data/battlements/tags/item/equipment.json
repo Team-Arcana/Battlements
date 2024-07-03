@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#c:armors",
+    "#c:tools",
+    "#c:tools/bows",
+    "#c:tools/crossbows",
+    "#c:tools/brushes",
+    "#c:tools/shears",
+    "#c:tools/shields",
+    "#c:tools/fishing_rods"
+  ]
+}

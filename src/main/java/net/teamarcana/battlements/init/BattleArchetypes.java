@@ -1,9 +1,9 @@
 package net.teamarcana.battlements.init;
 
+import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.ToolActions;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
-
 import java.util.Set;
 
 public class BattleArchetypes {
@@ -12,7 +12,7 @@ public class BattleArchetypes {
             true, Set.of()
     );
     public static final Archetype LONGSWORD = new Archetype(
-            "longsword", Battlements.MOD_ID,4.5f, 1.5f, 1.4f, 0.37f,
+            "longsword", Battlements.MOD_ID,4.5f, 1.5f, 1.4f, 0.3f,
             true, Set.of(ToolActions.SWORD_DIG)
     );
     public static final Archetype GREATSWORD = new Archetype(
@@ -41,7 +41,7 @@ public class BattleArchetypes {
     );
     public static final Archetype CLAW = new Archetype(
             "claw", Battlements.MOD_ID,2.0f, 0.5f, 3.5f,0,
-            true, Set.of(ToolActions.SHOVEL_DIG, ToolActions.SHOVEL_FLATTEN)
+            true, Set.of(ToolActions.SHOVEL_DIG, ToolActions.SHOVEL_FLATTEN), BlockTags.MINEABLE_WITH_SHOVEL
     );
     public static final Archetype CLUB = new Archetype(
             "club", Battlements.MOD_ID,4.0f, 1.0f, 1.3f,0,
@@ -56,7 +56,7 @@ public class BattleArchetypes {
             false, Set.of()
     );
     public static final Archetype WARHAMMER = new Archetype(
-            "warhammer", Battlements.MOD_ID,4.0f, 1.5f, 1.1f,0,
+            "warhammer", Battlements.MOD_ID,4.0f, 1.5f, 1.1f,0.2f,
             false, Set.of()
     );
     public static final Archetype MAUL = new Archetype(
@@ -68,63 +68,63 @@ public class BattleArchetypes {
             false, Set.of()
     );
     public static final Archetype WARPICK = new Archetype(
-            "warpick", Battlements.MOD_ID, 3.0f, 1.0f, 1.5f,
-            true, ToolActions.DEFAULT_PICKAXE_ACTIONS, BattleTags.Traits.WARPICK
+            "warpick", Battlements.MOD_ID, 3.0f, 1.0f, 1.5f, 0,
+            true, ToolActions.DEFAULT_PICKAXE_ACTIONS, BlockTags.MINEABLE_WITH_PICKAXE
     );
     public static final Archetype BATTLEAXE = new Archetype(
-            "battleaxe", Battlements.MOD_ID,4.0f, 2.0f, 1.0f,
-            true, ToolActions.DEFAULT_AXE_ACTIONS, BattleTags.Traits.BATTLEAXE
+            "battleaxe", Battlements.MOD_ID,4.0f, 2.0f, 1.0f, 0,
+            true, ToolActions.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
     );
     public static final Archetype GREATAXE = new Archetype(
-            "greataxe", Battlements.MOD_ID,4.8f, 2.1f, 0.8f,
-            true, ToolActions.DEFAULT_AXE_ACTIONS, BattleTags.Traits.GREATAXE
+            "greataxe", Battlements.MOD_ID,4.8f, 2.1f, 0.8f, 0.5f,
+            true, ToolActions.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
     );
     public static final Archetype SPEAR = new Archetype(
-            "spear", Battlements.MOD_ID,5.5f, 0.5f, 1.4f,
-            true, Set.of(), BattleTags.Traits.SPEAR
+            "spear", Battlements.MOD_ID,5.5f, 0.5f, 1.4f, 1f,
+            true, Set.of()
     );
     public static final Archetype PIKE = new Archetype(
-            "pike", Battlements.MOD_ID,4.0f, 1.0f, 1.4f,
-            true, Set.of(), BattleTags.Traits.PIKE
+            "pike", Battlements.MOD_ID,4.0f, 1.0f, 1.4f, 2,
+            true, Set.of()
     );
     public static final Archetype HALBERD = new Archetype(
-            "halberd", Battlements.MOD_ID,5.0f, 1.5f, 1.2f,
-            true, Set.of(), BattleTags.Traits.HALBERD
+            "halberd", Battlements.MOD_ID,5.0f, 1.5f, 1.2f, 1f,
+            true, Set.of()
     );
     public static final Archetype GLAIVE = new Archetype(
-            "glaive", Battlements.MOD_ID,4.0f, 1.5f, 1.0f,
-            true, Set.of(), BattleTags.Traits.GLAIVE
+            "glaive", Battlements.MOD_ID,4.0f, 1.5f, 1.0f, 1f,
+            true, Set.of()
     );
     public static final Archetype QUARTERSTAFF = new Archetype(
-            "quarterstaff", Battlements.MOD_ID, 3.0f, 1.5f, 1.4f,
-            false, Set.of(), BattleTags.Traits.QUARTERSTAFF
+            "quarterstaff", Battlements.MOD_ID, 3.0f, 1.5f, 1.4f, 1f,
+            false, Set.of()
     );
     public static final Archetype PITCHFORK = new Archetype(
-            "pitchfork", Battlements.MOD_ID,5, 0.5f, 1.2f,
-            true, Set.of(), BattleTags.Traits.PITCHFORK
+            "pitchfork", Battlements.MOD_ID,5, 0.5f, 1.2f, 1f,
+            true, Set.of()
     );
     public static final Archetype SCYTHE = new Archetype(
-            "scythe", Battlements.MOD_ID,5.0f, 1.0f, 1.0f,
-            true, ToolActions.DEFAULT_HOE_ACTIONS, BattleTags.Traits.SCYTHE
+            "scythe", Battlements.MOD_ID,5.0f, 1.0f, 1.0f, 1,
+            true, ToolActions.DEFAULT_HOE_ACTIONS
     );
     public static final Archetype BOOMERANG = new Archetype(
-            "boomerang", Battlements.MOD_ID, 4, 1, 2,
-            false, Set.of(), BattleTags.Traits.BOOMERANG
+            "boomerang", Battlements.MOD_ID, 4, 1, 2, 0,
+            false, Set.of()
     );
     public static final Archetype JAVELIN = new Archetype(
-            "javelin", Battlements.MOD_ID,1.5f, 1.0f, 1.2f,
-            false, Set.of(), BattleTags.Traits.JAVELIN
+            "javelin", Battlements.MOD_ID,1.5f, 1.0f, 1.2f, 0.5f,
+            false, Set.of()
     );
     public static final Archetype KUNAI = new Archetype(
-            "kunai", Battlements.MOD_ID,1.3f, 1.3f, 2.8f,
-            true, Set.of(), BattleTags.Traits.KUNAI
+            "kunai", Battlements.MOD_ID,1.3f, 1.3f, 2.8f, 0,
+            true, Set.of()
     );
     public static final Archetype TOMAHAWK = new Archetype(
-            "tomahawk", Battlements.MOD_ID,2.0f, 1.5f, 0.9f,
-            true, Set.of(), BattleTags.Traits.TOMAHAWK
+            "tomahawk", Battlements.MOD_ID,2.0f, 1.5f, 0.9f, 0,
+            true, Set.of()
     );
     public static final Archetype THROWING_KNIFE = new Archetype(
-            "throwing_knife", Battlements.MOD_ID,1.5f, 1.0f, 2.5f,
-            true, Set.of(), BattleTags.Traits.THROWING_KNIFE
+            "throwing_knife", Battlements.MOD_ID,1.5f, 1.0f, 2.5f, 0,
+            true, Set.of()
     );
 }

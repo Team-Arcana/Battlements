@@ -6,6 +6,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.init.BattleItems;
@@ -22,6 +23,20 @@ public class BattleItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // IMPORTANT TAG FOR TOOLTIP MODIFICATION
+        tag(BattleTags.Items.EQUIPPABLE)
+                .addTag(Tags.Items.ARMORS)
+                .addTag(Tags.Items.TOOLS)
+                .addTag(Tags.Items.TOOLS_BOWS)
+                .addTag(Tags.Items.TOOLS_CROSSBOWS)
+                .addTag(Tags.Items.TOOLS_BRUSHES)
+                .addTag(Tags.Items.TOOLS_SHEARS)
+                .addTag(Tags.Items.TOOLS_SHIELDS)
+                .addTag(Tags.Items.TOOLS_FISHING_RODS)
+        ;
+
+        // other
+
         tag(CommunityTags.INGOTS_STEEL).add(BattleItems.STEEL_INGOT.get());
         tag(CommunityTags.NUGGETS_STEEL).add(BattleItems.STEEL_INGOT.get());
         tag(CommunityTags.INGOTS_ENDERIUM).add(BattleItems.ENDERIUM_INGOT.get());
@@ -46,6 +61,7 @@ public class BattleItemTagProvider extends ItemTagsProvider {
 
         tag(CommunityTags.KNOCKBACK_ENCHANTABLE).addTag(ItemTags.SWORD_ENCHANTABLE).addTag(BattleTags.Items.BLUNT_MELEE).addTag(CommunityTags.WEAPONS_JAVELIN);
         tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).addTag(BattleTags.Items.BLADED_MELEE).addTag(BattleTags.Items.BLUNT_MELEE).addTag(CommunityTags.WEAPONS_BOOMERANG).addTag(CommunityTags.WEAPONS_JAVELIN);
+        tag(BattleTags.Items.FROSTBITE_ENCHANTABLE).addTag(ItemTags.FIRE_ASPECT_ENCHANTABLE);
         tag(CommunityTags.SWEEPING_ENCHANTABLE).addTag(ItemTags.SWORD_ENCHANTABLE).addTag(CommunityTags.WEAPONS_LONGSWORD).addTag(CommunityTags.WEAPONS_GREATSWORD).addTag(CommunityTags.WEAPONS_SABER).addTag(CommunityTags.WEAPONS_GLAIVE);
         tag(CommunityTags.LOOTING_ENCHANTABLE).addTag(ItemTags.SWORD_ENCHANTABLE).addTag(BattleTags.Items.BLADED_MELEE).addTag(BattleTags.Items.BLUNT_MELEE).addTag(CommunityTags.WEAPONS_BOOMERANG).addTag(CommunityTags.WEAPONS_JAVELIN);
 
@@ -54,6 +70,8 @@ public class BattleItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.AXES).add(BattleItems.STEEL_AXE.get(), BattleItems.ENDERIUM_AXE.get());
         tag(ItemTags.SHOVELS).add(BattleItems.STEEL_SHOVEL.get(), BattleItems.ENDERIUM_SHOVEL.get());
         tag(ItemTags.HOES).add(BattleItems.STEEL_HOE.get(), BattleItems.ENDERIUM_HOE.get());
+
+        tag(ItemTags.SWORD_ENCHANTABLE).addTag(CommunityTags.WEAPONS_LONGSWORD).addTag(CommunityTags.WEAPONS_GREATSWORD).addTag(CommunityTags.WEAPONS_KATANA).addTag(CommunityTags.WEAPONS_SABER).addTag(CommunityTags.WEAPONS_CUTLASS);
 
         // Weapon Tag Stuffs
         tag(CommunityTags.WEAPONS_DAGGER).add(
