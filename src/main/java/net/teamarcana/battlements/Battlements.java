@@ -38,6 +38,8 @@ public class Battlements
         BattleBlocks.register(modEventBus);
         BattleItems.register(modEventBus);
         BattleEnchantmentEntityEffects.register(modEventBus);
+        BattleMobEffects.register(modEventBus);
+        BattlePotions.register(modEventBus);
 
         BattleCreativeTabs.register(modEventBus);
 
