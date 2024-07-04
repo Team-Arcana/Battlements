@@ -5,11 +5,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.alchemy.Potion;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.teamarcana.battlements.Battlements;
@@ -26,6 +23,16 @@ public class BattleMobEffects {
     public static Supplier<MobEffect> BLEEDING = MOB_EFFECTS.register("bleeding", BleedEffect::new);
     public static Supplier<MobEffect> STUNNED = MOB_EFFECTS.register("stunned", StunEffect::new);
      */
+
+    public static final Holder<MobEffect> ENCUMBERED = MOB_EFFECTS.register("encumbered",()->
+            new BattleMobEffect(MobEffectCategory.HARMFUL, 0x575454)
+                    .addAttributeModifier(Attributes.ATTACK_DAMAGE,
+                            ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, "effect.encumbered"),
+                            -4.0, AttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(Attributes.ATTACK_SPEED,
+                            ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, "effect.encumbered"),
+                            -0.1F, AttributeModifier.Operation.ADD_VALUE)
+    );
 
 
     public static final Holder<MobEffect> BROKEN_ARMOR = MOB_EFFECTS.register("broken_armor",()->

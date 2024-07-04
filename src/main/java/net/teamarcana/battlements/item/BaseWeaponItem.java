@@ -5,6 +5,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -20,6 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ToolAction;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
+import net.teamarcana.battlements.init.BattleMobEffects;
 
 import java.util.List;
 
@@ -31,6 +35,8 @@ public class BaseWeaponItem extends TieredItem{
     protected static float attackDamage;
     protected static float attackSpeed;
     protected static float knockbackMod;
+    private boolean applyPenalty = false;
+    public void setTwoHandedPenalty(boolean b){ applyPenalty = b; }
 
     public static final ResourceLocation BASE_ENTITY_REACH_ID = ResourceLocation.withDefaultNamespace("base_entity_reach");
     public static final ResourceLocation BASE_ATTACK_KNOCKBACK_ID = ResourceLocation.withDefaultNamespace("base_attack_knockback");
@@ -132,6 +138,16 @@ public class BaseWeaponItem extends TieredItem{
 
     @Override
     public void inventoryTick(ItemStack item, Level level, Entity entity, int slot, boolean isSelected) {
+        if(entity instanceof LivingEntity livingEntity){
+            // Offhand Penalty for TwoHanded Items [applies if Better Combat is not installed]
+            if(this.getArchetype().getTwoHanded() > 0){
+                boolean emptyOffHand = this.getArchetype().getTwoHanded() > 0 && livingEntity.getItemInHand(InteractionHand.OFF_HAND).isEmpty();
+                setTwoHandedPenalty(!emptyOffHand && !Battlements.isBetterCombatHere);
+                if(applyPenalty && ((LivingEntity) entity).getItemInHand(InteractionHand.MAIN_HAND) == item){
+                    livingEntity.addEffect(new MobEffectInstance(BattleMobEffects.ENCUMBERED, 20, Math.max(this.getArchetype().getTwoHanded() - 1, 0), false, false, false));
+                }
+            }
+        }
         super.inventoryTick(item, level, entity, slot, isSelected);
     }
 
