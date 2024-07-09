@@ -433,14 +433,14 @@ public class BattleItemModelProvider extends ItemModelProvider {
                 "item/handheld")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
-    public ItemModelBuilder largeHeldItem(ResourceLocation item) {
-        return withExistingParent(item + "_held",
-                "battlements:item/base/large_handheld")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
-    }
     public ItemModelBuilder heldItemWithExistingModel(ResourceLocation item, String existingModelPath) {
         return withExistingParent(item + "_held",
                 existingModelPath)
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+    public ItemModelBuilder largeHeldItem(ResourceLocation item) {
+        return withExistingParent(item + "_held",
+                "battlements:item/base/large_handheld")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
     }
     public ItemModelBuilder polearmHandheldItem(Item item){
