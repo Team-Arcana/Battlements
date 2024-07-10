@@ -1,7 +1,7 @@
 package net.teamarcana.battlements.init;
 
 import net.minecraft.tags.BlockTags;
-import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.neoforge.common.ItemAbilities;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
 import java.util.Set;
@@ -13,15 +13,15 @@ public class BattleArchetypes {
     );
     public static final Archetype LONGSWORD = new Archetype(
             "longsword", Battlements.MOD_ID,4.5f, 1.5f, 1.4f, 0.3f,
-            true, Set.of(ToolActions.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG)
     );
     public static final Archetype GREATSWORD = new Archetype(
             "greatsword", Battlements.MOD_ID,5.0f, 1.5f, 1.3f, 1,
-            true, Set.of(ToolActions.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG)
     ).setTwoHanded(2);
     public static final Archetype KATANA = new Archetype(
             "katana", Battlements.MOD_ID,3.5f, 0.5f, 2.0f, 0.5f,
-            true, Set.of(ToolActions.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG)
     ).setTwoHanded(1);
     public static final Archetype RAPIER = new Archetype(
             "rapier", Battlements.MOD_ID,2, 0.5f, 2.4f, 0,
@@ -29,7 +29,7 @@ public class BattleArchetypes {
     );
     public static final Archetype SABER = new Archetype(
             "saber", Battlements.MOD_ID,3.5f, 0.5f, 1.6f,0,
-            true, Set.of(ToolActions.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG)
     );
     public static final Archetype CUTLASS = new Archetype(
             "cutlass", Battlements.MOD_ID,3f ,0.5f, 1.6f,0,
@@ -37,11 +37,11 @@ public class BattleArchetypes {
     );
     public static final Archetype SICKLE = new Archetype(
             "sickle", Battlements.MOD_ID,2, 1.0f, 1.9f,0,
-            true, ToolActions.DEFAULT_HOE_ACTIONS
+            true, ItemAbilities.DEFAULT_HOE_ACTIONS
     );
     public static final Archetype CLAW = new Archetype(
             "claw", Battlements.MOD_ID,2.0f, 0.5f, 3.5f,0,
-            true, Set.of(ToolActions.SHOVEL_DIG, ToolActions.SHOVEL_FLATTEN), BlockTags.MINEABLE_WITH_SHOVEL
+            true, Set.of(ItemAbilities.SHOVEL_DIG, ItemAbilities.SHOVEL_FLATTEN), BlockTags.MINEABLE_WITH_SHOVEL
     );
     public static final Archetype CLUB = new Archetype(
             "club", Battlements.MOD_ID,4.0f, 1.0f, 1.3f,0,
@@ -69,15 +69,15 @@ public class BattleArchetypes {
     );
     public static final Archetype WARPICK = new Archetype(
             "warpick", Battlements.MOD_ID, 3.0f, 1.0f, 1.5f, 0,
-            true, ToolActions.DEFAULT_PICKAXE_ACTIONS, BlockTags.MINEABLE_WITH_PICKAXE
+            true, ItemAbilities.DEFAULT_PICKAXE_ACTIONS, BlockTags.MINEABLE_WITH_PICKAXE
     );
     public static final Archetype BATTLEAXE = new Archetype(
             "battleaxe", Battlements.MOD_ID,4.0f, 2.0f, 1.0f, 0,
-            true, ToolActions.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
+            true, ItemAbilities.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
     );
     public static final Archetype GREATAXE = new Archetype(
             "greataxe", Battlements.MOD_ID,4.8f, 2.1f, 0.8f, 0.5f,
-            true, ToolActions.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
+            true, ItemAbilities.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
     ).setTwoHanded(1);
     public static final Archetype SPEAR = new Archetype(
             "spear", Battlements.MOD_ID,5.5f, 0.5f, 1.4f, 1f,
@@ -105,7 +105,7 @@ public class BattleArchetypes {
     );
     public static final Archetype SCYTHE = new Archetype(
             "scythe", Battlements.MOD_ID,5.0f, 1.0f, 1.0f, 1,
-            true, ToolActions.DEFAULT_HOE_ACTIONS
+            true, ItemAbilities.DEFAULT_HOE_ACTIONS
     ).setTwoHanded(1);
     public static final Archetype BOOMERANG = new Archetype(
             "boomerang", Battlements.MOD_ID, 4, 1, 2, 0,

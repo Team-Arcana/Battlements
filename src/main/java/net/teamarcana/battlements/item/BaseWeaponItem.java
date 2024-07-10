@@ -18,7 +18,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.common.ToolAction;
+import net.neoforged.neoforge.common.ItemAbility;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
 import net.teamarcana.battlements.init.BattleMobEffects;
@@ -98,9 +98,6 @@ public class BaseWeaponItem extends TieredItem{
     public Archetype getArchetype() { return archetype; }
 
     @Override
-    public ItemAttributeModifiers getAttributeModifiers(ItemStack item) { return modifiers != null  ? modifiers : super.getAttributeModifiers(item); }
-
-    @Override
     public Component getName(ItemStack item) {
         if(customName == null)
             return super.getName(item);
@@ -165,8 +162,8 @@ public class BaseWeaponItem extends TieredItem{
     }
 
     @Override
-    public boolean canPerformAction(ItemStack item, ToolAction action) {
-        return archetype.canPerformToolAction(action);
+    public boolean canPerformAction(ItemStack item, ItemAbility ability) {
+        return archetype.hasAbility(ability);
     }
 
     @Override

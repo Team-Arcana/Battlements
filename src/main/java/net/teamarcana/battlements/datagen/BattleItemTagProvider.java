@@ -27,12 +27,12 @@ public class BattleItemTagProvider extends ItemTagsProvider {
         tag(BattleTags.Items.EQUIPPABLE)
                 .addTag(Tags.Items.ARMORS)
                 .addTag(Tags.Items.TOOLS)
-                .addTag(Tags.Items.TOOLS_BOWS)
-                .addTag(Tags.Items.TOOLS_CROSSBOWS)
-                .addTag(Tags.Items.TOOLS_BRUSHES)
-                .addTag(Tags.Items.TOOLS_SHEARS)
-                .addTag(Tags.Items.TOOLS_SHIELDS)
-                .addTag(Tags.Items.TOOLS_FISHING_RODS)
+                .addTag(Tags.Items.TOOLS_BOW)
+                .addTag(Tags.Items.TOOLS_CROSSBOW)
+                .addTag(Tags.Items.TOOLS_BRUSH)
+                .addTag(Tags.Items.TOOLS_SHEAR)
+                .addTag(Tags.Items.TOOLS_SHIELD)
+                .addTag(Tags.Items.TOOLS_FISHING_ROD)
         ;
 
         // other

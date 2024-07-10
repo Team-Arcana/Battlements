@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.common.ToolAction;
+import net.neoforged.neoforge.common.ItemAbility;
 
 import java.util.List;
 import java.util.Set;
@@ -25,7 +25,7 @@ public class Archetype{
 
     protected float knockbackMod = 0;
 
-    protected Set<ToolAction> toolActions = Set.of();
+    protected Set<ItemAbility> abilities = Set.of();
     protected final TagKey<Block> effectiveBlocks;
     protected boolean isSharp = false;
 
@@ -36,10 +36,10 @@ public class Archetype{
      * @param attackDamageMultiplier the attack damage multiplier for the archetype
      * @param attackSpeed the attack speed of the archetype
      * @param size the size of the archetype
-     * @param toolActions the tool actions that the archetype can do
+     * @param abilities the tool actions that the archetype can do
      * @param effectiveBlocks the blocks that the archetype can effectively dig through
      */
-    public Archetype(String name, String modId, float baseAttackDamage, float attackDamageMultiplier, float attackSpeed, float size, boolean isSharp, Set<ToolAction> toolActions, TagKey<Block> effectiveBlocks){
+    public Archetype(String name, String modId, float baseAttackDamage, float attackDamageMultiplier, float attackSpeed, float size, boolean isSharp, Set<ItemAbility> abilities, TagKey<Block> effectiveBlocks){
         this.name = name;
         this.modId = modId;
         this.baseAttackDamage = baseAttackDamage;
@@ -48,11 +48,11 @@ public class Archetype{
         this.size = size;
 
         this.isSharp = isSharp;
-        this.toolActions = toolActions;
+        this.abilities = abilities;
         this.effectiveBlocks = effectiveBlocks;
     }
-    public Archetype(String name, String modId, float baseAttackDamage, float attackDamageMultiplier, float attackSpeed, float size, boolean isSharp, Set<ToolAction> toolActions){
-        this(name, modId, baseAttackDamage, attackDamageMultiplier, attackSpeed, size, isSharp, toolActions, null);
+    public Archetype(String name, String modId, float baseAttackDamage, float attackDamageMultiplier, float attackSpeed, float size, boolean isSharp, Set<ItemAbility> abilities){
+        this(name, modId, baseAttackDamage, attackDamageMultiplier, attackSpeed, size, isSharp, abilities, null);
     }
 
     public Archetype setSharp(boolean sharp) { this.isSharp = sharp; return this; }
@@ -65,8 +65,8 @@ public class Archetype{
     public float getAttackSpeed() { return attackSpeed; }
     public float getSize(){ return size; }
 
-    public Set<ToolAction> getToolActions() { return toolActions; }
-    public boolean canPerformToolAction(ToolAction action){ return toolActions.contains(action); }
+    public Set<ItemAbility> getAbilities() { return abilities; }
+    public boolean hasAbility(ItemAbility ability){ return abilities.contains(ability); }
     public TagKey<Block> getEffectiveBlocks(){ return effectiveBlocks; }
     public boolean isEffective(BlockState state){ return state.is(effectiveBlocks); }
 

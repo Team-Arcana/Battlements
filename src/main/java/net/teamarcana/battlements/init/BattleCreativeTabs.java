@@ -283,89 +283,34 @@ public class BattleCreativeTabs {
     @SubscribeEvent
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-
-            event.getEntries().putAfter(Items.STICK.getDefaultInstance(),
-                    BattleItems.HANDLE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(BattleItems.HANDLE.get().getDefaultInstance(),
-                    BattleItems.POLE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(BattleItems.POLE.get().getDefaultInstance(),
-                    BattleItems.ROCK.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.IRON_INGOT.getDefaultInstance(),
-                    BattleItems.STEEL_INGOT.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.COPPER_INGOT.getDefaultInstance(),
-                    BattleItems.COPPER_NUGGET.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.DIAMOND.getDefaultInstance(),
-                    BattleItems.DIAMOND_SHARD.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.NETHERITE_INGOT.getDefaultInstance(),
-                    BattleItems.NETHERITE_NUGGET.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(BattleItems.NETHERITE_NUGGET.get().getDefaultInstance(),
-                    BattleItems.ENDER_CRYSTAL.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(BattleItems.ENDER_CRYSTAL.get().getDefaultInstance(),
-                    BattleItems.ENDERIUM_INGOT.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(BattleItems.ENDERIUM_INGOT.get().getDefaultInstance(),
-                    BattleItems.ENDERIUM_NUGGET.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.HANDLE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.POLE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ROCK, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.COPPER_NUGGET, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_INGOT, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_NUGGET, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.DIAMOND_SHARD, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.NETHERITE_NUGGET, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDER_CRYSTAL, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_INGOT, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_NUGGET, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
         }
         if(event.getTabKey() == CreativeModeTabs.COMBAT){
-            event.getEntries().putAfter(Items.IRON_SWORD.getDefaultInstance(),
-                    BattleItems.STEEL_SWORD.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.NETHERITE_SWORD.getDefaultInstance(),
-                    BattleItems.ENDERIUM_SWORD.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.IRON_AXE.getDefaultInstance(),
-                    BattleItems.STEEL_AXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.NETHERITE_AXE.getDefaultInstance(),
-                    BattleItems.ENDERIUM_AXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_SWORD, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_AXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_SWORD, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_AXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-            event.getEntries().putAfter(Items.IRON_HOE.getDefaultInstance(),
-                    BattleItems.STEEL_SHOVEL.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.STEEL_SHOVEL.get().getDefaultInstance(),
-                    BattleItems.STEEL_PICKAXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.STEEL_PICKAXE.get().getDefaultInstance(),
-                    BattleItems.STEEL_AXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.STEEL_AXE.get().getDefaultInstance(),
-                    BattleItems.STEEL_HOE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-
-            event.getEntries().putAfter(Items.NETHERITE_HOE.getDefaultInstance(),
-                    BattleItems.ENDERIUM_SHOVEL.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.ENDERIUM_SHOVEL.get().getDefaultInstance(),
-                    BattleItems.ENDERIUM_PICKAXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.ENDERIUM_PICKAXE.get().getDefaultInstance(),
-                    BattleItems.ENDERIUM_AXE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(BattleItems.ENDERIUM_AXE.get().getDefaultInstance(),
-                    BattleItems.ENDERIUM_HOE.get().getDefaultInstance(),
-                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_SHOVEL, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_PICKAXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_AXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.STEEL_HOE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_SHOVEL, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_PICKAXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_AXE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(BattleItems.ENDERIUM_HOE, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 
