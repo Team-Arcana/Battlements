@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "minecraft:netherite_ingot"
+    "item": "battlements:enderium_ingot"
   },
   "base": {
     "item": "battlements:diamond_cutlass"

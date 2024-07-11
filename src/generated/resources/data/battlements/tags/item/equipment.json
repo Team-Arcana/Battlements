@@ -2,11 +2,11 @@
   "values": [
     "#c:armors",
     "#c:tools",
-    "#c:tools/bows",
-    "#c:tools/crossbows",
-    "#c:tools/brushes",
-    "#c:tools/shears",
-    "#c:tools/shields",
-    "#c:tools/fishing_rods"
+    "#c:tools/bow",
+    "#c:tools/crossbow",
+    "#c:tools/brush",
+    "#c:tools/shear",
+    "#c:tools/shield",
+    "#c:tools/fishing_rod"
   ]
 }

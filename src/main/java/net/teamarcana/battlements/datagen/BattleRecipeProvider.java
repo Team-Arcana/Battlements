@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -197,7 +198,7 @@ public class BattleRecipeProvider extends RecipeProvider {
         weaponRecipes(DIAMOND_WEAPONS, DIAMOND_INGREDIENTS, DIAMOND_UNLOCKS, output);
         for(int i = 0; i < NETHERITE_WEAPONS.size(); i++){
             netheriteSmithing(output, DIAMOND_WEAPONS.get(i).asItem(), RecipeCategory.COMBAT, NETHERITE_WEAPONS.get(i).asItem());
-            netheriteSmithing(output, DIAMOND_WEAPONS.get(i).asItem(), RecipeCategory.COMBAT, ENDERIUM_WEAPONS.get(i).asItem());
+            enderiumSmithing(output, DIAMOND_WEAPONS.get(i).asItem(), RecipeCategory.COMBAT, ENDERIUM_WEAPONS.get(i).asItem());
         }
 
         // stackable ones
@@ -654,5 +655,13 @@ public class BattleRecipeProvider extends RecipeProvider {
         scytheRecipe(resultItems.get(24), ingredients.get(0), unlockItems.get(0), output);
         javelinRecipe(resultItems.get(25), ingredients.get(0), ingredients.get(1), unlockItems.get(0), output);
         boomerangRecipe(resultItems.get(26), ingredients.get(0), unlockItems.get(0), output);
+    }
+
+    public static void enderiumSmithing(RecipeOutput pRecipeOutput, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(pIngredientItem), Ingredient.of(BattleItems.ENDERIUM_INGOT), pCategory, pResultItem
+                )
+                .unlocks("has_enderium_ingot", has(BattleItems.ENDERIUM_INGOT))
+                .save(pRecipeOutput, getItemName(pResultItem) + "_smithing");
     }
 }
