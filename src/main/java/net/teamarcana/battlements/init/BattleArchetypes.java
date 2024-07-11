@@ -13,15 +13,15 @@ public class BattleArchetypes {
     );
     public static final Archetype LONGSWORD = new Archetype(
             "longsword", Battlements.MOD_ID,4.5f, 1.5f, 1.4f, 0.3f,
-            true, Set.of(ItemAbilities.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG, ItemAbilities.SWORD_SWEEP)
     );
     public static final Archetype GREATSWORD = new Archetype(
             "greatsword", Battlements.MOD_ID,5.0f, 1.5f, 1.3f, 1,
-            true, Set.of(ItemAbilities.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG, ItemAbilities.SWORD_SWEEP)
     ).setTwoHanded(2);
     public static final Archetype KATANA = new Archetype(
             "katana", Battlements.MOD_ID,3.5f, 0.5f, 2.0f, 0.5f,
-            true, Set.of(ItemAbilities.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG, ItemAbilities.SWORD_SWEEP)
     ).setTwoHanded(1);
     public static final Archetype RAPIER = new Archetype(
             "rapier", Battlements.MOD_ID,2, 0.5f, 2.4f, 0,
@@ -29,11 +29,11 @@ public class BattleArchetypes {
     );
     public static final Archetype SABER = new Archetype(
             "saber", Battlements.MOD_ID,3.5f, 0.5f, 1.6f,0,
-            true, Set.of(ItemAbilities.SWORD_DIG)
+            true, Set.of(ItemAbilities.SWORD_DIG, ItemAbilities.SWORD_SWEEP)
     );
     public static final Archetype CUTLASS = new Archetype(
             "cutlass", Battlements.MOD_ID,3f ,0.5f, 1.6f,0,
-            true, Set.of()
+            true, Set.of(ItemAbilities.SWORD_SWEEP)
     );
     public static final Archetype SICKLE = new Archetype(
             "sickle", Battlements.MOD_ID,2, 1.0f, 1.9f,0,
@@ -54,19 +54,19 @@ public class BattleArchetypes {
     public static final Archetype HAMMER = new Archetype(
             "hammer", Battlements.MOD_ID,4.2f, 1.5f, 1.0f,0,
             false, Set.of()
-    );
+    ).setKnockbackModifier(1);
     public static final Archetype WARHAMMER = new Archetype(
             "warhammer", Battlements.MOD_ID,4.0f, 1.5f, 1.1f,0.2f,
             false, Set.of()
-    ).setTwoHanded(1);
+    ).setTwoHanded(1).setKnockbackModifier(1);
     public static final Archetype MAUL = new Archetype(
             "maul", Battlements.MOD_ID,5.0f, 2.0f, 0.75f,1,
             false, Set.of()
-    ).setTwoHanded(2);
+    ).setTwoHanded(2).setKnockbackModifier(2);
     public static final Archetype ANCHOR = new Archetype(
             "anchor", Battlements.MOD_ID, 4.1f, 1.6f, 1.0f,0.5f,
             false, Set.of()
-    );
+    ).setKnockbackModifier(1);
     public static final Archetype WARPICK = new Archetype(
             "warpick", Battlements.MOD_ID, 3.0f, 1.0f, 1.5f, 0,
             true, ItemAbilities.DEFAULT_PICKAXE_ACTIONS, BlockTags.MINEABLE_WITH_PICKAXE
