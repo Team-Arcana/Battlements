@@ -19,7 +19,6 @@ public class BattleCreativeTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WEAPON_TAB = CREATIVE_MODE_TABS.register("battle_combat", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.battlements")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> BattleItems.CREATIVE_ICON.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 // WOOD TIER
