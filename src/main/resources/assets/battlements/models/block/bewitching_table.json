@@ -1,0 +1,47 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "battlements:block/amethyst_orb",
+		"1": "battlements:block/bewitching_table_bottom",
+		"2": "battlements:block/bewitching_table_side",
+		"3": "battlements:block/bewitching_table_top",
+		"particle": "battlements:block/amethyst_orb"
+	},
+	"elements": [
+		{
+			"name": "bewitchingTable",
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 15, 16], "texture": "#2"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#2"},
+				"south": {"uv": [1, 8, 15, 16], "texture": "#2"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#2"},
+				"up": {"uv": [1, 1, 15, 15], "rotation": 90, "texture": "#3"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#1"}
+			}
+		},
+		{
+			"name": "orb",
+			"from": [3, 6, 3],
+			"to": [13, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 6, 5]},
+			"faces": {
+				"north": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"east": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"south": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"west": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "table",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}
