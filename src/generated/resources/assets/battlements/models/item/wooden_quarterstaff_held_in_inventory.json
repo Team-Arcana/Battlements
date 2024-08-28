@@ -1,6 +1,6 @@
 {
-  "parent": "battlements:item/base/polearm_held",
+  "parent": "battlements:item/base/weapon_inventory",
   "textures": {
-    "layer0": "battlements:item/wooden_quarterstaff_held"
+    "layer0": "battlements:item/wooden_quarterstaff"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "parent": "battlements:item/base/handheld_parrying",
+  "parent": "battlements:item/base/large_handheld_parrying",
   "textures": {
-    "layer0": "battlements:item/golden_katana"
+    "layer0": "battlements:item/golden_katana_held"
   }
 }

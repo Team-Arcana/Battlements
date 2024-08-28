@@ -2,12 +2,6 @@
   "parent": "battlements:item/wooden_boomerang_held",
   "overrides": [
     {
-      "model": "battlements:item/wooden_boomerang_parrying",
-      "predicate": {
-        "battlements:parrying": 1.0
-      }
-    },
-    {
       "model": "battlements:item/wooden_boomerang_throwing",
       "predicate": {
         "battlements:throwing": 1.0

@@ -1,6 +1,6 @@
 {
   "parent": "battlements:item/base/polearm_throwing",
   "textures": {
-    "layer0": "battlements:item/flint_javelin"
+    "layer0": "battlements:item/flint_javelin_held"
   }
 }

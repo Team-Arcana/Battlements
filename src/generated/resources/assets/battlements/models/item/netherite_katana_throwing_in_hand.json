@@ -1,6 +1,6 @@
 {
-  "parent": "battlements:item/base/handheld_throwing",
+  "parent": "battlements:item/base/large_handheld_throwing",
   "textures": {
-    "layer0": "battlements:item/netherite_katana"
+    "layer0": "battlements:item/netherite_katana_held"
   }
 }

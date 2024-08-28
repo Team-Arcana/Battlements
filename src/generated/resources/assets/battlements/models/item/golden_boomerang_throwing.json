@@ -1,5 +1,5 @@
 {
-  "parent": "battlements:item/base/handheld_throwing",
+  "parent": "battlements:item/base/boomerang_throwing",
   "textures": {
     "layer0": "battlements:item/golden_boomerang"
   }

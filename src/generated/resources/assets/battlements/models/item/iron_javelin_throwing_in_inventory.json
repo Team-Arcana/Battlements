@@ -1,5 +1,5 @@
 {
-  "parent": "battlements:item/base/handheld_throwing",
+  "parent": "battlements:item/base/weapon_inventory",
   "textures": {
     "layer0": "battlements:item/iron_javelin"
   }

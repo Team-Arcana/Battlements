@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/base/polearm_parrying",
+    "textures": {
+      "layer0": "battlements:item/steel_javelin_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/base/weapon_inventory",
+      "textures": {
+        "layer0": "battlements:item/steel_javelin"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/base/weapon_inventory",
+      "textures": {
+        "layer0": "battlements:item/steel_javelin"
+      }
+    }
+  }
+}

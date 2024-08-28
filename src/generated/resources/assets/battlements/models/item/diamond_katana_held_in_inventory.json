@@ -1,6 +1,6 @@
 {
-  "parent": "battlements:item/base/large_handheld",
+  "parent": "battlements:item/base/weapon_inventory",
   "textures": {
-    "layer0": "battlements:item/diamond_katana_held"
+    "layer0": "battlements:item/diamond_katana"
   }
 }

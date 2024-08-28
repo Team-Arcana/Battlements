@@ -1,39 +1,17 @@
 {
-  "parent": "battlements:item/wooden_quarterstaff",
-  "base": {
-    "parent": "battlements:item/base/polearm_throwing",
-    "textures": {
-      "layer0": "battlements:item/wooden_quarterstaff"
-    }
-  },
-  "gui_light": "front",
-  "loader": "neoforge:separate_transforms",
+  "parent": "battlements:item/wooden_quarterstaff_held",
   "overrides": [
     {
-      "model": "battlements:item/wooden_quarterstaff",
+      "model": "battlements:item/wooden_quarterstaff_parrying",
       "predicate": {
         "battlements:parrying": 1.0
       }
     },
     {
-      "model": "battlements:item/wooden_quarterstaff",
+      "model": "battlements:item/wooden_quarterstaff_throwing",
       "predicate": {
         "battlements:throwing": 1.0
       }
     }
-  ],
-  "perspectives": {
-    "fixed": {
-      "parent": "battlements:item/base/handheld_throwing",
-      "textures": {
-        "layer0": "battlements:item/wooden_quarterstaff"
-      }
-    },
-    "gui": {
-      "parent": "battlements:item/base/handheld_throwing",
-      "textures": {
-        "layer0": "battlements:item/wooden_quarterstaff"
-      }
-    }
-  }
+  ]
 }

@@ -163,12 +163,12 @@ public class BattleItemModelProvider extends ItemModelProvider {
         polearmWeaponItem(BattleItems.DIAMOND_JAVELIN.get());
         polearmWeaponItem(BattleItems.NETHERITE_JAVELIN.get());
 
-        weaponItem(BattleItems.WOODEN_BOOMERANG.get());
-        weaponItem(BattleItems.GOLDEN_BOOMERANG.get());
-        weaponItem(BattleItems.IRON_BOOMERANG.get());
-        weaponItem(BattleItems.STEEL_BOOMERANG.get());
-        weaponItem(BattleItems.DIAMOND_BOOMERANG.get());
-        weaponItem(BattleItems.NETHERITE_BOOMERANG.get());
+        boomerangItem(BattleItems.WOODEN_BOOMERANG.get());
+        boomerangItem(BattleItems.GOLDEN_BOOMERANG.get());
+        boomerangItem(BattleItems.IRON_BOOMERANG.get());
+        boomerangItem(BattleItems.STEEL_BOOMERANG.get());
+        boomerangItem(BattleItems.DIAMOND_BOOMERANG.get());
+        boomerangItem(BattleItems.NETHERITE_BOOMERANG.get());
     }
 
     // METHODS
@@ -407,7 +407,7 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = largeWeaponItemHandheldInHand(item);
         ItemModelBuilder inventoryModel = largeWeaponItemHandheldInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item) + "_held").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
@@ -419,8 +419,8 @@ public class BattleItemModelProvider extends ItemModelProvider {
     }
     public ItemModelBuilder largeWeaponItemHandheldInInventory(ResourceLocation item) {
         return withExistingParent(item + "_held_in_inventory",
-                "battlements:item/base/large_handheld")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+                "battlements:item/base/weapon_inventory")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
     // parrying
@@ -428,19 +428,19 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = largeWeaponItemParryingInHand(item);
         ItemModelBuilder inventoryModel = largeWeaponItemParryingInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item)+ "_parrying").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
     }
     public ItemModelBuilder largeWeaponItemParryingInHand(ResourceLocation item) {
         return withExistingParent(item + "_parrying_in_hand",
-                "battlements:item/base/handheld_parrying")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+                "battlements:item/base/large_handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held" ));
     }
     public ItemModelBuilder largeWeaponItemParryingInInventory(ResourceLocation item) {
         return withExistingParent(item + "_parrying_in_inventory",
-                "battlements:item/base/handheld_parrying")
+                "battlements:item/base/weapon_inventory")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
@@ -449,19 +449,19 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = largeWeaponItemThrowingInHand(item);
         ItemModelBuilder inventoryModel = largeWeaponItemThrowingInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item)+ "_throwing").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
     }
     public ItemModelBuilder largeWeaponItemThrowingInHand(ResourceLocation item) {
         return withExistingParent(item + "_throwing_in_hand",
-                "battlements:item/base/handheld_throwing")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+                "battlements:item/base/large_handheld_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held" ));
     }
     public ItemModelBuilder largeWeaponItemThrowingInInventory(ResourceLocation item) {
         return withExistingParent(item + "_throwing_in_inventory",
-                "battlements:item/base/handheld_throwing")
+                "battlements:item/base/weapon_inventory")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
@@ -485,7 +485,7 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = polearmWeaponItemHandheldInHand(item);
         ItemModelBuilder inventoryModel = polearmWeaponItemHandheldInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item)+ "_held").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
@@ -497,8 +497,8 @@ public class BattleItemModelProvider extends ItemModelProvider {
     }
     public ItemModelBuilder polearmWeaponItemHandheldInInventory(ResourceLocation item) {
         return withExistingParent(item + "_held_in_inventory",
-                "battlements:item/base/polearm_held")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+                "battlements:item/base/weapon_inventory")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
     // parrying
@@ -506,7 +506,7 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = polearmWeaponItemParryingInHand(item);
         ItemModelBuilder inventoryModel = polearmWeaponItemParryingInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item)+ "_parrying").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
@@ -514,11 +514,11 @@ public class BattleItemModelProvider extends ItemModelProvider {
     public ItemModelBuilder polearmWeaponItemParryingInHand(ResourceLocation item) {
         return withExistingParent(item + "_parrying_in_hand",
                 "battlements:item/base/polearm_parrying")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
     }
     public ItemModelBuilder polearmWeaponItemParryingInInventory(ResourceLocation item) {
         return withExistingParent(item + "_parrying_in_inventory",
-                "battlements:item/base/handheld_parrying")
+                "battlements:item/base/weapon_inventory")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
@@ -527,7 +527,7 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = polearmWeaponItemThrowingInHand(item);
         ItemModelBuilder inventoryModel = polearmWeaponItemThrowingInInventory(item);
 
-        return getBuilder(String.valueOf(item)).customLoader(SeparateTransformsModelBuilder::begin)
+        return getBuilder(String.valueOf(item) + "_throwing").customLoader(SeparateTransformsModelBuilder::begin)
                 .base(heldModel)
                 .perspective(ItemDisplayContext.GUI, inventoryModel)
                 .perspective(ItemDisplayContext.FIXED, inventoryModel).end().guiLight(BlockModel.GuiLight.FRONT);
@@ -535,11 +535,36 @@ public class BattleItemModelProvider extends ItemModelProvider {
     public ItemModelBuilder polearmWeaponItemThrowingInHand(ResourceLocation item) {
         return withExistingParent(item + "_throwing_in_hand",
                 "battlements:item/base/polearm_throwing")
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
     }
     public ItemModelBuilder polearmWeaponItemThrowingInInventory(ResourceLocation item) {
         return withExistingParent(item + "_throwing_in_inventory",
-                "battlements:item/base/handheld_throwing")
+                "battlements:item/base/weapon_inventory")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+
+    // Weapon Item Modeling
+    public ItemModelBuilder boomerangItem(Item item){
+        return boomerangItem(Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item)));
+    }
+    public ItemModelBuilder boomerangItem(ResourceLocation item){
+        ItemModelBuilder heldModel = boomerangItemHandheld(item);
+        ItemModelBuilder throwingModel = boomerangItemThrowing(item);
+        return withExistingParent(item.toString(), heldModel.getLocation())
+                .override().predicate(BattleModelOverrides.THROWING, 1.0f).model(new ModelFile.ExistingModelFile(throwingModel.getLocation(), existingFileHelper)).end();
+    }
+
+    // normal
+    public ItemModelBuilder boomerangItemHandheld(ResourceLocation item) {
+        return withExistingParent(item + "_held",
+                "battlements:item/base/boomerang_held")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    // throwing
+    public ItemModelBuilder boomerangItemThrowing(ResourceLocation item) {
+        return withExistingParent(item + "_throwing",
+                "battlements:item/base/boomerang_throwing")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 }

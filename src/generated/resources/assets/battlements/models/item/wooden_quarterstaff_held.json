@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/base/polearm_held",
+    "textures": {
+      "layer0": "battlements:item/wooden_quarterstaff_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/base/weapon_inventory",
+      "textures": {
+        "layer0": "battlements:item/wooden_quarterstaff"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/base/weapon_inventory",
+      "textures": {
+        "layer0": "battlements:item/wooden_quarterstaff"
+      }
+    }
+  }
+}

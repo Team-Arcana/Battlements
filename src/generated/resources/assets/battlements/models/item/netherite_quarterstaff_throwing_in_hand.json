@@ -1,6 +1,6 @@
 {
   "parent": "battlements:item/base/polearm_throwing",
   "textures": {
-    "layer0": "battlements:item/netherite_quarterstaff"
+    "layer0": "battlements:item/netherite_quarterstaff_held"
   }
 }

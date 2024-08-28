@@ -2,12 +2,6 @@
   "parent": "battlements:item/iron_boomerang_held",
   "overrides": [
     {
-      "model": "battlements:item/iron_boomerang_parrying",
-      "predicate": {
-        "battlements:parrying": 1.0
-      }
-    },
-    {
       "model": "battlements:item/iron_boomerang_throwing",
       "predicate": {
         "battlements:throwing": 1.0

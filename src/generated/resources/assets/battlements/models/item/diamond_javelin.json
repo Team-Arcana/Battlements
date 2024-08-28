@@ -1,39 +1,17 @@
 {
-  "parent": "battlements:item/diamond_javelin",
-  "base": {
-    "parent": "battlements:item/base/polearm_throwing",
-    "textures": {
-      "layer0": "battlements:item/diamond_javelin"
-    }
-  },
-  "gui_light": "front",
-  "loader": "neoforge:separate_transforms",
+  "parent": "battlements:item/diamond_javelin_held",
   "overrides": [
     {
-      "model": "battlements:item/diamond_javelin",
+      "model": "battlements:item/diamond_javelin_parrying",
       "predicate": {
         "battlements:parrying": 1.0
       }
     },
     {
-      "model": "battlements:item/diamond_javelin",
+      "model": "battlements:item/diamond_javelin_throwing",
       "predicate": {
         "battlements:throwing": 1.0
       }
     }
-  ],
-  "perspectives": {
-    "fixed": {
-      "parent": "battlements:item/base/handheld_throwing",
-      "textures": {
-        "layer0": "battlements:item/diamond_javelin"
-      }
-    },
-    "gui": {
-      "parent": "battlements:item/base/handheld_throwing",
-      "textures": {
-        "layer0": "battlements:item/diamond_javelin"
-      }
-    }
-  }
+  ]
 }
