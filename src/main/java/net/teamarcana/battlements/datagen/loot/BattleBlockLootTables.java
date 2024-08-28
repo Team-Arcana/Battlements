@@ -32,8 +32,6 @@ public class BattleBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(BattleBlocks.STEEL_BLOCK.get());
-        dropSelf(BattleBlocks.ENDERIUM_BLOCK.get());
-        add(BattleBlocks.ENDER_CRYSTAL_BLOCk.get(), createCopperLikeOreDrops(BattleBlocks.ENDER_CRYSTAL_BLOCk.get(), BattleItems.ENDER_CRYSTAL.get()));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

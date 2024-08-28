@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "item": "battlements:diamond_battleaxe"
     },
     "|": {
-      "item": "battlements:handle"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [

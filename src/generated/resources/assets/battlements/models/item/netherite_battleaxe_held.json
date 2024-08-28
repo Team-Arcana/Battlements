@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/large_handheld",
+  "textures": {
+    "layer0": "battlements:item/netherite_battleaxe_held"
+  }
+}

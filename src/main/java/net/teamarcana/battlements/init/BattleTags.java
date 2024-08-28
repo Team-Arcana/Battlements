@@ -12,8 +12,6 @@ public class BattleTags {
     public static class Blocks{
         public static final TagKey<Block> NEEDS_STEEL_TOOL = tag("needs_steel_tool");
         public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = tag("incorrect_for_steel_tool");
-        public static final TagKey<Block> NEEDS_ENDERIUM_TOOL = tag("needs_enderium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_ENDERIUM_TOOL = tag("incorrect_for_enderium_tool");
 
         private static TagKey<Block> tag(String name){
             return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, name));
@@ -27,9 +25,6 @@ public class BattleTags {
         public static final TagKey<Item> BLUNT_THROWING = tag("blunt_throwing_weapons");
 
         public static final TagKey<Item> FROSTBITE_ENCHANTABLE = tag("enchantable/frostbite");
-
-        // special tag for items that are tools/weapons/armor
-        public static final TagKey<Item> EQUIPPABLE = tag("equipment");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, name));

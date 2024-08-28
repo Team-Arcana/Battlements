@@ -18,9 +18,8 @@ public class BattleBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.BEACON_BASE_BLOCKS).add(BattleBlocks.ENDERIUM_BLOCK.get(), BattleBlocks.STEEL_BLOCK.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BattleBlocks.ENDERIUM_BLOCK.get(), BattleBlocks.STEEL_BLOCK.get(), BattleBlocks.ENDER_CRYSTAL_BLOCk.get());
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BattleBlocks.STEEL_BLOCK.get(), BattleBlocks.ENDER_CRYSTAL_BLOCk.get());
-        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(BattleBlocks.ENDERIUM_BLOCK.get());
+        tag(BlockTags.BEACON_BASE_BLOCKS).add(BattleBlocks.STEEL_BLOCK.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BattleBlocks.STEEL_BLOCK.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BattleBlocks.STEEL_BLOCK.get());
     }
 }

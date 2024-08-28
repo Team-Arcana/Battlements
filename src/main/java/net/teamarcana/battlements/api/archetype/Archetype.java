@@ -77,11 +77,4 @@ public class Archetype{
     public int getTwoHanded(){ return twoHanded; }
     public Archetype setExtendedReach(){ this.hasExtendedReach = true; return this; }
     public boolean hasExtendedReach(){ return hasExtendedReach; }
-
-    public void addArchetypeDescription(ItemStack item, List<Component> tooltip, boolean isShiftPressed){
-        if(isShiftPressed && I18n.exists(String.format("tooltip.%s." + name + "_description", modId))){
-            tooltip.add(Component.translatable(String.format("tooltip.%s." + name + "_description", modId))
-                    .withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-        }
-    }
 }

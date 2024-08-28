@@ -1,6 +1,24 @@
 {
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "battlements:item/stone_battleaxe"
+  "base": {
+    "parent": "battlements:item/base/large_handheld",
+    "textures": {
+      "layer0": "battlements:item/stone_battleaxe_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_battleaxe"
+      }
+    },
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/stone_battleaxe"
+      }
+    }
   }
 }

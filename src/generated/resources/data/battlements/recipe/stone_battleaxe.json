@@ -6,7 +6,7 @@
       "tag": "minecraft:stone_crafting_materials"
     },
     "|": {
-      "item": "battlements:handle"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [

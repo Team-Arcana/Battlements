@@ -105,13 +105,6 @@ public class BaseWeaponItem extends TieredItem{
     }
 
     @Override
-    public void appendHoverText(ItemStack item, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        boolean isShiftPressed = Screen.hasShiftDown();
-        archetype.addArchetypeDescription(item, tooltip, isShiftPressed);
-        super.appendHoverText(item, context, tooltip, flag);
-    }
-
-    @Override
     public float getDestroySpeed(ItemStack item, BlockState state) {
         if(archetype.getEffectiveBlocks() != null && state.is(archetype.getEffectiveBlocks())){
             return tier.getSpeed();

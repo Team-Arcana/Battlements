@@ -14,9 +14,7 @@ public class BattleBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(BattleBlocks.ENDERIUM_BLOCK.get());
         blockWithItem(BattleBlocks.STEEL_BLOCK.get());
-        blockWithItem(BattleBlocks.ENDER_CRYSTAL_BLOCk.get());
     }
 
     private void blockWithItem(Block block){
