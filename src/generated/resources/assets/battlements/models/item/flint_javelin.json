@@ -1,0 +1,17 @@
+{
+  "parent": "battlements:item/flint_javelin_held",
+  "overrides": [
+    {
+      "model": "battlements:item/flint_javelin_parrying",
+      "predicate": {
+        "battlements:parrying": 1.0
+      }
+    },
+    {
+      "model": "battlements:item/flint_javelin_throwing",
+      "predicate": {
+        "battlements:throwing": 1.0
+      }
+    }
+  ]
+}

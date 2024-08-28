@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/polearm_held",
+  "textures": {
+    "layer0": "battlements:item/flint_spear_held"
+  }
+}

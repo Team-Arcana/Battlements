@@ -1,12 +1,9 @@
 {
   "values": [
-    "battlements:wooden_sickle",
-    "battlements:stone_sickle",
     "battlements:golden_sickle",
     "battlements:iron_sickle",
     "battlements:steel_sickle",
     "battlements:diamond_sickle",
-    "battlements:netherite_sickle",
-    "battlements:enderium_sickle"
+    "battlements:netherite_sickle"
   ]
 }

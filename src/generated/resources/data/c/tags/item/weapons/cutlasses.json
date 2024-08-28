@@ -1,12 +1,10 @@
 {
   "values": [
     "battlements:wooden_cutlass",
-    "battlements:stone_cutlass",
     "battlements:golden_cutlass",
     "battlements:iron_cutlass",
     "battlements:steel_cutlass",
     "battlements:diamond_cutlass",
-    "battlements:netherite_cutlass",
-    "battlements:enderium_cutlass"
+    "battlements:netherite_cutlass"
   ]
 }

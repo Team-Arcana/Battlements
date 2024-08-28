@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/polearm_parrying",
+  "textures": {
+    "layer0": "battlements:item/diamond_quarterstaff"
+  }
+}

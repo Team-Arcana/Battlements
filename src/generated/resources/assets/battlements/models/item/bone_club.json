@@ -1,0 +1,24 @@
+{
+  "base": {
+    "parent": "battlements:item/base/club_held",
+    "textures": {
+      "layer0": "battlements:item/bone_club_held"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
+  "perspectives": {
+    "fixed": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/bone_club"
+      }
+    },
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "battlements:item/bone_club"
+      }
+    }
+  }
+}

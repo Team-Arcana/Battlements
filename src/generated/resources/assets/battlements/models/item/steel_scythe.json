@@ -1,6 +1,6 @@
 {
   "base": {
-    "parent": "battlements:item/base/polearm_alt_held",
+    "parent": "battlements:item/base/polearm_held",
     "textures": {
       "layer0": "battlements:item/steel_scythe_held"
     }

@@ -65,6 +65,103 @@ public class BattleItemModelProvider extends ItemModelProvider {
         largeHandheldItem(BattleItems.STEEL_BATTLEAXE.get());
         largeHandheldItem(BattleItems.DIAMOND_BATTLEAXE.get());
         largeHandheldItem(BattleItems.NETHERITE_BATTLEAXE.get());
+
+        largeHandheldItem(BattleItems.GOLDEN_ANCHOR.get());
+        largeHandheldItem(BattleItems.IRON_ANCHOR.get());
+        largeHandheldItem(BattleItems.STEEL_ANCHOR.get());
+        largeHandheldItem(BattleItems.DIAMOND_ANCHOR.get());
+        largeHandheldItem(BattleItems.NETHERITE_ANCHOR.get());
+
+        handheldItem(BattleItems.FLINT_DAGGER.get());
+        handheldItem(BattleItems.GOLDEN_DAGGER.get());
+        handheldItem(BattleItems.BONE_DAGGER.get());
+        handheldItem(BattleItems.IRON_DAGGER.get());
+        handheldItem(BattleItems.STEEL_DAGGER.get());
+        handheldItem(BattleItems.DIAMOND_DAGGER.get());
+        handheldItem(BattleItems.NETHERITE_DAGGER.get());
+
+        handheldItem(BattleItems.GOLDEN_RAPIER.get());
+        handheldItem(BattleItems.IRON_RAPIER.get());
+        handheldItem(BattleItems.STEEL_RAPIER.get());
+        handheldItem(BattleItems.DIAMOND_RAPIER.get());
+        handheldItem(BattleItems.NETHERITE_RAPIER.get());
+
+        handheldItem(BattleItems.WOODEN_CUTLASS.get());
+        handheldItem(BattleItems.GOLDEN_CUTLASS.get());
+        handheldItem(BattleItems.IRON_CUTLASS.get());
+        handheldItem(BattleItems.STEEL_CUTLASS.get());
+        handheldItem(BattleItems.DIAMOND_CUTLASS.get());
+        handheldItem(BattleItems.NETHERITE_CUTLASS.get());
+
+        handheldItem(BattleItems.GOLDEN_SICKLE.get());
+        handheldItem(BattleItems.IRON_SICKLE.get());
+        handheldItem(BattleItems.STEEL_SICKLE.get());
+        handheldItem(BattleItems.DIAMOND_SICKLE.get());
+        handheldItem(BattleItems.NETHERITE_SICKLE.get());
+
+        polearmHandheldItem(BattleItems.FLINT_SPEAR.get());
+        polearmHandheldItem(BattleItems.GOLDEN_SPEAR.get());
+        polearmHandheldItem(BattleItems.IRON_SPEAR.get());
+        polearmHandheldItem(BattleItems.STEEL_SPEAR.get());
+        polearmHandheldItem(BattleItems.DIAMOND_SPEAR.get());
+        polearmHandheldItem(BattleItems.NETHERITE_SPEAR.get());
+
+        polearmHandheldItem(BattleItems.STONE_GLAIVE.get());
+        polearmHandheldItem(BattleItems.GOLDEN_GLAIVE.get());
+        polearmHandheldItem(BattleItems.IRON_GLAIVE.get());
+        polearmHandheldItem(BattleItems.STEEL_GLAIVE.get());
+        polearmHandheldItem(BattleItems.DIAMOND_GLAIVE.get());
+        polearmHandheldItem(BattleItems.NETHERITE_GLAIVE.get());
+
+        polearmHandheldItem(BattleItems.WOODEN_SCYTHE.get());
+        polearmHandheldItem(BattleItems.GOLDEN_SCYTHE.get());
+        polearmHandheldItem(BattleItems.IRON_SCYTHE.get());
+        polearmHandheldItem(BattleItems.STEEL_SCYTHE.get());
+        polearmHandheldItem(BattleItems.DIAMOND_SCYTHE.get());
+        polearmHandheldItem(BattleItems.NETHERITE_SCYTHE.get());
+
+        handheldItemWithExistingModel(BattleItems.WOODEN_CLUB.get(), "battlements:item/base/club_held");
+        handheldItemWithExistingModel(BattleItems.BONE_CLUB.get(), "battlements:item/base/club_held");
+
+        handheldItemWithExistingModel(BattleItems.GOLDEN_HAMMER.get(), "battlements:item/base/hammer_held");
+        handheldItemWithExistingModel(BattleItems.IRON_HAMMER.get(), "battlements:item/base/hammer_held");
+        handheldItemWithExistingModel(BattleItems.STEEL_HAMMER.get(), "battlements:item/base/hammer_held");
+        handheldItemWithExistingModel(BattleItems.DIAMOND_HAMMER.get(), "battlements:item/base/hammer_held");
+        handheldItemWithExistingModel(BattleItems.NETHERITE_HAMMER.get(), "battlements:item/base/hammer_held");
+
+        handheldItemWithExistingModel(BattleItems.FLINT_CLAW.get(), "battlements:item/base/claw_held");
+        handheldItemWithExistingModel(BattleItems.GOLDEN_CLAW.get(), "battlements:item/base/claw_held");
+        handheldItemWithExistingModel(BattleItems.IRON_CLAW.get(), "battlements:item/base/claw_held");
+        handheldItemWithExistingModel(BattleItems.STEEL_CLAW.get(), "battlements:item/base/claw_held");
+        handheldItemWithExistingModel(BattleItems.DIAMOND_CLAW.get(), "battlements:item/base/claw_held");
+        handheldItemWithExistingModel(BattleItems.NETHERITE_CLAW.get(), "battlements:item/base/claw_held");
+
+        largeWeaponItem(BattleItems.GOLDEN_KATANA.get());
+        largeWeaponItem(BattleItems.IRON_KATANA.get());
+        largeWeaponItem(BattleItems.STEEL_KATANA.get());
+        largeWeaponItem(BattleItems.DIAMOND_KATANA.get());
+        largeWeaponItem(BattleItems.NETHERITE_KATANA.get());
+
+        polearmWeaponItem(BattleItems.WOODEN_QUARTERSTAFF.get());
+        polearmWeaponItem(BattleItems.GOLDEN_QUARTERSTAFF.get());
+        polearmWeaponItem(BattleItems.IRON_QUARTERSTAFF.get());
+        polearmWeaponItem(BattleItems.STEEL_QUARTERSTAFF.get());
+        polearmWeaponItem(BattleItems.DIAMOND_QUARTERSTAFF.get());
+        polearmWeaponItem(BattleItems.NETHERITE_QUARTERSTAFF.get());
+
+        polearmWeaponItem(BattleItems.FLINT_JAVELIN.get());
+        polearmWeaponItem(BattleItems.GOLDEN_JAVELIN.get());
+        polearmWeaponItem(BattleItems.IRON_JAVELIN.get());
+        polearmWeaponItem(BattleItems.STEEL_JAVELIN.get());
+        polearmWeaponItem(BattleItems.DIAMOND_JAVELIN.get());
+        polearmWeaponItem(BattleItems.NETHERITE_JAVELIN.get());
+
+        weaponItem(BattleItems.WOODEN_BOOMERANG.get());
+        weaponItem(BattleItems.GOLDEN_BOOMERANG.get());
+        weaponItem(BattleItems.IRON_BOOMERANG.get());
+        weaponItem(BattleItems.STEEL_BOOMERANG.get());
+        weaponItem(BattleItems.DIAMOND_BOOMERANG.get());
+        weaponItem(BattleItems.NETHERITE_BOOMERANG.get());
     }
 
     // METHODS
@@ -343,6 +440,70 @@ public class BattleItemModelProvider extends ItemModelProvider {
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
     public ItemModelBuilder largeWeaponItemThrowingInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_throwing_in_inventory",
+                "battlements:item/base/handheld_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // Large Weapon Item Modeling
+    public ItemModelBuilder polearmWeaponItem(Item item){
+        return polearmWeaponItem(Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item)));
+    }
+    public ItemModelBuilder polearmWeaponItem(ResourceLocation item){
+        ItemModelBuilder heldModel = polearmWeaponItemHandheld(item);
+        ItemModelBuilder parryModel = polearmWeaponItemParrying(item);
+        ItemModelBuilder throwingModel = polearmWeaponItemThrowing(item);
+        return withExistingParent(item.toString(), heldModel.getLocation())
+                .override().predicate(BattleModelOverrides.PARRYING, 1.0f).model(new ModelFile.ExistingModelFile(parryModel.getLocation(), existingFileHelper)).end()
+                .override().predicate(BattleModelOverrides.THROWING, 1.0f).model(new ModelFile.ExistingModelFile(throwingModel.getLocation(), existingFileHelper)).end();
+    }
+
+    // normal
+    public ItemModelBuilder polearmWeaponItemHandheld(ResourceLocation item) {
+        return withExistingParent(item + "_held",
+                "battlements:item/base/polearm_held")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+    public ItemModelBuilder polearmWeaponItemHandheldInHand(ResourceLocation item) {
+        return withExistingParent(item + "_held_in_hand",
+                "battlements:item/base/polearm_held")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+    public ItemModelBuilder polearmWeaponItemHandheldInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_held_in_inventory",
+                "battlements:item/base/polearm_held")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath() + "_held"));
+    }
+
+    // parrying
+    public ItemModelBuilder polearmWeaponItemParrying(ResourceLocation item) {
+        return withExistingParent(item + "_parrying",
+                "battlements:item/base/polearm_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder polearmWeaponItemParryingInHand(ResourceLocation item) {
+        return withExistingParent(item + "_parrying_in_hand",
+                "battlements:item/base/polearm_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder polearmWeaponItemParryingInInventory(ResourceLocation item) {
+        return withExistingParent(item + "_parrying_in_inventory",
+                "battlements:item/base/handheld_parrying")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    // throwing
+    public ItemModelBuilder polearmWeaponItemThrowing(ResourceLocation item) {
+        return withExistingParent(item + "_throwing",
+                "battlements:item/base/polearm_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder polearmWeaponItemThrowingInHand(ResourceLocation item) {
+        return withExistingParent(item + "_throwing_in_hand",
+                "battlements:item/base/polearm_throwing")
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+    public ItemModelBuilder polearmWeaponItemThrowingInInventory(ResourceLocation item) {
         return withExistingParent(item + "_throwing_in_inventory",
                 "battlements:item/base/handheld_throwing")
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));

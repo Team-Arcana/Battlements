@@ -1,12 +1,10 @@
 {
   "values": [
-    "battlements:wooden_javelin",
-    "battlements:stone_javelin",
+    "battlements:flint_javelin",
     "battlements:golden_javelin",
     "battlements:iron_javelin",
     "battlements:steel_javelin",
     "battlements:diamond_javelin",
-    "battlements:netherite_javelin",
-    "battlements:enderium_javelin"
+    "battlements:netherite_javelin"
   ]
 }

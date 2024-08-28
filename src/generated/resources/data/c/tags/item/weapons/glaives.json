@@ -1,12 +1,10 @@
 {
   "values": [
-    "battlements:wooden_glaive",
     "battlements:stone_glaive",
     "battlements:golden_glaive",
     "battlements:iron_glaive",
     "battlements:steel_glaive",
     "battlements:diamond_glaive",
-    "battlements:netherite_glaive",
-    "battlements:enderium_glaive"
+    "battlements:netherite_glaive"
   ]
 }

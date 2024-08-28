@@ -1,8 +1,7 @@
 {
   "values": [
-    "#c:weapons/warpicks",
+    "#c:weapons/hammers",
     "#c:weapons/battleaxes",
-    "#c:weapons/greataxes",
     "#c:weapons/claws"
   ]
 }

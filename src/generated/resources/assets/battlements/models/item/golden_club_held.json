@@ -1,6 +1,0 @@
-{
-  "parent": "battlements:item/base/club_held",
-  "textures": {
-    "layer0": "battlements:item/golden_club_held"
-  }
-}

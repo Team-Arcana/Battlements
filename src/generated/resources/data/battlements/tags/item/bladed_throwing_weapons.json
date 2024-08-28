@@ -1,8 +1,5 @@
 {
   "values": [
-    "#c:weapons/javelins",
-    "#c:weapons/kunais",
-    "#c:weapons/throwing_knives",
-    "#c:weapons/tomahawks"
+    "#c:weapons/javelins"
   ]
 }

@@ -1,9 +1,7 @@
 {
   "values": [
-    "#c:weapons/longswords",
     "#c:weapons/greatswords",
     "#c:weapons/katanas",
-    "#c:weapons/sabers",
     "#c:weapons/cutlasses"
   ]
 }

@@ -1,12 +1,9 @@
 {
   "values": [
-    "battlements:wooden_rapier",
-    "battlements:stone_rapier",
     "battlements:golden_rapier",
     "battlements:iron_rapier",
     "battlements:steel_rapier",
     "battlements:diamond_rapier",
-    "battlements:netherite_rapier",
-    "battlements:enderium_rapier"
+    "battlements:netherite_rapier"
   ]
 }

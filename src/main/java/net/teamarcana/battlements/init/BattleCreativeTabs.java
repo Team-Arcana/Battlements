@@ -21,6 +21,7 @@ public class BattleCreativeTabs {
             .title(Component.translatable("itemGroup.battlements")) //The language key for the title of your CreativeModeTab
             .icon(() -> BattleItems.DIAMOND_BATTLEAXE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
+                // -- Melee Weapons --
                 // Battleaxes
                 output.accept(BattleItems.STONE_BATTLEAXE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 output.accept(BattleItems.GOLDEN_BATTLEAXE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -28,6 +29,133 @@ public class BattleCreativeTabs {
                 output.accept(BattleItems.STEEL_BATTLEAXE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 output.accept(BattleItems.DIAMOND_BATTLEAXE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
                 output.accept(BattleItems.NETHERITE_BATTLEAXE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Anchors
+                output.accept(BattleItems.GOLDEN_ANCHOR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_ANCHOR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_ANCHOR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_ANCHOR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_ANCHOR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Hammers
+                output.accept(BattleItems.GOLDEN_HAMMER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_HAMMER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_HAMMER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_HAMMER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_HAMMER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Clubs
+                output.accept(BattleItems.WOODEN_CLUB.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.BONE_CLUB.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Katanas
+                output.accept(BattleItems.GOLDEN_KATANA.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_KATANA.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_KATANA.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_KATANA.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_KATANA.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Rapiers
+                output.accept(BattleItems.GOLDEN_RAPIER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_RAPIER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_RAPIER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_RAPIER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_RAPIER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Cutlasses
+                output.accept(BattleItems.WOODEN_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_CUTLASS.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Daggers
+                output.accept(BattleItems.FLINT_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.BONE_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_DAGGER.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Greatswords
+                output.accept(BattleItems.STONE_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_GREATSWORD.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Claws
+                output.accept(BattleItems.FLINT_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_CLAW.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Sickles
+                output.accept(BattleItems.GOLDEN_SICKLE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_SICKLE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_SICKLE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_SICKLE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_SICKLE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Spears
+                output.accept(BattleItems.FLINT_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_SPEAR.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Quarterstaves
+                output.accept(BattleItems.WOODEN_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_QUARTERSTAFF.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Glaives
+                output.accept(BattleItems.STONE_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_GLAIVE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Scythes
+                output.accept(BattleItems.WOODEN_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_SCYTHE.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // -- Ranged Weapons --
+
+
+
+                // -- Throwing Weapons --
+
+                // Javelins
+                output.accept(BattleItems.FLINT_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_JAVELIN.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+                // Boomerangs
+                output.accept(BattleItems.WOODEN_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.GOLDEN_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.IRON_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.STEEL_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.DIAMOND_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                output.accept(BattleItems.NETHERITE_BOOMERANG.get(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
 
             }).build());
 

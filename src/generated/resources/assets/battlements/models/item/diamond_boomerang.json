@@ -1,24 +1,17 @@
 {
-  "base": {
-    "parent": "battlements:item/base/boomerang_held",
-    "textures": {
-      "layer0": "battlements:item/diamond_boomerang"
-    }
-  },
-  "gui_light": "front",
-  "loader": "neoforge:separate_transforms",
-  "perspectives": {
-    "fixed": {
-      "parent": "minecraft:item/handheld",
-      "textures": {
-        "layer0": "battlements:item/diamond_boomerang"
+  "parent": "battlements:item/diamond_boomerang_held",
+  "overrides": [
+    {
+      "model": "battlements:item/diamond_boomerang_parrying",
+      "predicate": {
+        "battlements:parrying": 1.0
       }
     },
-    "gui": {
-      "parent": "minecraft:item/handheld",
-      "textures": {
-        "layer0": "battlements:item/diamond_boomerang"
+    {
+      "model": "battlements:item/diamond_boomerang_throwing",
+      "predicate": {
+        "battlements:throwing": 1.0
       }
     }
-  }
+  ]
 }

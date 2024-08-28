@@ -1,24 +1,17 @@
 {
-  "base": {
-    "parent": "battlements:item/base/polearm_held",
-    "textures": {
-      "layer0": "battlements:item/golden_javelin_held"
-    }
-  },
-  "gui_light": "front",
-  "loader": "neoforge:separate_transforms",
-  "perspectives": {
-    "fixed": {
-      "parent": "minecraft:item/handheld",
-      "textures": {
-        "layer0": "battlements:item/golden_javelin"
+  "parent": "battlements:item/golden_javelin_held",
+  "overrides": [
+    {
+      "model": "battlements:item/golden_javelin_parrying",
+      "predicate": {
+        "battlements:parrying": 1.0
       }
     },
-    "gui": {
-      "parent": "minecraft:item/handheld",
-      "textures": {
-        "layer0": "battlements:item/golden_javelin"
+    {
+      "model": "battlements:item/golden_javelin_throwing",
+      "predicate": {
+        "battlements:throwing": 1.0
       }
     }
-  }
+  ]
 }

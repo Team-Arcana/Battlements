@@ -1,12 +1,10 @@
 {
   "values": [
-    "battlements:wooden_claw",
-    "battlements:stone_claw",
+    "battlements:flint_claw",
     "battlements:golden_claw",
     "battlements:iron_claw",
     "battlements:steel_claw",
     "battlements:diamond_claw",
-    "battlements:netherite_claw",
-    "battlements:enderium_claw"
+    "battlements:netherite_claw"
   ]
 }

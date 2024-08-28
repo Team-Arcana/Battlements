@@ -1,6 +1,0 @@
-{
-  "parent": "battlements:item/base/polearm_alt_held",
-  "textures": {
-    "layer0": "battlements:item/netherite_halberd_held"
-  }
-}

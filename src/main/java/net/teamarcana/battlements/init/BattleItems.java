@@ -56,10 +56,293 @@ public class BattleItems {
             "netherite_battleaxe", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.BATTLEAXE, new Item.Properties())
     );
 
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_ANCHOR = ITEMS.register(
+            "golden_anchor", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.ANCHOR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_ANCHOR = ITEMS.register(
+            "iron_anchor", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.ANCHOR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_ANCHOR = ITEMS.register(
+            "steel_anchor", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.ANCHOR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_ANCHOR = ITEMS.register(
+            "diamond_anchor", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.ANCHOR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_ANCHOR = ITEMS.register(
+            "netherite_anchor", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.ANCHOR, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_HAMMER = ITEMS.register(
+            "golden_hammer", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.HAMMER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_HAMMER = ITEMS.register(
+            "iron_hammer", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.HAMMER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_HAMMER = ITEMS.register(
+            "steel_hammer", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.HAMMER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_HAMMER = ITEMS.register(
+            "diamond_hammer", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.HAMMER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_HAMMER = ITEMS.register(
+            "netherite_hammer", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.HAMMER, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> WOODEN_CLUB = ITEMS.register(
+            "wooden_club", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.CLUB, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> BONE_CLUB = ITEMS.register(
+            "bone_club", () -> new BaseWeaponItem(BattleTiers.BONE, BattleArchetypes.CLUB, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_KATANA = ITEMS.register(
+            "golden_katana", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.KATANA, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_KATANA = ITEMS.register(
+            "iron_katana", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.KATANA, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_KATANA = ITEMS.register(
+            "steel_katana", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.KATANA, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_KATANA = ITEMS.register(
+            "diamond_katana", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.KATANA, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_KATANA = ITEMS.register(
+            "netherite_katana", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.KATANA, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_RAPIER = ITEMS.register(
+            "golden_rapier", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.RAPIER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_RAPIER = ITEMS.register(
+            "iron_rapier", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.RAPIER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_RAPIER = ITEMS.register(
+            "steel_rapier", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.RAPIER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_RAPIER = ITEMS.register(
+            "diamond_rapier", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.RAPIER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_RAPIER = ITEMS.register(
+            "netherite_rapier", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.RAPIER, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> WOODEN_CUTLASS = ITEMS.register(
+            "wooden_cutlass", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_CUTLASS = ITEMS.register(
+            "golden_cutlass", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_CUTLASS = ITEMS.register(
+            "iron_cutlass", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_CUTLASS = ITEMS.register(
+            "steel_cutlass", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_CUTLASS = ITEMS.register(
+            "diamond_cutlass", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_CUTLASS = ITEMS.register(
+            "netherite_cutlass", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.CUTLASS, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> FLINT_DAGGER = ITEMS.register(
+            "flint_dagger", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> BONE_DAGGER = ITEMS.register(
+            "bone_dagger", () -> new BaseWeaponItem(BattleTiers.BONE, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_DAGGER = ITEMS.register(
+            "golden_dagger", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_DAGGER = ITEMS.register(
+            "iron_dagger", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_DAGGER = ITEMS.register(
+            "steel_dagger", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_DAGGER = ITEMS.register(
+            "diamond_dagger", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_DAGGER = ITEMS.register(
+            "netherite_dagger", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.DAGGER, new Item.Properties())
+    );
+
+
+    public static final DeferredItem<BaseWeaponItem> STONE_GREATSWORD = ITEMS.register(
+            "stone_greatsword", () -> new BaseWeaponItem(Tiers.STONE, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_GREATSWORD = ITEMS.register(
+            "golden_greatsword", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_GREATSWORD = ITEMS.register(
+            "iron_greatsword", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_GREATSWORD = ITEMS.register(
+            "steel_greatsword", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_GREATSWORD = ITEMS.register(
+            "diamond_greatsword", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_GREATSWORD = ITEMS.register(
+            "netherite_greatsword", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.GREATSWORD, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> FLINT_CLAW = ITEMS.register(
+            "flint_claw", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.CLAW, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_CLAW = ITEMS.register(
+            "golden_claw", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.CLAW, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_CLAW = ITEMS.register(
+            "iron_claw", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.CLAW, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_CLAW = ITEMS.register(
+            "steel_claw", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.CLAW, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_CLAW = ITEMS.register(
+            "diamond_claw", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.CLAW, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_CLAW = ITEMS.register(
+            "netherite_claw", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.CLAW, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_SICKLE = ITEMS.register(
+            "golden_sickle", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.SICKLE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_SICKLE = ITEMS.register(
+            "iron_sickle", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.SICKLE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_SICKLE = ITEMS.register(
+            "steel_sickle", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.SICKLE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_SICKLE = ITEMS.register(
+            "diamond_sickle", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.SICKLE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_SICKLE = ITEMS.register(
+            "netherite_sickle", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.SICKLE, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> FLINT_SPEAR = ITEMS.register(
+            "flint_spear", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_SPEAR = ITEMS.register(
+            "golden_spear", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_SPEAR = ITEMS.register(
+            "iron_spear", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_SPEAR = ITEMS.register(
+            "steel_spear", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_SPEAR = ITEMS.register(
+            "diamond_spear", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_SPEAR = ITEMS.register(
+            "netherite_spear", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.SPEAR, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> WOODEN_QUARTERSTAFF = ITEMS.register(
+            "wooden_quarterstaff", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_QUARTERSTAFF = ITEMS.register(
+            "golden_quarterstaff", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_QUARTERSTAFF = ITEMS.register(
+            "iron_quarterstaff", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_QUARTERSTAFF = ITEMS.register(
+            "steel_quarterstaff", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_QUARTERSTAFF = ITEMS.register(
+            "diamond_quarterstaff", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_QUARTERSTAFF = ITEMS.register(
+            "netherite_quarterstaff", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.QUARTERSTAFF, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> STONE_GLAIVE = ITEMS.register(
+            "stone_glaive", () -> new BaseWeaponItem(Tiers.STONE, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_GLAIVE = ITEMS.register(
+            "golden_glaive", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_GLAIVE = ITEMS.register(
+            "iron_glaive", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_GLAIVE = ITEMS.register(
+            "steel_glaive", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_GLAIVE = ITEMS.register(
+            "diamond_glaive", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_GLAIVE = ITEMS.register(
+            "netherite_glaive", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.GLAIVE, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> WOODEN_SCYTHE = ITEMS.register(
+            "wooden_scythe", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_SCYTHE = ITEMS.register(
+            "golden_scythe", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_SCYTHE = ITEMS.register(
+            "iron_scythe", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_SCYTHE = ITEMS.register(
+            "steel_scythe", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_SCYTHE = ITEMS.register(
+            "diamond_scythe", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_SCYTHE = ITEMS.register(
+            "netherite_scythe", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.SCYTHE, new Item.Properties())
+    );
+
     // RANGED WEAPONS
 
 
     // THROWING WEAPONS
+    public static final DeferredItem<BaseWeaponItem> FLINT_JAVELIN = ITEMS.register(
+            "flint_javelin", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_JAVELIN = ITEMS.register(
+            "golden_javelin", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_JAVELIN = ITEMS.register(
+            "iron_javelin", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_JAVELIN = ITEMS.register(
+            "steel_javelin", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_JAVELIN = ITEMS.register(
+            "diamond_javelin", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_JAVELIN = ITEMS.register(
+            "netherite_javelin", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.JAVELIN, new Item.Properties())
+    );
+
+    public static final DeferredItem<BaseWeaponItem> WOODEN_BOOMERANG = ITEMS.register(
+            "wooden_boomerang", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> GOLDEN_BOOMERANG = ITEMS.register(
+            "golden_boomerang", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> IRON_BOOMERANG = ITEMS.register(
+            "iron_boomerang", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> STEEL_BOOMERANG = ITEMS.register(
+            "steel_boomerang", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> DIAMOND_BOOMERANG = ITEMS.register(
+            "diamond_boomerang", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+    public static final DeferredItem<BaseWeaponItem> NETHERITE_BOOMERANG = ITEMS.register(
+            "netherite_boomerang", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.BOOMERANG, new Item.Properties())
+    );
+
+    // MISC
+
 
     public static void register(IEventBus eventBus){ ITEMS.register(eventBus); }
 }

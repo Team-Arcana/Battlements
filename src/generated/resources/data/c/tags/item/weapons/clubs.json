@@ -1,12 +1,6 @@
 {
   "values": [
     "battlements:wooden_club",
-    "battlements:stone_club",
-    "battlements:golden_club",
-    "battlements:iron_club",
-    "battlements:steel_club",
-    "battlements:diamond_club",
-    "battlements:netherite_club",
-    "battlements:enderium_club"
+    "battlements:bone_club"
   ]
 }

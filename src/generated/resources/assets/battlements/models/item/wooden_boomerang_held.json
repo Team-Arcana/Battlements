@@ -1,5 +1,5 @@
 {
-  "parent": "battlements:item/base/boomerang_held",
+  "parent": "battlements:item/base/handheld",
   "textures": {
     "layer0": "battlements:item/wooden_boomerang"
   }

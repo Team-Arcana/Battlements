@@ -48,7 +48,7 @@ public class BattleArchetypes {
             false, Set.of()
     ).setKnockbackModifier(1);
     public static final Archetype BATTLEAXE = new Archetype(
-            "battleaxe", Battlements.MOD_ID,4.0f, 2.0f, 1.0f, 0,
+            "battleaxe", Battlements.MOD_ID,4.0f, 2.0f, 0.8f, 0,
             true, ItemAbilities.DEFAULT_AXE_ACTIONS, BlockTags.MINEABLE_WITH_AXE
     );
     public static final Archetype SPEAR = new Archetype(

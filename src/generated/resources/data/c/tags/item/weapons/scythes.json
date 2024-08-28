@@ -1,12 +1,10 @@
 {
   "values": [
     "battlements:wooden_scythe",
-    "battlements:stone_scythe",
     "battlements:golden_scythe",
     "battlements:iron_scythe",
     "battlements:steel_scythe",
     "battlements:diamond_scythe",
-    "battlements:netherite_scythe",
-    "battlements:enderium_scythe"
+    "battlements:netherite_scythe"
   ]
 }

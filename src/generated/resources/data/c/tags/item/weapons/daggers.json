@@ -1,12 +1,11 @@
 {
   "values": [
-    "battlements:wooden_dagger",
-    "battlements:stone_dagger",
+    "battlements:flint_dagger",
+    "battlements:bone_dagger",
     "battlements:golden_dagger",
     "battlements:iron_dagger",
     "battlements:steel_dagger",
     "battlements:diamond_dagger",
-    "battlements:netherite_dagger",
-    "battlements:enderium_dagger"
+    "battlements:netherite_dagger"
   ]
 }

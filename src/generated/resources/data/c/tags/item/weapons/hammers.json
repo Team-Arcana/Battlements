@@ -1,12 +1,9 @@
 {
   "values": [
-    "battlements:wooden_hammer",
-    "battlements:stone_hammer",
     "battlements:golden_hammer",
     "battlements:iron_hammer",
     "battlements:steel_hammer",
     "battlements:diamond_hammer",
-    "battlements:netherite_hammer",
-    "battlements:enderium_hammer"
+    "battlements:netherite_hammer"
   ]
 }

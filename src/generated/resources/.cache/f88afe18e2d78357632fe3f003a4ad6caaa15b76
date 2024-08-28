@@ -1,10 +1,4 @@
-// 1.21	2024-06-27T17:26:11.242844	Block States: battlements
-4974354a926fdefbc931d015b47b9e312bd36863 assets/battlements/blockstates/enderium_block.json
-f6b08edd066dc9ba4c4e77a89c9f6cd7c9b26445 assets/battlements/blockstates/ender_crystal_block.json
+// 1.21	2024-08-28T14:14:22.3349497	Block States: battlements
 59ee71ce617e8d38bb61b317e3012b4130ae3712 assets/battlements/blockstates/steel_block.json
-786d0e6f0456a3c7f804001e819da9317cad388f assets/battlements/models/block/enderium_block.json
-a36918c3365be73c3187bdbc30bb44013f159d13 assets/battlements/models/block/ender_crystal_block.json
 c35841ba375db8c869699ac63ff9d3c1bd4009a4 assets/battlements/models/block/steel_block.json
-9fe0958a6444b75012d4228ec806ccbe2edc690f assets/battlements/models/item/enderium_block.json
-72483a79abe9941703b933a4ce6063740079f38b assets/battlements/models/item/ender_crystal_block.json
 3f60372685a5f4f1362fb4c5856ca95755c8b7d6 assets/battlements/models/item/steel_block.json
