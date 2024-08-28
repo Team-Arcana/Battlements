@@ -66,6 +66,13 @@ public class BattleItemModelProvider extends ItemModelProvider {
         largeHandheldItem(BattleItems.DIAMOND_BATTLEAXE.get());
         largeHandheldItem(BattleItems.NETHERITE_BATTLEAXE.get());
 
+        largeHandheldItem(BattleItems.STONE_GREATSWORD.get());
+        largeHandheldItem(BattleItems.GOLDEN_GREATSWORD.get());
+        largeHandheldItem(BattleItems.IRON_GREATSWORD.get());
+        largeHandheldItem(BattleItems.STEEL_GREATSWORD.get());
+        largeHandheldItem(BattleItems.DIAMOND_GREATSWORD.get());
+        largeHandheldItem(BattleItems.NETHERITE_GREATSWORD.get());
+
         largeHandheldItem(BattleItems.GOLDEN_ANCHOR.get());
         largeHandheldItem(BattleItems.IRON_ANCHOR.get());
         largeHandheldItem(BattleItems.STEEL_ANCHOR.get());
