@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/handheld_throwing",
+  "textures": {
+    "layer0": "battlements:item/wooden_quarterstaff"
+  }
+}

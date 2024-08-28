@@ -1,0 +1,6 @@
+{
+  "parent": "battlements:item/base/handheld_parrying",
+  "textures": {
+    "layer0": "battlements:item/diamond_quarterstaff"
+  }
+}

@@ -1,17 +1,39 @@
 {
-  "parent": "battlements:item/iron_katana_held",
+  "parent": "battlements:item/iron_katana",
+  "base": {
+    "parent": "battlements:item/base/handheld_throwing",
+    "textures": {
+      "layer0": "battlements:item/iron_katana"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
   "overrides": [
     {
-      "model": "battlements:item/iron_katana_parrying",
+      "model": "battlements:item/iron_katana",
       "predicate": {
         "battlements:parrying": 1.0
       }
     },
     {
-      "model": "battlements:item/iron_katana_throwing",
+      "model": "battlements:item/iron_katana",
       "predicate": {
         "battlements:throwing": 1.0
       }
     }
-  ]
+  ],
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/iron_katana"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/iron_katana"
+      }
+    }
+  }
 }

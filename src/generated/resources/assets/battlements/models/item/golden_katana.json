@@ -1,17 +1,39 @@
 {
-  "parent": "battlements:item/golden_katana_held",
+  "parent": "battlements:item/golden_katana",
+  "base": {
+    "parent": "battlements:item/base/handheld_throwing",
+    "textures": {
+      "layer0": "battlements:item/golden_katana"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
   "overrides": [
     {
-      "model": "battlements:item/golden_katana_parrying",
+      "model": "battlements:item/golden_katana",
       "predicate": {
         "battlements:parrying": 1.0
       }
     },
     {
-      "model": "battlements:item/golden_katana_throwing",
+      "model": "battlements:item/golden_katana",
       "predicate": {
         "battlements:throwing": 1.0
       }
     }
-  ]
+  ],
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/golden_katana"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/golden_katana"
+      }
+    }
+  }
 }

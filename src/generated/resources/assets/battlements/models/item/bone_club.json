@@ -1,6 +1,6 @@
 {
   "base": {
-    "parent": "battlements:item/base/club_held",
+    "parent": "battlements:item/base/bone_club_held",
     "textures": {
       "layer0": "battlements:item/bone_club_held"
     }

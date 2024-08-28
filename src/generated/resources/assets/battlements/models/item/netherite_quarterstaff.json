@@ -1,17 +1,39 @@
 {
-  "parent": "battlements:item/netherite_quarterstaff_held",
+  "parent": "battlements:item/netherite_quarterstaff",
+  "base": {
+    "parent": "battlements:item/base/polearm_throwing",
+    "textures": {
+      "layer0": "battlements:item/netherite_quarterstaff"
+    }
+  },
+  "gui_light": "front",
+  "loader": "neoforge:separate_transforms",
   "overrides": [
     {
-      "model": "battlements:item/netherite_quarterstaff_parrying",
+      "model": "battlements:item/netherite_quarterstaff",
       "predicate": {
         "battlements:parrying": 1.0
       }
     },
     {
-      "model": "battlements:item/netherite_quarterstaff_throwing",
+      "model": "battlements:item/netherite_quarterstaff",
       "predicate": {
         "battlements:throwing": 1.0
       }
     }
-  ]
+  ],
+  "perspectives": {
+    "fixed": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/netherite_quarterstaff"
+      }
+    },
+    "gui": {
+      "parent": "battlements:item/base/handheld_throwing",
+      "textures": {
+        "layer0": "battlements:item/netherite_quarterstaff"
+      }
+    }
+  }
 }
