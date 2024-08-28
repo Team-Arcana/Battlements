@@ -5,9 +5,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.teamarcana.battlements.Battlements;
-import net.teamarcana.battlements.item.BaseWeaponItem;
-import net.teamarcana.battlements.item.ParryingWeaponItem;
-import net.teamarcana.battlements.item.ThrowingWeaponItem;
+import net.teamarcana.battlements.item.*;
 
 public class BattleItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Battlements.MOD_ID);
@@ -305,42 +303,42 @@ public class BattleItems {
 
 
     // THROWING WEAPONS
-    public static final DeferredItem<ThrowingWeaponItem> FLINT_JAVELIN = ITEMS.register(
-            "flint_javelin", () -> new ThrowingWeaponItem(BattleTiers.FLINT, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> FLINT_JAVELIN = ITEMS.register(
+            "flint_javelin", () -> new JavelinItem(BattleTiers.FLINT, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> GOLDEN_JAVELIN = ITEMS.register(
-            "golden_javelin", () -> new ThrowingWeaponItem(Tiers.GOLD, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> GOLDEN_JAVELIN = ITEMS.register(
+            "golden_javelin", () -> new JavelinItem(Tiers.GOLD, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> IRON_JAVELIN = ITEMS.register(
-            "iron_javelin", () -> new ThrowingWeaponItem(Tiers.IRON, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> IRON_JAVELIN = ITEMS.register(
+            "iron_javelin", () -> new JavelinItem(Tiers.IRON, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> STEEL_JAVELIN = ITEMS.register(
-            "steel_javelin", () -> new ThrowingWeaponItem(BattleTiers.STEEL, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> STEEL_JAVELIN = ITEMS.register(
+            "steel_javelin", () -> new JavelinItem(BattleTiers.STEEL, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> DIAMOND_JAVELIN = ITEMS.register(
-            "diamond_javelin", () -> new ThrowingWeaponItem(Tiers.DIAMOND, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> DIAMOND_JAVELIN = ITEMS.register(
+            "diamond_javelin", () -> new JavelinItem(Tiers.DIAMOND, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> NETHERITE_JAVELIN = ITEMS.register(
-            "netherite_javelin", () -> new ThrowingWeaponItem(Tiers.NETHERITE, BattleArchetypes.JAVELIN, new Item.Properties())
+    public static final DeferredItem<JavelinItem> NETHERITE_JAVELIN = ITEMS.register(
+            "netherite_javelin", () -> new JavelinItem(Tiers.NETHERITE, new Item.Properties())
     );
 
-    public static final DeferredItem<ThrowingWeaponItem> WOODEN_BOOMERANG = ITEMS.register(
-            "wooden_boomerang", () -> new ThrowingWeaponItem(Tiers.WOOD, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> WOODEN_BOOMERANG = ITEMS.register(
+            "wooden_boomerang", () -> new BoomerangItem(Tiers.WOOD, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> GOLDEN_BOOMERANG = ITEMS.register(
-            "golden_boomerang", () -> new ThrowingWeaponItem(Tiers.GOLD, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> GOLDEN_BOOMERANG = ITEMS.register(
+            "golden_boomerang", () -> new BoomerangItem(Tiers.GOLD, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> IRON_BOOMERANG = ITEMS.register(
-            "iron_boomerang", () -> new ThrowingWeaponItem(Tiers.IRON, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> IRON_BOOMERANG = ITEMS.register(
+            "iron_boomerang", () -> new BoomerangItem(Tiers.IRON, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> STEEL_BOOMERANG = ITEMS.register(
-            "steel_boomerang", () -> new ThrowingWeaponItem(BattleTiers.STEEL, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> STEEL_BOOMERANG = ITEMS.register(
+            "steel_boomerang", () -> new BoomerangItem(BattleTiers.STEEL, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> DIAMOND_BOOMERANG = ITEMS.register(
-            "diamond_boomerang", () -> new ThrowingWeaponItem(Tiers.DIAMOND, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> DIAMOND_BOOMERANG = ITEMS.register(
+            "diamond_boomerang", () -> new BoomerangItem(Tiers.DIAMOND, new Item.Properties())
     );
-    public static final DeferredItem<ThrowingWeaponItem> NETHERITE_BOOMERANG = ITEMS.register(
-            "netherite_boomerang", () -> new ThrowingWeaponItem(Tiers.NETHERITE, BattleArchetypes.BOOMERANG, new Item.Properties())
+    public static final DeferredItem<BoomerangItem> NETHERITE_BOOMERANG = ITEMS.register(
+            "netherite_boomerang", () -> new BoomerangItem(Tiers.NETHERITE, new Item.Properties())
     );
 
     // MISC

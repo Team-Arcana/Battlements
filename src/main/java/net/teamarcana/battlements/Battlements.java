@@ -1,7 +1,12 @@
 package net.teamarcana.battlements;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
+import net.teamarcana.battlements.client.renderer.entity.BoomerangRenderer;
+import net.teamarcana.battlements.client.renderer.entity.JavelinRenderer;
+import net.teamarcana.battlements.client.renderer.entity.ThrownWeaponRenderer;
 import net.teamarcana.battlements.init.*;
 import org.slf4j.Logger;
 
@@ -40,6 +45,8 @@ public class Battlements
         BattleEnchantmentEntityEffects.register(modEventBus);
         BattleMobEffects.register(modEventBus);
         BattlePotions.register(modEventBus);
+        BattleEntities.register(modEventBus);
+        BattleSounds.register(modEventBus);
 
         BattleCreativeTabs.register(modEventBus);
 
@@ -81,6 +88,12 @@ public class Battlements
             //LOGGER.info("HELLO FROM CLIENT SETUP");
             //LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             BattleItemProperties.addCustomItemProperties();
+        }
+        @SubscribeEvent
+        public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
+            event.registerEntityRenderer(BattleEntities.THROWN_WEAPON.get(), ThrownWeaponRenderer::new);
+            event.registerEntityRenderer(BattleEntities.THROWN_JAVELIN.get(), JavelinRenderer::new);
+            event.registerEntityRenderer(BattleEntities.THROWN_BOOMERANG.get(), BoomerangRenderer::new);
         }
     }
 }

@@ -1,5 +1,6 @@
 package net.teamarcana.battlements.init;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.teamarcana.battlements.Battlements;
@@ -70,9 +71,9 @@ public class BattleArchetypes {
     public static final Archetype BOOMERANG = new Archetype(
             "boomerang", Battlements.MOD_ID, 4, 1, 2, 0,
             false, Set.of()
-    );
+    ).setChargeTicks(5).setThrowSound(BattleSounds.BOOMERANG_THROW.get());;
     public static final Archetype JAVELIN = new Archetype(
             "javelin", Battlements.MOD_ID,1.5f, 1.0f, 1.2f, 0.5f,
             false, Set.of()
-    );
+    ).setChargeTicks(10).setThrowSound(SoundEvents.TRIDENT_THROW.value());;
 }

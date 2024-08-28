@@ -3,6 +3,7 @@ package net.teamarcana.battlements.api.archetype;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -28,6 +29,10 @@ public class Archetype{
     protected Set<ItemAbility> abilities = Set.of();
     protected final TagKey<Block> effectiveBlocks;
     protected boolean isSharp = false;
+
+    // stuff for throwing weapons
+    protected float chargeTicks;
+    protected SoundEvent throwSound;
 
     /**
      * Constructor for Weapon Archetypes
@@ -77,4 +82,15 @@ public class Archetype{
     public int getTwoHanded(){ return twoHanded; }
     public Archetype setExtendedReach(){ this.hasExtendedReach = true; return this; }
     public boolean hasExtendedReach(){ return hasExtendedReach; }
+
+    public float getChargeTicks(){ return this.chargeTicks; }
+    public Archetype setChargeTicks(float f){
+        this.chargeTicks = f;
+        return this;
+    }
+    public SoundEvent getThrowSound() { return this.throwSound; }
+    public Archetype setThrowSound(SoundEvent s){
+        this.throwSound = s;
+        return this;
+    }
 }

@@ -164,4 +164,12 @@ public class BaseWeaponItem extends TieredItem{
         if(archetype.getEffectiveBlocks() != null && state.is(archetype.getEffectiveBlocks())){ return true; }
         return !player.isCreative() && super.canAttackBlock(state, level, pos, player);
     }
+
+    public static float getAttackDamage() {
+        return attackDamage;
+    }
+
+    public static float getAttackSpeed() {
+        return attackSpeed;
+    }
 }
