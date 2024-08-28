@@ -1,6 +1,14 @@
 package net.teamarcana.battlements.event;
 
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
@@ -10,9 +18,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.teamarcana.battlements.api.IReloadable;
 import net.teamarcana.battlements.api.ReloadHandler;
 import net.teamarcana.battlements.init.BattlePotions;
+import net.teamarcana.battlements.item.ParryingWeaponItem;
 import org.jline.utils.Log;
 
 import java.util.List;
@@ -114,5 +125,40 @@ public class GameEvents {
                 Items.GOAT_HORN,
                 BattlePotions.KNOCKBACK_BOOST
         );
+    }
+
+    @SubscribeEvent
+    public static void entityAttackEvent(LivingIncomingDamageEvent event){
+        if(event.getEntity() != null){
+            LivingEntity target = event.getEntity();
+            blockCheck(event, target);
+        }
+    }
+
+    public static void blockCheck(LivingIncomingDamageEvent event, LivingEntity target){
+        if(target.isUsingItem() && !target.getUseItem().isEmpty()){
+            ItemStack item = target.getUseItem();
+            if(item.getItem() instanceof ParryingWeaponItem weapon){
+                DamageSource source = event.getSource();
+                float damage = event.getAmount();
+                boolean damageItem = false;
+                boolean canbeBlocked = source != null && !ParryingWeaponItem.cantBeBlocked(source);
+
+                if(canbeBlocked){
+                    Entity trueSource = source.getEntity();
+
+                    if(trueSource instanceof LivingEntity attacker){
+                        attacker.knockback(0.3f, target.getX() - attacker.getX(), target.getZ() - attacker.getZ());
+                    }
+                    damageItem = true;
+                }
+                if(damageItem){
+                    int dmg = (int) Math.floor(damage);
+                    item.hurtAndBreak(dmg, target, EquipmentSlot.MAINHAND);
+                    target.level().playSound(((Player) null), target.getX(), target.getY(), target.getZ(), SoundEvents.PLAYER_ATTACK_KNOCKBACK, SoundSource.PLAYERS, 0.8f, 0.8f);
+                    event.setCanceled(true);
+                }
+            }
+        }
     }
 }

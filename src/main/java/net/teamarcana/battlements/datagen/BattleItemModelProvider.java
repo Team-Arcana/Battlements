@@ -106,26 +106,26 @@ public class BattleItemModelProvider extends ItemModelProvider {
         handheldItem(BattleItems.DIAMOND_SICKLE.get());
         handheldItem(BattleItems.NETHERITE_SICKLE.get());
 
-        polearmHandheldItem(BattleItems.FLINT_SPEAR.get());
-        polearmHandheldItem(BattleItems.GOLDEN_SPEAR.get());
-        polearmHandheldItem(BattleItems.IRON_SPEAR.get());
-        polearmHandheldItem(BattleItems.STEEL_SPEAR.get());
-        polearmHandheldItem(BattleItems.DIAMOND_SPEAR.get());
-        polearmHandheldItem(BattleItems.NETHERITE_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.FLINT_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.GOLDEN_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.IRON_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.STEEL_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.DIAMOND_SPEAR.get());
+        polearmHandheldItemAlt(BattleItems.NETHERITE_SPEAR.get());
 
-        polearmHandheldItem(BattleItems.STONE_GLAIVE.get());
-        polearmHandheldItem(BattleItems.GOLDEN_GLAIVE.get());
-        polearmHandheldItem(BattleItems.IRON_GLAIVE.get());
-        polearmHandheldItem(BattleItems.STEEL_GLAIVE.get());
-        polearmHandheldItem(BattleItems.DIAMOND_GLAIVE.get());
-        polearmHandheldItem(BattleItems.NETHERITE_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.STONE_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.GOLDEN_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.IRON_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.STEEL_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.DIAMOND_GLAIVE.get());
+        polearmHandheldItemAlt(BattleItems.NETHERITE_GLAIVE.get());
 
-        polearmHandheldItem(BattleItems.WOODEN_SCYTHE.get());
-        polearmHandheldItem(BattleItems.GOLDEN_SCYTHE.get());
-        polearmHandheldItem(BattleItems.IRON_SCYTHE.get());
-        polearmHandheldItem(BattleItems.STEEL_SCYTHE.get());
-        polearmHandheldItem(BattleItems.DIAMOND_SCYTHE.get());
-        polearmHandheldItem(BattleItems.NETHERITE_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.WOODEN_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.GOLDEN_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.IRON_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.STEEL_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.DIAMOND_SCYTHE.get());
+        polearmHandheldItemAlt(BattleItems.NETHERITE_SCYTHE.get());
 
         handheldItemWithExistingModel(BattleItems.WOODEN_CLUB.get(), "battlements:item/base/club_held");
         handheldItemWithExistingModel(BattleItems.BONE_CLUB.get(), "battlements:item/base/bone_club_held");
@@ -396,6 +396,7 @@ public class BattleItemModelProvider extends ItemModelProvider {
         ItemModelBuilder heldModel = largeWeaponItemHandheld(item);
         ItemModelBuilder parryModel = largeWeaponItemParrying(item);
         ItemModelBuilder throwingModel = largeWeaponItemThrowing(item);
+
         return withExistingParent(item.toString(), heldModel.getLocation())
                 .override().predicate(BattleModelOverrides.PARRYING, 1.0f).model(new ModelFile.ExistingModelFile(parryModel.getLocation(), existingFileHelper)).end()
                 .override().predicate(BattleModelOverrides.THROWING, 1.0f).model(new ModelFile.ExistingModelFile(throwingModel.getLocation(), existingFileHelper)).end();
