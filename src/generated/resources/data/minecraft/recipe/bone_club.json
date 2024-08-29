@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:bone_block"
+    }
+  },
+  "pattern": [
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:bone_club"
+  }
+}

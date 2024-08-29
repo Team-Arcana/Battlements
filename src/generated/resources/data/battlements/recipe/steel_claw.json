@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "battlements:steel_ingot"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "SS ",
+    "LL "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:steel_claw"
+  }
+}

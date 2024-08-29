@@ -92,9 +92,124 @@ public class BattleRecipeProvider extends RecipeProvider {
         battleaxeRecipe(BattleItems.GOLDEN_BATTLEAXE, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
         battleaxeRecipe(BattleItems.IRON_BATTLEAXE, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
         battleaxeRecipe(BattleItems.STEEL_BATTLEAXE, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
-        battleaxeRecipe(BattleItems.DIAMOND_BATTLEAXE, Ingredient.of(BattleItems.DIAMOND_BATTLEAXE), Items.DIAMOND, output);
+        battleaxeRecipe(BattleItems.DIAMOND_BATTLEAXE, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
         netheriteSmithing(output, BattleItems.DIAMOND_BATTLEAXE.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_BATTLEAXE.get());
 
+        anchorRecipe(BattleItems.GOLDEN_ANCHOR, Ingredient.of(Items.GOLD_INGOT), Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_INGOT, output);
+        anchorRecipe(BattleItems.IRON_ANCHOR, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.IRON_NUGGET), Items.IRON_INGOT, output);
+        anchorRecipe(BattleItems.STEEL_ANCHOR, Ingredient.of(BattleItems.STEEL_INGOT), Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_INGOT, output);
+        anchorRecipe(BattleItems.DIAMOND_ANCHOR, Ingredient.of(Items.DIAMOND), Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_ANCHOR.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_ANCHOR.get());
+
+        hammerRecipe(BattleItems.GOLDEN_HAMMER, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        hammerRecipe(BattleItems.IRON_HAMMER, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        hammerRecipe(BattleItems.STEEL_HAMMER, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        hammerRecipe(BattleItems.DIAMOND_HAMMER, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_HAMMER.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_HAMMER.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BattleItems.WOODEN_CLUB)
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('S', Ingredient.of(ItemTags.LOGS))
+                .unlockedBy(getHasName(Items.OAK_LOG), has(Items.OAK_LOG))
+                .save(output, getItemName(BattleItems.WOODEN_CLUB));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BattleItems.BONE_CLUB)
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('S', Ingredient.of(Items.BONE_BLOCK))
+                .unlockedBy(getHasName(Items.BONE_BLOCK), has(Items.BONE_BLOCK))
+                .save(output, getItemName(BattleItems.BONE_CLUB));
+
+        katanaRecipe(BattleItems.GOLDEN_KATANA, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        katanaRecipe(BattleItems.IRON_KATANA, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        katanaRecipe(BattleItems.STEEL_KATANA, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        katanaRecipe(BattleItems.DIAMOND_KATANA, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_KATANA.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_KATANA.get());
+
+        rapierRecipe(BattleItems.GOLDEN_RAPIER, Ingredient.of(Items.GOLD_INGOT), Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_INGOT, output);
+        rapierRecipe(BattleItems.IRON_RAPIER, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.IRON_NUGGET), Items.IRON_INGOT, output);
+        rapierRecipe(BattleItems.STEEL_RAPIER, Ingredient.of(BattleItems.STEEL_INGOT), Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_INGOT, output);
+        rapierRecipe(BattleItems.DIAMOND_RAPIER, Ingredient.of(Items.DIAMOND), Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_RAPIER.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_RAPIER.get());
+
+        cutlassRecipe(BattleItems.WOODEN_CUTLASS, Ingredient.of(ItemTags.PLANKS), Ingredient.of(ItemTags.PLANKS), Items.OAK_PLANKS, output);
+        cutlassRecipe(BattleItems.GOLDEN_CUTLASS, Ingredient.of(Items.GOLD_INGOT), Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_INGOT, output);
+        cutlassRecipe(BattleItems.IRON_CUTLASS, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.IRON_NUGGET), Items.IRON_INGOT, output);
+        cutlassRecipe(BattleItems.STEEL_CUTLASS, Ingredient.of(BattleItems.STEEL_INGOT), Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_INGOT, output);
+        cutlassRecipe(BattleItems.DIAMOND_CUTLASS, Ingredient.of(Items.DIAMOND), Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_CUTLASS.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_CUTLASS.get());
+
+        daggerRecipe(BattleItems.FLINT_DAGGER, Ingredient.of(Items.FLINT), Items.FLINT, output);
+        daggerRecipe(BattleItems.BONE_DAGGER, Ingredient.of(Items.BONE), Items.BONE, output);
+        daggerRecipe(BattleItems.GOLDEN_DAGGER, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        daggerRecipe(BattleItems.IRON_DAGGER, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        daggerRecipe(BattleItems.STEEL_DAGGER, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        daggerRecipe(BattleItems.DIAMOND_DAGGER, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_DAGGER.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_DAGGER.get());
+
+        greatswordRecipe(BattleItems.STONE_GREATSWORD, Ingredient.of(ItemTags.STONE_CRAFTING_MATERIALS), Items.COBBLESTONE, output);
+        greatswordRecipe(BattleItems.GOLDEN_GREATSWORD, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        greatswordRecipe(BattleItems.IRON_GREATSWORD, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        greatswordRecipe(BattleItems.STEEL_GREATSWORD, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        greatswordRecipe(BattleItems.DIAMOND_GREATSWORD, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_GREATSWORD.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_GREATSWORD.get());
+
+        clawRecipe(BattleItems.FLINT_CLAW, Ingredient.of(Items.FLINT), Items.FLINT, output);
+        clawRecipe(BattleItems.GOLDEN_CLAW, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        clawRecipe(BattleItems.IRON_CLAW, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        clawRecipe(BattleItems.STEEL_CLAW, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        clawRecipe(BattleItems.DIAMOND_CLAW, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_CLAW.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_CLAW.get());
+
+        sickleRecipe(BattleItems.GOLDEN_SICKLE, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        sickleRecipe(BattleItems.IRON_SICKLE, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        sickleRecipe(BattleItems.STEEL_SICKLE, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        sickleRecipe(BattleItems.DIAMOND_SICKLE, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_SICKLE.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_SICKLE.get());
+
+        spearRecipe(BattleItems.FLINT_SPEAR, Ingredient.of(Items.FLINT), Items.FLINT, output);
+        spearRecipe(BattleItems.GOLDEN_SPEAR, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        spearRecipe(BattleItems.IRON_SPEAR, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        spearRecipe(BattleItems.STEEL_SPEAR, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        spearRecipe(BattleItems.DIAMOND_SPEAR, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_SPEAR.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_SPEAR.get());
+
+        quarterstaffRecipe(BattleItems.WOODEN_QUARTERSTAFF, Ingredient.of(ItemTags.PLANKS), Items.OAK_PLANKS, output);
+        quarterstaffRecipe(BattleItems.GOLDEN_QUARTERSTAFF, Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_NUGGET, output);
+        quarterstaffRecipe(BattleItems.IRON_QUARTERSTAFF, Ingredient.of(Items.IRON_NUGGET), Items.IRON_NUGGET, output);
+        quarterstaffRecipe(BattleItems.STEEL_QUARTERSTAFF, Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_NUGGET, output);
+        quarterstaffRecipe(BattleItems.DIAMOND_QUARTERSTAFF, Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_QUARTERSTAFF.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_QUARTERSTAFF.get());
+
+        glaiveRecipe(BattleItems.STONE_GLAIVE, Ingredient.of(ItemTags.STONE_CRAFTING_MATERIALS), Ingredient.of(ItemTags.STONE_CRAFTING_MATERIALS), Items.COBBLESTONE, output);
+        glaiveRecipe(BattleItems.GOLDEN_GLAIVE, Ingredient.of(Items.GOLD_INGOT), Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_INGOT, output);
+        glaiveRecipe(BattleItems.IRON_GLAIVE, Ingredient.of(Items.IRON_INGOT),Ingredient.of(Items.IRON_NUGGET), Items.IRON_INGOT, output);
+        glaiveRecipe(BattleItems.STEEL_GLAIVE, Ingredient.of(BattleItems.STEEL_INGOT),Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_INGOT, output);
+        glaiveRecipe(BattleItems.DIAMOND_GLAIVE, Ingredient.of(BattleItems.DIAMOND_GLAIVE),Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_GLAIVE.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_GLAIVE.get());
+
+        scytheRecipe(BattleItems.WOODEN_SCYTHE, Ingredient.of(ItemTags.PLANKS), Items.OAK_PLANKS, output);
+        scytheRecipe(BattleItems.GOLDEN_SCYTHE, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        scytheRecipe(BattleItems.IRON_SCYTHE, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        scytheRecipe(BattleItems.STEEL_SCYTHE, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        scytheRecipe(BattleItems.DIAMOND_SCYTHE, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_SCYTHE.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_SCYTHE.get());
+
+        javelinRecipe(BattleItems.FLINT_JAVELIN, Ingredient.of(Items.FLINT), Ingredient.of(Items.FLINT), Items.FLINT, output);
+        javelinRecipe(BattleItems.GOLDEN_JAVELIN, Ingredient.of(Items.GOLD_INGOT), Ingredient.of(Items.GOLD_NUGGET), Items.GOLD_INGOT, output);
+        javelinRecipe(BattleItems.IRON_JAVELIN, Ingredient.of(Items.IRON_INGOT), Ingredient.of(Items.IRON_NUGGET), Items.IRON_INGOT, output);
+        javelinRecipe(BattleItems.STEEL_JAVELIN, Ingredient.of(BattleItems.STEEL_INGOT), Ingredient.of(BattleItems.STEEL_NUGGET), BattleItems.STEEL_INGOT, output);
+        javelinRecipe(BattleItems.DIAMOND_JAVELIN, Ingredient.of(Items.DIAMOND), Ingredient.of(BattleItems.DIAMOND_SHARD), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_JAVELIN.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_JAVELIN.get());
+
+        boomerangRecipe(BattleItems.WOODEN_BOOMERANG, Ingredient.of(ItemTags.PLANKS), Items.OAK_PLANKS, output);
+        boomerangRecipe(BattleItems.GOLDEN_BOOMERANG, Ingredient.of(Items.GOLD_INGOT), Items.GOLD_INGOT, output);
+        boomerangRecipe(BattleItems.IRON_BOOMERANG, Ingredient.of(Items.IRON_INGOT), Items.IRON_INGOT, output);
+        boomerangRecipe(BattleItems.STEEL_BOOMERANG, Ingredient.of(BattleItems.STEEL_INGOT), BattleItems.STEEL_INGOT, output);
+        boomerangRecipe(BattleItems.DIAMOND_BOOMERANG, Ingredient.of(Items.DIAMOND), Items.DIAMOND, output);
+        netheriteSmithing(output, BattleItems.DIAMOND_BOOMERANG.get(), RecipeCategory.COMBAT, BattleItems.NETHERITE_BOOMERANG.get());
+
+        // other recipes
     }
 
     public static void smokingRecipe(RecipeOutput output,  List<ItemLike> pIngredients,  RecipeCategory pCategory,  ItemLike pResult,  float pExperience,  int cookingTime,  String pGroup) {
@@ -212,7 +327,7 @@ public class BattleRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
                 .pattern("  S")
                 .pattern(" | ")
-                .pattern("| ")
+                .pattern("|  ")
                 .define('S', ingot)
                 .define('|', Items.STICK)
                 .unlockedBy(getHasName(unlockItem), has(unlockItem))
@@ -243,7 +358,7 @@ public class BattleRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
                 .pattern(" sS")
                 .pattern(" | ")
-                .pattern("| ")
+                .pattern("|  ")
                 .define('S', ingot)
                 .define('s', nugget)
                 .define('|', Items.STICK)

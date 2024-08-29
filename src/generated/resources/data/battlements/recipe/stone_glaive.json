@@ -3,19 +3,22 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "tag": "minecraft:stone_crafting_materials"
+    },
+    "s": {
+      "tag": "minecraft:stone_crafting_materials"
     },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    " sS",
+    " | ",
+    "|  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:stone_glaive"
   }
 }

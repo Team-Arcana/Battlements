@@ -3,19 +3,19 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "item": "battlements:steel_ingot"
     },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    "  S",
+    " | ",
+    "|  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:steel_spear"
   }
 }

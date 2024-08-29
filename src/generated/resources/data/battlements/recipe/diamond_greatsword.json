@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    " S ",
+    " S ",
+    "S|S"
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:diamond_greatsword"
   }
 }

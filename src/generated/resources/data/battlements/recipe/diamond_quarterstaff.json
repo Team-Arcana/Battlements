@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "S": {
-      "item": "minecraft:diamond"
+    "s": {
+      "item": "battlements:diamond_shard"
     },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    "  s",
+    " | ",
+    "s  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:diamond_quarterstaff"
   }
 }

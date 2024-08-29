@@ -3,19 +3,22 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "item": "battlements:diamond_glaive"
+    },
+    "s": {
+      "item": "battlements:diamond_shard"
     },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    " sS",
+    " | ",
+    "|  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:diamond_glaive"
   }
 }

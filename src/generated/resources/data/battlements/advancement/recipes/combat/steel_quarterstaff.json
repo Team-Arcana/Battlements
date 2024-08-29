@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "battlements:steel_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "battlements:steel_quarterstaff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "battlements:steel_quarterstaff"
+    ]
+  }
+}

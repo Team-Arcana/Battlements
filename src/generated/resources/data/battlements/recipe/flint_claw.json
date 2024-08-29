@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "SS ",
+    "LL "
+  ],
+  "result": {
+    "count": 1,
+    "id": "battlements:flint_claw"
+  }
+}

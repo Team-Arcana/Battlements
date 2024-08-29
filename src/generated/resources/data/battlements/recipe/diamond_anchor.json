@@ -5,17 +5,20 @@
     "S": {
       "item": "minecraft:diamond"
     },
+    "s": {
+      "item": "battlements:diamond_shard"
+    },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
+    "SSS",
     "S|S",
-    "S|S",
-    " | "
+    "s|s"
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:diamond_anchor"
   }
 }

@@ -3,19 +3,19 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:gold_ingot"
     },
     "|": {
-      "item": "minecraft:stick"
+      "item": "minecraft:leather"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    "|SS",
+    "S  ",
+    "S  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:golden_boomerang"
   }
 }

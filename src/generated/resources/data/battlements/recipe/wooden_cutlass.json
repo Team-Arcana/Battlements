@@ -3,19 +3,22 @@
   "category": "equipment",
   "key": {
     "S": {
-      "item": "minecraft:diamond"
+      "tag": "minecraft:planks"
+    },
+    "s": {
+      "tag": "minecraft:planks"
     },
     "|": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    " S ",
+    " S ",
+    " |s"
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:wooden_cutlass"
   }
 }

@@ -6,16 +6,16 @@
       "item": "minecraft:diamond"
     },
     "|": {
-      "item": "minecraft:stick"
+      "item": "minecraft:leather"
     }
   },
   "pattern": [
-    "S|S",
-    "S|S",
-    " | "
+    "|SS",
+    "S  ",
+    "S  "
   ],
   "result": {
     "count": 1,
-    "id": "battlements:diamond_battleaxe"
+    "id": "battlements:diamond_boomerang"
   }
 }
