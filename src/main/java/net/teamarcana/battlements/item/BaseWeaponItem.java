@@ -22,6 +22,8 @@ import net.neoforged.neoforge.common.ItemAbility;
 import net.teamarcana.battlements.Battlements;
 import net.teamarcana.battlements.api.archetype.Archetype;
 import net.teamarcana.battlements.init.BattleMobEffects;
+import net.teamarcana.battlements.init.BattleTags;
+import net.teamarcana.battlements.init.CommunityTags;
 
 import java.util.List;
 
@@ -172,4 +174,6 @@ public class BaseWeaponItem extends TieredItem{
     public static float getAttackSpeed() {
         return attackSpeed;
     }
+
+    public void setAttackDamage(float damage){ attackDamage = damage; }
 }

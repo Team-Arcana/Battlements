@@ -19,6 +19,6 @@ public class JavelinItem extends ThrowingWeaponItem{
 
     @Override
     public AbstractThrownWeapon createThrownWeapon(Level level, Player player, ItemStack item, int charge) {
-        return new ThrownJavelin(BattleEntities.THROWN_JAVELIN.get(), level, player, item).setWeapon(item);
+        return new ThrownJavelin(BattleEntities.THROWN_JAVELIN.get(), level, player, item).setWeapon(item).setWeapon(item).setBaseDamage(getAttackDamage());
     }
 }

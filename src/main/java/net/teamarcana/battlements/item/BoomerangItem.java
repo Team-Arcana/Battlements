@@ -21,7 +21,7 @@ public class BoomerangItem extends ThrowingWeaponItem{
 
     @Override
     public AbstractThrownWeapon createThrownWeapon(Level level, Player player, ItemStack item, int charge) {
-        ThrownBoomerang boomerang = (ThrownBoomerang) new ThrownBoomerang(BattleEntities.THROWN_BOOMERANG.get(), level, player, item).setWeapon(item);
+        ThrownBoomerang boomerang = (ThrownBoomerang) new ThrownBoomerang(BattleEntities.THROWN_BOOMERANG.get(), level, player, item).setWeapon(item).setBaseDamage(getAttackDamage());
 
         boomerang.setReturnDistance((charge / 5.0d) * (ThrownBoomerang.distanceToReturn - 3.0d)
                 + 3.0d);

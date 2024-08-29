@@ -1,9 +1,10 @@
-// 1.21	2024-08-28T15:55:44.4503625	Tags for minecraft:item mod id battlements
+// 1.21	2024-08-29T15:39:44.3557816	Tags for minecraft:item mod id battlements
 7cc23787ef9e5426b102da28f6aeb9e0f8a9a0ec data/battlements/tags/item/bladed_melee_weapons.json
 566b5d6f5c3ec278870101f2483359cee686bdcd data/battlements/tags/item/bladed_throwing_weapons.json
 f8b0c6d4e0e4e18c57b89f1d6bc790c858fb3da7 data/battlements/tags/item/blunt_melee_weapons.json
 734c7e45a720a716850802143a703ee616ff5892 data/battlements/tags/item/blunt_throwing_weapons.json
 4eded238cc169507c3ee1964422fed9bcd54b1f7 data/battlements/tags/item/enchantable/frostbite.json
+7af6de930cd754028eacad9ab6ef8ea278f484f9 data/battlements/tags/item/enchantable/loyalty.json
 53afab49b5b9633acf3b19ddcc94f6a7d07029e7 data/c/tags/item/enchantable/blunt_weapon.json
 109af27f5c848766a2ebbbce21ebe9bef9a2f328 data/c/tags/item/enchantable/knockback.json
 263e828567fd007b98fd5dcc3201a2f88eb3ef93 data/c/tags/item/enchantable/looting.json

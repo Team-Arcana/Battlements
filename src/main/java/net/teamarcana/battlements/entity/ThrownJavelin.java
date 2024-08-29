@@ -6,6 +6,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.teamarcana.battlements.init.BattleItems;
 
 public class ThrownJavelin extends AbstractThrownWeapon {
     // constructors
@@ -26,5 +27,10 @@ public class ThrownJavelin extends AbstractThrownWeapon {
     @Override
     protected SoundEvent getDefaultHitGroundSoundEvent() {
         return SoundEvents.TRIDENT_HIT_GROUND;
+    }
+
+    @Override
+    protected ItemStack getDefaultPickupItem() {
+        return new ItemStack(BattleItems.FLINT_JAVELIN.get());
     }
 }

@@ -31,7 +31,7 @@ public class ThrownWeaponRenderer<T extends AbstractThrownWeapon> extends Entity
 
         transform(entity, partialTick, pose);
         pose.translate(0.10d, -0.20d, 0.0d);
-        ItemStack item = entity.getWeapon();
+        ItemStack item = getItemToRender(entity);
         if(item != null && !item.isEmpty()){
             BakedModel model = this.renderer.getModel(item, entity.level(), (LivingEntity)null, entity.getId());
             this.renderer.render(item, ItemDisplayContext.GROUND, false, pose, buffer, light, OverlayTexture.NO_OVERLAY, model);
@@ -48,5 +48,9 @@ public class ThrownWeaponRenderer<T extends AbstractThrownWeapon> extends Entity
     @Override
     public ResourceLocation getTextureLocation(T entity) {
         return TextureAtlas.LOCATION_BLOCKS;
+    }
+
+    public ItemStack getItemToRender(T weapon){
+        return weapon.getWeapon();
     }
 }

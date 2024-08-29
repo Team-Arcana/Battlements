@@ -11,11 +11,13 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.teamarcana.battlements.init.BattleItems;
 import net.teamarcana.battlements.init.BattleSounds;
 
 import java.util.UUID;
@@ -116,7 +118,8 @@ public class ThrownBoomerang extends AbstractThrownWeapon {
                 setNoPhysics(true);
             }
             else if(pickup == Pickup.ALLOWED){
-                dropAsItem();
+                //dropAsItem();
+                //if(getThrower() instanceof Player player){ tryPickup(player); }
                 discard();
             }
         }
@@ -167,6 +170,18 @@ public class ThrownBoomerang extends AbstractThrownWeapon {
     }
 
     @Override
+    public void playerTouch(Player entity) {
+        if (this.ownedBy(entity) || this.getOwner() == null) {
+            if (!this.level().isClientSide && (inGround || isReturning()) && this.shakeTime <= 0) {
+                if (this.tryPickup(entity)) {
+                    entity.take(this, 1);
+                    this.discard();
+                }
+            }
+        }
+    }
+
+    @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         if(tag.contains(throwerTag, 10)){
@@ -187,4 +202,9 @@ public class ThrownBoomerang extends AbstractThrownWeapon {
         isReturning = bool;
     }
     public boolean returning() { return isReturning; }
+
+    @Override
+    protected ItemStack getDefaultPickupItem() {
+        return new ItemStack(BattleItems.WOODEN_BOOMERANG.get());
+    }
 }

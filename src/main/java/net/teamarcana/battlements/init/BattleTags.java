@@ -25,6 +25,7 @@ public class BattleTags {
         public static final TagKey<Item> BLUNT_THROWING = tag("blunt_throwing_weapons");
 
         public static final TagKey<Item> FROSTBITE_ENCHANTABLE = tag("enchantable/frostbite");
+        public static final TagKey<Item> LOYALTY_ENCHANTABLE = tag("enchantable/loyalty");
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Battlements.MOD_ID, name));

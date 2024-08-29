@@ -242,5 +242,6 @@
   "item.minecraft.lingering_potion.effect.slamming": "Lingering Potion of Slamming",
   "item.minecraft.potion.effect.slamming": "Potion of Slamming",
   "item.minecraft.splash_potion.effect.slamming": "Splash Potion of Slamming",
-  "item.minecraft.tipped_arrow.effect.slamming": "Arrow of Slamming"
+  "item.minecraft.tipped_arrow.effect.slamming": "Arrow of Slamming",
+  "tooltip.battlements.throw_boost": "Deals more damage when thrown."
 }

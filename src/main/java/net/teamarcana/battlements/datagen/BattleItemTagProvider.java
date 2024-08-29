@@ -186,5 +186,7 @@ public class BattleItemTagProvider extends ItemTagsProvider {
                 BattleItems.DIAMOND_BOOMERANG.get(),
                 BattleItems.NETHERITE_BOOMERANG.get()
         );
+
+        tag(BattleTags.Items.LOYALTY_ENCHANTABLE).addTag(ItemTags.TRIDENT_ENCHANTABLE).addTag(CommunityTags.WEAPONS_JAVELIN);
     }
 }

@@ -1,5 +1,7 @@
 package net.teamarcana.battlements.item;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -10,18 +12,20 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.teamarcana.battlements.api.archetype.Archetype;
 import net.teamarcana.battlements.entity.AbstractThrownWeapon;
 import net.teamarcana.battlements.init.BattleEntities;
 
+import java.util.List;
+
 public class ThrowingWeaponItem extends BaseWeaponItem{
     protected float baseVelocity = 2.0f;
     public ThrowingWeaponItem(Tier tier, Archetype archetype, Properties properties) {
         super(tier, archetype, properties);
     }
-
     public ThrowingWeaponItem(Tier tier, Archetype archetype, Properties properties, String customName) {
         super(tier, archetype, properties, customName);
     }
@@ -54,7 +58,7 @@ public class ThrowingWeaponItem extends BaseWeaponItem{
                     AbstractThrownWeapon thrownWeapon = createThrownWeapon(level, player, item, charge);
                     float c = ((float) charge / maxCharge);
                     if(thrownWeapon == null){ return; }
-                    thrownWeapon.setWeapon(item);
+                    //thrownWeapon.setWeapon(item);
 
                     int bonusVelocity = 0;
                     float damageMultiplier = (Math.abs(this.getArchetype().getAttackDamageMultiplier() - 1.0f)) * c + 1;
@@ -82,10 +86,16 @@ public class ThrowingWeaponItem extends BaseWeaponItem{
     }
 
     public AbstractThrownWeapon createThrownWeapon(Level level, Player player, ItemStack item, int charge){
-        return new AbstractThrownWeapon(BattleEntities.THROWN_WEAPON.get(), level, player, item).setWeapon(item);
+        return new AbstractThrownWeapon(BattleEntities.THROWN_WEAPON.get(), level, player, item).setWeapon(item).setBaseDamage(getAttackDamage());
     }
 
     public int getMaxCharge(){
         return (int) this.getArchetype().getChargeTicks();
+    }
+
+    @Override
+    public void appendHoverText(ItemStack item, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(item, context, tooltip, flag);
+        tooltip.addLast(Component.translatable("tooltip.battlements.throw_boost").withStyle(ChatFormatting.BLUE));
     }
 }
