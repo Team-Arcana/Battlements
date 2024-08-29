@@ -50,9 +50,9 @@ public class BattleItemTagProvider extends ItemTagsProvider {
         tag(CommunityTags.LOOTING_ENCHANTABLE).addTag(ItemTags.SWORD_ENCHANTABLE).addTag(BattleTags.Items.BLADED_MELEE).addTag(BattleTags.Items.BLUNT_MELEE).addTag(CommunityTags.WEAPONS_BOOMERANG).addTag(CommunityTags.WEAPONS_JAVELIN);
 
         tag(ItemTags.SWORDS).add(BattleItems.STEEL_SWORD.get());
-        tag(ItemTags.PICKAXES).add(BattleItems.STEEL_PICKAXE.get());
-        tag(ItemTags.AXES).add(BattleItems.STEEL_AXE.get());
-        tag(ItemTags.SHOVELS).add(BattleItems.STEEL_SHOVEL.get());
+        tag(ItemTags.PICKAXES).add(BattleItems.STEEL_PICKAXE.get()).addTag(CommunityTags.WEAPONS_HAMMER);
+        tag(ItemTags.AXES).add(BattleItems.STEEL_AXE.get()).addTag(CommunityTags.WEAPONS_BATTLEAXE);
+        tag(ItemTags.SHOVELS).add(BattleItems.STEEL_SHOVEL.get()).addTag(CommunityTags.WEAPONS_CLAW);
         tag(ItemTags.HOES).add(BattleItems.STEEL_HOE.get());
 
         tag(ItemTags.SWORD_ENCHANTABLE).addTag(CommunityTags.WEAPONS_GREATSWORD).addTag(CommunityTags.WEAPONS_KATANA).addTag(CommunityTags.WEAPONS_CUTLASS);

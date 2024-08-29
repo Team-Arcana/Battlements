@@ -1,5 +1,6 @@
 {
   "values": [
-    "battlements:steel_pickaxe"
+    "battlements:steel_pickaxe",
+    "#c:weapons/hammers"
   ]
 }

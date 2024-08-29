@@ -1,5 +1,6 @@
 {
   "values": [
-    "battlements:steel_axe"
+    "battlements:steel_axe",
+    "#c:weapons/battleaxes"
   ]
 }

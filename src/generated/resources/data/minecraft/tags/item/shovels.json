@@ -1,5 +1,6 @@
 {
   "values": [
-    "battlements:steel_shovel"
+    "battlements:steel_shovel",
+    "#c:weapons/claws"
   ]
 }
