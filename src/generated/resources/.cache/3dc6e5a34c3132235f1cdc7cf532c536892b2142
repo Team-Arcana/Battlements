@@ -1,4 +1,4 @@
-// 1.21	2024-08-29T16:09:33.4700447	Tags for minecraft:item mod id battlements
+// 1.21	2024-08-29T16:25:10.2754069	Tags for minecraft:item mod id battlements
 7cc23787ef9e5426b102da28f6aeb9e0f8a9a0ec data/battlements/tags/item/bladed_melee_weapons.json
 566b5d6f5c3ec278870101f2483359cee686bdcd data/battlements/tags/item/bladed_throwing_weapons.json
 f8b0c6d4e0e4e18c57b89f1d6bc790c858fb3da7 data/battlements/tags/item/blunt_melee_weapons.json
@@ -30,7 +30,7 @@ cf6470f5556221ce72c27109623d6359ef00a352 data/c/tags/item/weapons/rapiers.json
 992f35bfc6f03ed86d24ebeff1c04d31565b0766 data/c/tags/item/weapons/scythes.json
 8d279f65ce43e36dad3371e1ea9204f3ae968f32 data/c/tags/item/weapons/sickles.json
 43660cd66480c6018bd42ac9e3b2a059fb309362 data/c/tags/item/weapons/spears.json
-7475d56198b74ee1ae431c4bd441aabb07ac2622 data/minecraft/tags/item/axes.json
+41ac7c2991c1366eb792a58c485884b7dfc43d99 data/minecraft/tags/item/axes.json
 f73fa79bde76a21222ea1e9fb4b5a1841ad769b5 data/minecraft/tags/item/enchantable/durability.json
 017902b15d237ca2c7a046ee2d0c2991416b5ba2 data/minecraft/tags/item/enchantable/fire_aspect.json
 be84063b17a9ce276b2fbf825d656566a993c450 data/minecraft/tags/item/enchantable/mining.json
@@ -39,6 +39,6 @@ de10e666b49d84935f31ce6d44adff29a162d85c data/minecraft/tags/item/enchantable/sh
 8c8f9106f61283fa6bf8272915db5faf90026e88 data/minecraft/tags/item/enchantable/sword.json
 f73fa79bde76a21222ea1e9fb4b5a1841ad769b5 data/minecraft/tags/item/enchantable/weapon.json
 206c4ef201b1b3cd4ffdcca127fe49d0b1fe8201 data/minecraft/tags/item/hoes.json
-3ea57cd10afc58e0daa0a00e79c3dd79cf8d0156 data/minecraft/tags/item/pickaxes.json
-1728a24db7e25419feda9c11405389ce86a4c15b data/minecraft/tags/item/shovels.json
+33de1099761b19944c6319d58b0f8804744eab1d data/minecraft/tags/item/pickaxes.json
+8963841a559d92cd09bb38d125ca33cd6b7ec526 data/minecraft/tags/item/shovels.json
 955ccd3dc1bb86a4ff73337eabb93e35c7ec91d4 data/minecraft/tags/item/swords.json

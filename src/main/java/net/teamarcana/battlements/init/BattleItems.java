@@ -1,5 +1,7 @@
 package net.teamarcana.battlements.init;
 
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -38,22 +40,22 @@ public class BattleItems {
 
     // MELEE WEAPONS
     public static final DeferredItem<BaseWeaponItem> STONE_BATTLEAXE = ITEMS.register(
-            "stone_battleaxe", () -> new BaseWeaponItem(Tiers.STONE, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "stone_battleaxe", () -> new BaseWeaponItem(Tiers.STONE, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, Tiers.STONE.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
     public static final DeferredItem<BaseWeaponItem> GOLDEN_BATTLEAXE = ITEMS.register(
-            "golden_battleaxe", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "golden_battleaxe", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, Tiers.GOLD.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
     public static final DeferredItem<BaseWeaponItem> IRON_BATTLEAXE = ITEMS.register(
-            "iron_battleaxe", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "iron_battleaxe", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, Tiers.IRON.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
     public static final DeferredItem<BaseWeaponItem> STEEL_BATTLEAXE = ITEMS.register(
-            "steel_battleaxe", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "steel_battleaxe", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, BattleTiers.STEEL.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
     public static final DeferredItem<BaseWeaponItem> DIAMOND_BATTLEAXE = ITEMS.register(
-            "diamond_battleaxe", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "diamond_battleaxe", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, Tiers.DIAMOND.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
     public static final DeferredItem<BaseWeaponItem> NETHERITE_BATTLEAXE = ITEMS.register(
-            "netherite_battleaxe", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.BATTLEAXE, new Item.Properties())
+            "netherite_battleaxe", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.BATTLEAXE, new Item.Properties().component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_AXE)))
     );
 
     public static final DeferredItem<BaseWeaponItem> GOLDEN_ANCHOR = ITEMS.register(
@@ -73,20 +75,20 @@ public class BattleItems {
     );
 
     public static final DeferredItem<BaseWeaponItem> GOLDEN_HAMMER = ITEMS.register(
-            "golden_hammer", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.HAMMER, new Item.Properties())
+            "golden_hammer", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.HAMMER, new Item.Properties().component(DataComponents.TOOL, Tiers.GOLD.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)))
     );
     public static final DeferredItem<BaseWeaponItem> IRON_HAMMER = ITEMS.register(
-            "iron_hammer", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.HAMMER, new Item.Properties())
-    );
+            "iron_hammer", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.HAMMER, new Item.Properties().component(DataComponents.TOOL, Tiers.IRON.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+    ));
     public static final DeferredItem<BaseWeaponItem> STEEL_HAMMER = ITEMS.register(
-            "steel_hammer", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.HAMMER, new Item.Properties())
-    );
+            "steel_hammer", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.HAMMER, new Item.Properties().component(DataComponents.TOOL, BattleTiers.STEEL.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+    ));
     public static final DeferredItem<BaseWeaponItem> DIAMOND_HAMMER = ITEMS.register(
-            "diamond_hammer", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.HAMMER, new Item.Properties())
-    );
+            "diamond_hammer", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.HAMMER, new Item.Properties().component(DataComponents.TOOL, Tiers.DIAMOND.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+    ));
     public static final DeferredItem<BaseWeaponItem> NETHERITE_HAMMER = ITEMS.register(
-            "netherite_hammer", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.HAMMER, new Item.Properties())
-    );
+            "netherite_hammer", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.HAMMER, new Item.Properties().component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+    ));
 
     public static final DeferredItem<BaseWeaponItem> WOODEN_CLUB = ITEMS.register(
             "wooden_club", () -> new BaseWeaponItem(Tiers.WOOD, BattleArchetypes.CLUB, new Item.Properties())
@@ -189,22 +191,22 @@ public class BattleItems {
     );
 
     public static final DeferredItem<BaseWeaponItem> FLINT_CLAW = ITEMS.register(
-            "flint_claw", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.CLAW, new Item.Properties())
+            "flint_claw", () -> new BaseWeaponItem(BattleTiers.FLINT, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, BattleTiers.FLINT.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
     public static final DeferredItem<BaseWeaponItem> GOLDEN_CLAW = ITEMS.register(
-            "golden_claw", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.CLAW, new Item.Properties())
+            "golden_claw", () -> new BaseWeaponItem(Tiers.GOLD, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, Tiers.GOLD.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
     public static final DeferredItem<BaseWeaponItem> IRON_CLAW = ITEMS.register(
-            "iron_claw", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.CLAW, new Item.Properties())
+            "iron_claw", () -> new BaseWeaponItem(Tiers.IRON, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, Tiers.IRON.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
     public static final DeferredItem<BaseWeaponItem> STEEL_CLAW = ITEMS.register(
-            "steel_claw", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.CLAW, new Item.Properties())
+            "steel_claw", () -> new BaseWeaponItem(BattleTiers.STEEL, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, BattleTiers.STEEL.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
     public static final DeferredItem<BaseWeaponItem> DIAMOND_CLAW = ITEMS.register(
-            "diamond_claw", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.CLAW, new Item.Properties())
+            "diamond_claw", () -> new BaseWeaponItem(Tiers.DIAMOND, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, Tiers.DIAMOND.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
     public static final DeferredItem<BaseWeaponItem> NETHERITE_CLAW = ITEMS.register(
-            "netherite_claw", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.CLAW, new Item.Properties())
+            "netherite_claw", () -> new BaseWeaponItem(Tiers.NETHERITE, BattleArchetypes.CLAW, new Item.Properties().component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_SHOVEL)))
     );
 
     public static final DeferredItem<BaseWeaponItem> GOLDEN_SICKLE = ITEMS.register(
